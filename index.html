@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebPulse | Full-Stack Developer & Digital Solutions Architect</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Subtle Animated Background Canvas -->
+    <canvas id="cosmicCanvas"></canvas>
+
+    <!-- Navigation -->
+    <header class="nav-header" id="navHeader">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-w">Web</span><span class="logo-p">Pulse</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#expertise" class="nav-link">Expertise</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="#contact" class="nav-link nav-link--cta">Let's Talk</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-inner">
+                <div class="hero-badge">
+                    <span class="hero-badge__dot"></span>
+                    Available for Projects
+                </div>
+                <h1 class="hero-title">
+                    I craft <span class="hero-title__accent">digital products</span><br>
+                    that move businesses forward.
+                </h1>
+                <p class="hero-subtitle">
+                    Full-Stack Developer & Digital Solutions Architect with 4+ years of experience delivering 
+                    high-performance web applications, fintech platforms, e-commerce stores, trading systems, 
+                    and scalable SaaS products. I handle everything from concept and design to development, 
+                    deployment, and ongoing maintenance &mdash; so you get a complete solution, not just code.
+                </p>
+                <div class="hero-actions">
+                    <a href="#portfolio" class="btn btn--primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-down"></i>
+                    </a>
+                    <a href="#contact" class="btn btn--ghost">
+                        <span>Get In Touch</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="hero-metrics">
+                    <div class="hero-metric">
+                        <span class="hero-metric__num" data-target="50">0</span><span class="hero-metric__plus">+</span>
+                        <span class="hero-metric__label">Projects Delivered</span>
+                    </div>
+                    <div class="hero-metric__divider"></div>
+                    <div class="hero-metric">
+                        <span class="hero-metric__num" data-target="22">0</span><span class="hero-metric__plus">+</span>
+                        <span class="hero-metric__label">Premium Scripts</span>
+                    </div>
+                    <div class="hero-metric__divider"></div>
+                    <div class="hero-metric">
+                        <span class="hero-metric__num" data-target="247">0</span><span class="hero-metric__plus">+</span>
+                        <span class="hero-metric__label">Happy Clients</span>
+                    </div>
+                    <div class="hero-metric__divider"></div>
+                    <div class="hero-metric">
+                        <span class="hero-metric__num" data-target="4">0</span><span class="hero-metric__plus">+</span>
+                        <span class="hero-metric__label">Years Experience</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-eyebrow">About Me</div>
+            <div class="about-grid">
+                <div class="about-content reveal">
+                    <h2 class="section-title">Turning complex problems<br>into <span class="text-gradient">elegant solutions</span></h2>
+                    <p class="about-text">
+                        I'm a Full-Stack Developer and Digital Solutions Architect based in Cameroon with over 
+                        4 years of hands-on experience building production-grade software. I specialize in fintech 
+                        platforms, cryptocurrency systems, forex and copy trading tools, e-commerce stores 
+                        (including WordPress/WooCommerce), logistics management systems, and custom SaaS 
+                        applications &mdash; helping businesses of all sizes operate more efficiently and scale faster.
+                    </p>
+                    <p class="about-text">
+                        With a portfolio of 22+ premium production-ready scripts and 50+ successfully delivered 
+                        projects across Africa and beyond, I bring a proven track record of shipping clean, scalable, 
+                        and well-documented code that performs in the real world. Every project I take on includes 
+                        responsive design, SEO-ready architecture, secure authentication, admin panels, and thorough 
+                        documentation so you can manage everything with confidence.
+                    </p>
+                    <p class="about-text">
+                        Whether you need a brand-new website built from scratch, an existing platform redesigned and 
+                        optimized, bugs fixed in your current codebase, or a complete custom application developed 
+                        end-to-end &mdash; I provide a full-service experience from initial consultation and wireframing 
+                        through development, testing, deployment, and post-launch support. I work with individuals, 
+                        startups, agencies, and established companies who value quality, reliability, and clear communication.
+                    </p>
+                    <div class="about-info-grid">
+                        <div class="about-info">
+                            <span class="about-info__label">Location</span>
+                            <span class="about-info__value">Cameroon</span>
+                        </div>
+                        <div class="about-info">
+                            <span class="about-info__label">Experience</span>
+                            <span class="about-info__value">4+ Years</span>
+                        </div>
+                        <div class="about-info">
+                            <span class="about-info__label">Availability</span>
+                            <span class="about-info__value"><span class="status-dot"></span>Open to Work</span>
+                        </div>
+                        <div class="about-info">
+                            <span class="about-info__label">Languages</span>
+                            <span class="about-info__value">English, French</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stack reveal">
+                    <h3 class="about-stack__title">Tech Stack</h3>
+                    <div class="stack-grid">
+                        <div class="stack-item"><i class="fab fa-php"></i><span>PHP</span></div>
+                        <div class="stack-item"><i class="fab fa-laravel"></i><span>Laravel</span></div>
+                        <div class="stack-item"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+                        <div class="stack-item"><i class="fab fa-react"></i><span>React</span></div>
+                        <div class="stack-item"><i class="fab fa-node-js"></i><span>Node.js</span></div>
+                        <div class="stack-item"><i class="fab fa-python"></i><span>Python</span></div>
+                        <div class="stack-item"><i class="fas fa-database"></i><span>MySQL</span></div>
+                        <div class="stack-item"><i class="fab fa-docker"></i><span>Docker</span></div>
+                        <div class="stack-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
+                        <div class="stack-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+                        <div class="stack-item"><i class="fab fa-wordpress"></i><span>WordPress</span></div>
+                        <div class="stack-item"><i class="fas fa-store"></i><span>WooCommerce</span></div>
+                        <div class="stack-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
+                        <div class="stack-item"><i class="fas fa-server"></i><span>REST APIs</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise -->
+    <section id="expertise" class="section section--alt">
+        <div class="container">
+            <div class="section-eyebrow">What I Do</div>
+            <h2 class="section-title section-title--center">Areas of <span class="text-gradient">Expertise</span></h2>
+            <div class="expertise-grid">
+                <div class="expertise-card reveal">
+                    <div class="expertise-card__icon"><i class="fas fa-university"></i></div>
+                    <h3 class="expertise-card__title">Fintech & Banking</h3>
+                    <p class="expertise-card__desc">I build full-stack banking platforms with cryptocurrency integration, multi-currency wallets, user account management, secure transaction processing, KYC/AML verification workflows, detailed admin dashboards, and real-time reporting &mdash; everything a modern financial institution needs to operate securely and at scale.</p>
+                    <div class="expertise-card__tags">
+                        <span>Payment Systems</span><span>Crypto</span><span>KYC/AML</span><span>Admin Panels</span>
+                    </div>
+                </div>
+                <div class="expertise-card reveal">
+                    <div class="expertise-card__icon"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="expertise-card__title">Trading Platforms</h3>
+                    <p class="expertise-card__desc">I develop advanced forex and crypto trading platforms featuring real-time charting with TradingView integration, automated signal systems, copy trading functionality, order management, portfolio tracking, risk analytics dashboards, and user-friendly interfaces that make complex trading accessible to beginners and professionals alike.</p>
+                    <div class="expertise-card__tags">
+                        <span>Forex</span><span>Copy Trading</span><span>Analytics</span><span>Signals</span>
+                    </div>
+                </div>
+                <div class="expertise-card reveal">
+                    <div class="expertise-card__icon"><i class="fas fa-shopping-cart"></i></div>
+                    <h3 class="expertise-card__title">E-Commerce</h3>
+                    <p class="expertise-card__desc">I create modern online stores using custom code or WordPress/WooCommerce &mdash; complete with product catalogs, shopping carts, secure payment gateway integration (Stripe, PayPal, mobile money), inventory management, order tracking, customer dashboards, coupon systems, and mobile-first responsive designs that convert visitors into buyers.</p>
+                    <div class="expertise-card__tags">
+                        <span>WooCommerce</span><span>Custom Stores</span><span>Payments</span><span>Mobile-First</span>
+                    </div>
+                </div>
+                <div class="expertise-card reveal">
+                    <div class="expertise-card__icon"><i class="fas fa-truck"></i></div>
+                    <h3 class="expertise-card__title">Logistics & Shipping</h3>
+                    <p class="expertise-card__desc">I build complete logistics management solutions with real-time GPS tracking, route optimization, delivery scheduling, driver and fleet management, warehouse inventory control, automated notifications, proof-of-delivery systems, and comprehensive reporting &mdash; giving you full visibility and control over your supply chain operations.</p>
+                    <div class="expertise-card__tags">
+                        <span>Tracking</span><span>Fleet Mgmt</span><span>Automation</span><span>Warehouse</span>
+                    </div>
+                </div>
+                <div class="expertise-card reveal">
+                    <div class="expertise-card__icon"><i class="fas fa-link"></i></div>
+                    <h3 class="expertise-card__title">Blockchain & Web3</h3>
+                    <p class="expertise-card__desc">I develop blockchain-based financial systems, multi-chain wallet integrations (MetaMask, WalletConnect, Trust Wallet), smart contract interfaces, decentralized application frontends, token dashboards, and DeFi platforms &mdash; bridging the gap between complex blockchain technology and user-friendly interfaces that anyone can navigate.</p>
+                    <div class="expertise-card__tags">
+                        <span>Smart Contracts</span><span>DeFi</span><span>Wallets</span><span>Multi-Chain</span>
+                    </div>
+                </div>
+                <div class="expertise-card reveal">
+                    <div class="expertise-card__icon"><i class="fas fa-code"></i></div>
+                    <h3 class="expertise-card__title">Custom Development</h3>
+                    <p class="expertise-card__desc">I design and build bespoke web applications, SaaS platforms, content management systems, admin panels, REST API development, third-party integrations, WordPress/WooCommerce customization, and enterprise-grade solutions &mdash; tailored precisely to your business requirements with clean architecture and thorough documentation.</p>
+                    <div class="expertise-card__tags">
+                        <span>SaaS</span><span>APIs</span><span>WordPress</span><span>Enterprise</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="section">
+        <div class="container">
+            <div class="section-eyebrow">Selected Work</div>
+            <h2 class="section-title section-title--center">Featured <span class="text-gradient">Projects</span></h2>
+            <div class="portfolio-grid">
+                <article class="project-card reveal">
+                    <div class="project-card__header">
+                        <span class="project-card__cat">Fintech</span>
+                        <span class="project-card__num">01</span>
+                    </div>
+                    <h3 class="project-card__title">Banking with Crypto Integration</h3>
+                    <p class="project-card__desc">A complete digital banking platform built from the ground up with cryptocurrency wallet support, fiat and crypto multi-currency accounts, peer-to-peer transfers, bill payments, KYC verification, transaction history, and a comprehensive admin panel for managing users, transactions, and compliance settings.</p>
+                    <div class="project-card__tech">
+                        <span>Laravel</span><span>MySQL</span><span>API</span><span>Blockchain</span><span>Admin Panel</span>
+                    </div>
+                </article>
+                <article class="project-card reveal">
+                    <div class="project-card__header">
+                        <span class="project-card__cat">Trading</span>
+                        <span class="project-card__num">02</span>
+                    </div>
+                    <h3 class="project-card__title">Forex Trading Platform</h3>
+                    <p class="project-card__desc">A professional-grade forex trading platform featuring real-time candlestick charts with TradingView integration, automated buy/sell signal alerts, position sizing tools, order management with stop-loss and take-profit, portfolio analytics, and a risk management dashboard that helps traders make informed decisions with confidence.</p>
+                    <div class="project-card__tech">
+                        <span>PHP</span><span>JavaScript</span><span>WebSocket</span><span>TradingView</span><span>Charts</span>
+                    </div>
+                </article>
+                <article class="project-card reveal">
+                    <div class="project-card__header">
+                        <span class="project-card__cat">E-Commerce</span>
+                        <span class="project-card__num">03</span>
+                    </div>
+                    <h3 class="project-card__title">E-Commerce Platform</h3>
+                    <p class="project-card__desc">A fully responsive online store with advanced product catalog, smart search and filtering, shopping cart with abandoned cart recovery, multi-gateway payment processing (Stripe, PayPal, mobile money), real-time inventory management, order tracking, customer accounts, reviews system, and a powerful admin dashboard for managing every aspect of the business.</p>
+                    <div class="project-card__tech">
+                        <span>Laravel</span><span>Stripe</span><span>React</span><span>MySQL</span><span>WooCommerce</span>
+                    </div>
+                </article>
+                <article class="project-card reveal">
+                    <div class="project-card__header">
+                        <span class="project-card__cat">Blockchain</span>
+                        <span class="project-card__num">04</span>
+                    </div>
+                    <h3 class="project-card__title">Advanced Wallet Connect</h3>
+                    <p class="project-card__desc">A multi-chain crypto wallet integration platform supporting Ethereum, BSC, Polygon, and more &mdash; with one-click wallet connection (MetaMask, WalletConnect, Trust Wallet), real-time balance tracking, full transaction history, token swap interface, and secure authentication that makes interacting with blockchain technology seamless for everyday users.</p>
+                    <div class="project-card__tech">
+                        <span>Web3</span><span>React</span><span>Node.js</span><span>Solidity</span><span>Multi-Chain</span>
+                    </div>
+                </article>
+                <article class="project-card reveal">
+                    <div class="project-card__header">
+                        <span class="project-card__cat">Logistics</span>
+                        <span class="project-card__num">05</span>
+                    </div>
+                    <h3 class="project-card__title">Shipping & Logistics Suite</h3>
+                    <p class="project-card__desc">An end-to-end logistics management system with real-time GPS tracking on an interactive map, intelligent route optimization, delivery scheduling and assignment, driver management, warehouse inventory control, automated SMS/email notifications for customers, proof-of-delivery capture, and comprehensive analytics for monitoring fleet performance and operational costs.</p>
+                    <div class="project-card__tech">
+                        <span>PHP</span><span>Maps API</span><span>MySQL</span><span>REST</span><span>GPS</span>
+                    </div>
+                </article>
+                <article class="project-card reveal">
+                    <div class="project-card__header">
+                        <span class="project-card__cat">Finance</span>
+                        <span class="project-card__num">06</span>
+                    </div>
+                    <h3 class="project-card__title">Copy Trading System</h3>
+                    <p class="project-card__desc">A social trading platform that lets users automatically replicate the trades of top-performing traders in real time. Includes a public trader leaderboard with verified performance stats, customizable risk controls (max drawdown, lot size limits), portfolio allocation tools, profit-sharing settings, and detailed analytics so both leaders and followers can track ROI and manage risk effectively.</p>
+                    <div class="project-card__tech">
+                        <span>Laravel</span><span>Vue.js</span><span>API</span><span>WebSocket</span><span>Analytics</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section section--alt">
+        <div class="container">
+            <div class="section-eyebrow">What I Offer</div>
+            <h2 class="section-title section-title--center">Professional <span class="text-gradient">Services</span></h2>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-card__num">01</div>
+                    <h3 class="service-card__title">Full Website Development</h3>
+                    <p class="service-card__desc">I design and build complete professional websites from scratch &mdash; tailored to your brand, goals, and target audience. Every project includes a modern responsive design that looks perfect on all devices, intuitive UI/UX, SEO-optimized structure so you rank on Google, fast loading speeds, contact forms, social media integration, analytics setup, SSL security, and full deployment to your hosting. Whether you need a business website, portfolio, landing page, WordPress site, or a complex web application &mdash; I deliver a polished, production-ready product with documentation and post-launch support.</p>
+                    <div class="service-card__price">From <strong>$250</strong>+</div>
+                    <a href="https://wa.me/237681008986?text=Hi,%20I'm%20interested%20in%20Full%20Website%20Development" class="service-card__cta" target="_blank">
+                        Discuss Project <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card service-card--featured reveal">
+                    <div class="service-card__badge">Popular</div>
+                    <div class="service-card__num">02</div>
+                    <h3 class="service-card__title">Website Code Fixing &amp; Optimization</h3>
+                    <p class="service-card__desc">Is your website broken, slow, or not working the way it should? I provide comprehensive code fixing, debugging, performance optimization, security patching, mobile responsiveness fixes, feature additions, plugin conflicts resolution, database optimization, and complete code cleanup for any existing web application. Whether it's a WordPress site, custom PHP project, Laravel app, React frontend, or any other stack &mdash; I diagnose the root cause quickly, fix it properly, and make sure everything runs smoothly. You also get a detailed report of everything I changed and why.</p>
+                    <div class="service-card__price">From <strong>$130</strong>+</div>
+                    <a href="https://wa.me/237681008986?text=Hi,%20I%20need%20help%20fixing%20my%20website" class="service-card__cta" target="_blank">
+                        Get Help <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-card__num">03</div>
+                    <h3 class="service-card__title">AI Website Building Course</h3>
+                    <p class="service-card__desc">A comprehensive, hands-on course that teaches you how to build professional, production-quality websites from absolute zero using modern AI tools &mdash; no prior coding experience required. You'll learn to create responsive business websites, portfolios, e-commerce stores, and landing pages using AI-assisted development workflows. The course covers HTML, CSS, JavaScript fundamentals, WordPress/WooCommerce setup, deployment to live hosting, domain configuration, SEO basics, and how to use AI to write, debug, and optimize code 10x faster. Includes lifetime access to all course materials, project templates, and a private community for ongoing support.</p>
+                    <div class="service-card__price"><strong>$999</strong>+</div>
+                    <a href="https://wa.me/237681008986?text=Hi,%20I'm%20interested%20in%20the%20AI%20Website%20Building%20Course" class="service-card__cta" target="_blank">
+                        Enroll Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section">
+        <div class="container">
+            <div class="section-eyebrow">Client Feedback</div>
+            <h2 class="section-title section-title--center">What <span class="text-gradient">Clients Say</span></h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-card__stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <blockquote class="testimonial-card__quote">"Amazing work! Set up my banking site in 20 minutes. Clean code, excellent documentation, and outstanding support. Worth every penny."</blockquote>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">EN</div>
+                        <div>
+                            <div class="testimonial-card__name">Emmanuel N.</div>
+                            <div class="testimonial-card__role">Fintech Startup, Douala</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-card__stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <blockquote class="testimonial-card__quote">"Professional scripts with excellent support. The trading platform exceeded our expectations. Highly recommended for any serious project."</blockquote>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">JT</div>
+                        <div>
+                            <div class="testimonial-card__name">Jean-Pierre T.</div>
+                            <div class="testimonial-card__role">Trading Firm, Yaound&eacute;</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-card__stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <blockquote class="testimonial-card__quote">"Best investment for my web development business. The code quality is exceptional, clients love the end result. Ongoing support is superb."</blockquote>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">FM</div>
+                        <div>
+                            <div class="testimonial-card__name">Franck M.</div>
+                            <div class="testimonial-card__role">Agency Owner, Bamenda</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="testimonial-card__stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <blockquote class="testimonial-card__quote">"Clean code, easy to customize. The e-commerce solution handles thousands of orders daily without issues. Support team is very responsive."</blockquote>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">SA</div>
+                        <div>
+                            <div class="testimonial-card__name">Sandrine A.</div>
+                            <div class="testimonial-card__role">E-Commerce, Buea</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section--alt">
+        <div class="container">
+            <div class="contact-layout">
+                <div class="contact-info reveal">
+                    <div class="section-eyebrow">Get In Touch</div>
+                    <h2 class="section-title">Let's build something<br><span class="text-gradient">great together</span></h2>
+                    <p class="contact-text">Have a project in mind? I'd love to hear about it. Whether you need a complete website or web application built from scratch, an existing site redesigned and optimized, bugs and performance issues fixed, a WordPress/WooCommerce store set up, or a custom fintech or trading platform developed &mdash; I'm here to help. Reach out through any channel below and I'll respond within a few hours with a free consultation and project estimate.</p>
+                    <div class="contact-channels">
+                        <a href="https://wa.me/237681008986" class="contact-channel" target="_blank">
+                            <div class="contact-channel__icon"><i class="fab fa-whatsapp"></i></div>
+                            <div>
+                                <span class="contact-channel__label">WhatsApp</span>
+                                <span class="contact-channel__value">+237 681 008 986</span>
+                            </div>
+                        </a>
+                        <a href="mailto:hello@webpulse.dev" class="contact-channel">
+                            <div class="contact-channel__icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <span class="contact-channel__label">Email</span>
+                                <span class="contact-channel__value">hello@webpulse.dev</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/perevet74" class="contact-channel" target="_blank">
+                            <div class="contact-channel__icon"><i class="fab fa-github"></i></div>
+                            <div>
+                                <span class="contact-channel__label">GitHub</span>
+                                <span class="contact-channel__value">@perevet74</span>
+                            </div>
+                        </a>
+                        <a href="http://linkedin.com/in/perevet-n-4a453230b" class="contact-channel" target="_blank">
+                            <div class="contact-channel__icon"><i class="fab fa-linkedin-in"></i></div>
+                            <div>
+                                <span class="contact-channel__label">LinkedIn</span>
+                                <span class="contact-channel__value">Perevet N.</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form reveal" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Project inquiry">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <a href="#hero" class="footer-logo">
+                    <span class="logo-w">Web</span><span class="logo-p">Pulse</span>
+                </a>
+                <p class="footer-copy">&copy; 2024 WebPulse Web Solutions. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/perevet74" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="http://linkedin.com/in/perevet-n-4a453230b" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/237681008986" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
