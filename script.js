@@ -16,7 +16,140 @@ document.addEventListener('DOMContentLoaded', () => {
     initContactForm();
     initActiveNavHighlight();
     initMagneticButtons();
+    initColorMode();
 });
+
+/* === Color Mode Picker === */
+function initColorMode() {
+    const STORAGE_KEY = 'webpulse-theme';
+    const btn = document.getElementById('colorModeBtn');
+    const panel = document.getElementById('colorModePanel');
+    const options = document.getElementById('colorModeOptions');
+    const swatchEl = document.getElementById('colorModeSwatch');
+    if (!btn || !panel || !options) return;
+
+    const themes = ['system', 'light', 'dark', 'midnight', 'ocean', 'forest', 'sunset', 'rose', 'lavender', 'terminal'];
+    const themeSwatches = {
+        system: null,
+        light: '#ffffff',
+        dark: '#0f172a',
+        midnight: '#0c0a1d',
+        ocean: '#0c4a6e',
+        forest: '#14532d',
+        sunset: '#7c2d12',
+        rose: '#831843',
+        lavender: '#4c1d95',
+        terminal: '#052e16'
+    };
+
+    function getStored() {
+        try {
+            const s = localStorage.getItem(STORAGE_KEY);
+            return themes.includes(s) ? s : 'system';
+        } catch (_) { return 'system'; }
+    }
+
+    function getResolvedTheme() {
+        const stored = getStored();
+        if (stored !== 'system') return stored;
+        return typeof matchMedia !== 'undefined' && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    function updateSwatch(preference) {
+        if (!swatchEl) return;
+        if (preference === 'system') {
+            swatchEl.style.background = 'linear-gradient(90deg,#fff 50%,#0f172a 50%)';
+            swatchEl.style.borderColor = 'var(--border)';
+            return;
+        }
+        const color = themeSwatches[preference] || themeSwatches.light;
+        swatchEl.style.background = color;
+        swatchEl.style.borderColor = preference === 'light' ? '#e2e8f0' : color;
+    }
+
+    function applyTheme(preference) {
+        const resolved = preference === 'system' ? getResolvedTheme() : preference;
+        document.documentElement.setAttribute('data-theme', resolved === 'light' ? '' : resolved);
+        options.querySelectorAll('.color-mode-option').forEach(opt => {
+            opt.classList.toggle('active', opt.dataset.theme === preference);
+        });
+        updateSwatch(preference);
+    }
+
+    function openPanel() {
+        panel.classList.add('open');
+        panel.setAttribute('aria-hidden', 'false');
+        btn.setAttribute('aria-expanded', 'true');
+        const opts = options.querySelectorAll('.color-mode-option');
+        const active = options.querySelector('.color-mode-option.active');
+        (active || opts[0])?.focus();
+    }
+
+    function closePanel() {
+        panel.classList.remove('open');
+        panel.setAttribute('aria-hidden', 'true');
+        btn.setAttribute('aria-expanded', 'false');
+        btn.focus({ preventScroll: true });
+    }
+
+    function selectTheme(theme) {
+        applyTheme(theme);
+        try { localStorage.setItem(STORAGE_KEY, theme); } catch (_) {}
+        closePanel();
+    }
+
+    // Apply saved preference on load (inline script already set initial; we sync UI and listen for system)
+    const initial = getStored();
+    applyTheme(initial);
+
+    matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+        if (getStored() === 'system') applyTheme('system');
+    });
+
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (panel.classList.contains('open')) closePanel();
+        else openPanel();
+    });
+
+    options.querySelectorAll('.color-mode-option').forEach((opt, i) => {
+        opt.addEventListener('click', () => selectTheme(opt.dataset.theme));
+
+        opt.addEventListener('keydown', (e) => {
+            const opts = Array.from(options.querySelectorAll('.color-mode-option'));
+            const idx = opts.indexOf(opt);
+            if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+                e.preventDefault();
+                opts[(idx + 1) % opts.length].focus();
+            } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+                e.preventDefault();
+                opts[(idx - 1 + opts.length) % opts.length].focus();
+            } else if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                selectTheme(opt.dataset.theme);
+            } else if (e.key === 'Home') {
+                e.preventDefault();
+                opts[0].focus();
+            } else if (e.key === 'End') {
+                e.preventDefault();
+                opts[opts.length - 1].focus();
+            }
+        });
+    });
+
+    panel.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            e.preventDefault();
+            closePanel();
+        }
+    });
+
+    document.addEventListener('click', (e) => {
+        if (panel.classList.contains('open') && !panel.contains(e.target) && !btn.contains(e.target)) {
+            closePanel();
+        }
+    });
+}
 
 /* === Cursor Glow (desktop only) === */
 function initCursorGlow() {
