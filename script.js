@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
     initRevealAnimations();
     initHeroAnimations();
+    initTypingEffect();
     initCountUp();
     initContactForm();
     initActiveNavHighlight();
@@ -284,6 +285,48 @@ function initHeroAnimations() {
         if (!el) return;
         setTimeout(() => el.classList.add('visible'), 150 + i * 120);
     });
+}
+
+/* === Hero Typing Animation === */
+function initTypingEffect() {
+    const part1 = document.getElementById('heroTypedPart1');
+    const part2 = document.getElementById('heroTypedPart2');
+    const part3 = document.getElementById('heroTypedPart3');
+    const cursor = document.getElementById('heroCursor');
+    if (!part1 || !part2 || !part3 || !cursor) return;
+
+    const text1 = 'I craft ';
+    const text2 = 'digital products';
+    const text3 = 'that move businesses forward.';
+    const speed = 28;
+    const pauseBetweenParts = 50;
+
+    let partIndex = 0;
+    let charIndex = 0;
+    const parts = [
+        { el: part1, text: text1 },
+        { el: part2, text: text2 },
+        { el: part3, text: text3 }
+    ];
+
+    function typeNext() {
+        if (partIndex >= parts.length) {
+            cursor.classList.add('typing-done');
+            return;
+        }
+        const current = parts[partIndex];
+        if (charIndex < current.text.length) {
+            current.el.textContent += current.text[charIndex];
+            charIndex++;
+            setTimeout(typeNext, speed);
+        } else {
+            partIndex++;
+            charIndex = 0;
+            setTimeout(typeNext, pauseBetweenParts);
+        }
+    }
+
+    setTimeout(typeNext, 280);
 }
 
 /* === Counter Animation === */
