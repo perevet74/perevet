@@ -170,6 +170,55 @@
                         <div class="stack-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
                         <div class="stack-item"><i class="fas fa-server"></i><span>REST APIs</span></div>
                     </div>
+                    <div class="tech-robot" aria-hidden="true">
+                        <svg class="tech-robot__svg" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="robotGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:var(--grad-1)"/>
+                                    <stop offset="100%" style="stop-color:var(--grad-2)"/>
+                                </linearGradient>
+                                <linearGradient id="robotGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:var(--accent-bright)"/>
+                                    <stop offset="100%" style="stop-color:var(--accent)"/>
+                                </linearGradient>
+                                <filter id="robotGlow">
+                                    <feGaussianBlur stdDeviation="1" result="blur"/>
+                                    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                                </filter>
+                            </defs>
+                            <g class="tech-robot__body">
+                                <rect x="35" y="52" width="50" height="42" rx="6" fill="url(#robotGrad1)" stroke="var(--border)" stroke-width="1.5"/>
+                                <rect x="42" y="60" width="36" height="18" rx="2" fill="var(--bg)" opacity="0.9"/>
+                                <line x1="45" y1="66" x2="75" y2="66" stroke="var(--accent)" stroke-width="1" opacity="0.6" class="tech-robot__screen-line"/>
+                                <line x1="45" y1="71" x2="65" y2="71" stroke="var(--accent)" stroke-width="1" opacity="0.4" class="tech-robot__screen-line"/>
+                                <line x1="45" y1="76" x2="70" y2="76" stroke="var(--accent)" stroke-width="1" opacity="0.3" class="tech-robot__screen-line"/>
+                            </g>
+                            <g class="tech-robot__head">
+                                <rect x="40" y="18" width="40" height="36" rx="8" fill="url(#robotGrad1)" stroke="var(--border)" stroke-width="1.5"/>
+                                <circle cx="52" cy="32" r="4" fill="var(--accent)" class="tech-robot__eye tech-robot__eye--l"/>
+                                <circle cx="68" cy="32" r="4" fill="var(--accent)" class="tech-robot__eye tech-robot__eye--r"/>
+                                <circle cx="52" cy="32" r="1.5" fill="var(--bg)" class="tech-robot__pupil tech-robot__pupil--l"/>
+                                <circle cx="68" cy="32" r="1.5" fill="var(--bg)" class="tech-robot__pupil tech-robot__pupil--r"/>
+                            </g>
+                            <g class="tech-robot__antenna">
+                                <line x1="60" y1="18" x2="60" y2="6" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="60" cy="4" r="4" fill="url(#robotGrad2)" filter="url(#robotGlow)" class="tech-robot__antenna-orb"/>
+                            </g>
+                            <g class="tech-robot__arm tech-robot__arm--l">
+                                <rect x="20" y="58" width="14" height="6" rx="3" fill="url(#robotGrad1)" stroke="var(--border)" stroke-width="1" transform="rotate(-25 27 61)"/>
+                                <rect x="12" y="54" width="10" height="5" rx="2" fill="var(--grad-2)" stroke="var(--border)" stroke-width="1" transform="rotate(-45 17 56.5)" class="tech-robot__hand"/>
+                            </g>
+                            <g class="tech-robot__arm tech-robot__arm--r">
+                                <rect x="86" y="58" width="14" height="6" rx="3" fill="url(#robotGrad1)" stroke="var(--border)" stroke-width="1" transform="rotate(25 93 61)"/>
+                                <rect x="98" y="54" width="10" height="5" rx="2" fill="var(--grad-2)" stroke="var(--border)" stroke-width="1" transform="rotate(45 103 56.5)" class="tech-robot__hand"/>
+                            </g>
+                            <g class="tech-robot__base">
+                                <rect x="38" y="94" width="44" height="14" rx="4" fill="var(--text-3)" opacity="0.4"/>
+                                <circle cx="48" cy="108" r="5" fill="var(--text-2)" opacity="0.5" class="tech-robot__wheel"/>
+                                <circle cx="72" cy="108" r="5" fill="var(--text-2)" opacity="0.5" class="tech-robot__wheel"/>
+                            </g>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>

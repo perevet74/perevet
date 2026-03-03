@@ -311,6 +311,43 @@ img{max-width:100%;display:block}a{color:inherit;text-decoration:none}
 .stack-item:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft);box-shadow:var(--sh-sm);transform:translateY(-2px)}
 .stack-item i{font-size:1.125rem;color:var(--accent);width:20px;text-align:center}
 
+/* Tech Robot (under stack) */
+.tech-robot{display:flex;justify-content:center;align-items:center;margin-top:2rem;padding:1rem}
+.tech-robot__svg{width:100%;max-width:120px;height:auto;animation:robot-float 3s ease-in-out infinite}
+.tech-robot__body{transform-origin:60px 73px;animation:robot-body-bob 2.5s ease-in-out infinite}
+.tech-robot__head{transform-origin:60px 36px;animation:robot-head-tilt 4s ease-in-out infinite}
+.tech-robot__antenna{transform-origin:60px 4px}
+.tech-robot__antenna-orb{animation:robot-orb-pulse 1.5s ease-in-out infinite}
+.tech-robot__eye{transform-origin:center;animation:robot-eye-glow 2s ease-in-out infinite}
+.tech-robot__eye--r{animation-delay:.1s}
+.tech-robot__pupil{animation:robot-pupil-move 3s ease-in-out infinite}
+.tech-robot__pupil--r{animation-delay:.15s}
+.tech-robot__arm--l{transform-origin:27px 61px;animation:robot-arm-wave-l 2.8s ease-in-out infinite}
+.tech-robot__arm--r{transform-origin:93px 61px;animation:robot-arm-wave-r 2.8s ease-in-out infinite}
+.tech-robot__hand{transform-origin:center;animation:robot-hand-wiggle .4s ease-in-out infinite alternate}
+.tech-robot__arm--r .tech-robot__hand{animation-name:robot-hand-wiggle-r;animation-delay:.2s}
+.tech-robot__screen-line{animation:robot-screen-scan 2s ease-in-out infinite}
+.tech-robot__screen-line:nth-child(2){animation-delay:.3s}
+.tech-robot__screen-line:nth-child(3){animation-delay:.6s}
+.tech-robot__screen-line:nth-child(4){animation-delay:.9s}
+.tech-robot__wheel{transform-origin:center;animation:robot-wheel-spin 1.2s linear infinite}
+.tech-robot__wheel:last-child{animation-direction:reverse;animation-duration:1.4s}
+@keyframes robot-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes robot-body-bob{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.02)}}
+@keyframes robot-head-tilt{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
+@keyframes robot-orb-pulse{0%,100%{opacity:1;transform:scale(1);filter:brightness(1)}50%{opacity:.9;transform:scale(1.15);filter:brightness(1.3)}}
+@keyframes robot-eye-glow{0%,100%{opacity:1;filter:drop-shadow(0 0 2px var(--accent))}50%{opacity:.85;filter:drop-shadow(0 0 6px var(--accent-bright))}}
+@keyframes robot-pupil-move{0%,100%{transform:translate(0,0)}25%{transform:translate(.5px,-.5px)}75%{transform:translate(-.5px,.5px)}}
+@keyframes robot-arm-wave-l{0%,100%{transform:rotate(-25deg)}50%{transform:rotate(-18deg)}}
+@keyframes robot-arm-wave-r{0%,100%{transform:rotate(25deg)}50%{transform:rotate(18deg)}}
+@keyframes robot-hand-wiggle{0%{transform:rotate(-45deg) scale(1)}100%{transform:rotate(-38deg) scale(1.05)}}
+@keyframes robot-hand-wiggle-r{0%{transform:rotate(45deg) scale(1)}100%{transform:rotate(52deg) scale(1.05)}}
+@keyframes robot-screen-scan{0%,100%{opacity:.6}50%{opacity:1}}
+.tech-robot__screen-line:nth-child(2){opacity:.4}
+.tech-robot__screen-line:nth-child(3){opacity:.3}
+.tech-robot__screen-line:nth-child(4){opacity:.3}
+@keyframes robot-wheel-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+
 /* === Gradient Border Card Mixin (via pseudo-element) === */
 .expertise-card,.project-card,.service-card,.testimonial-card{
     position:relative;background:var(--glass-bg);backdrop-filter:blur(var(--glass-blur)) saturate(180%);-webkit-backdrop-filter:blur(var(--glass-blur)) saturate(180%);border:1px solid var(--glass-border);border-radius:var(--r-lg);box-shadow:var(--glass-shadow);transition:all .45s var(--ease);

@@ -295,9 +295,9 @@ function initTypingEffect() {
     const cursor = document.getElementById('heroCursor');
     if (!part1 || !part2 || !part3 || !cursor) return;
 
-    const text1 = 'I craft ';
-    const text2 = 'digital products';
-    const text3 = 'that move businesses forward.';
+    const text1 = 'I built this site so you could see some of my ';
+    const text2 = 'cool web designs';
+    const text3 = ' & projects :)';
     const speed = 28;
     const pauseBetweenParts = 50;
 
