@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebPulse | Full-Stack Developer & Digital Solutions Architect</title>
+    <title>WebPulse | What i do, Full Stack DevOps & Digital Solutions Architect</title>
     <script>
     (function(){
         var k='webpulse-theme',s=typeof localStorage!=='undefined'?localStorage.getItem(k):null,v;
@@ -12,32 +12,33 @@
     })();
     </script>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Cursor Glow -->
     <div class="cursor-glow" id="cursorGlow"></div>
-
-    <!-- Scroll Progress -->
     <div class="scroll-progress" id="scrollProgress"></div>
-
-    <!-- Noise Overlay -->
     <div class="noise-overlay"></div>
 
-    <!-- Gradient Mesh Background -->
     <div class="gradient-mesh">
         <div class="mesh-blob mesh-blob--1"></div>
         <div class="mesh-blob mesh-blob--2"></div>
         <div class="mesh-blob mesh-blob--3"></div>
+        <div class="mesh-blob mesh-blob--4"></div>
     </div>
+
+    <!-- Floating Particles -->
+    <canvas id="particleCanvas" class="particle-canvas"></canvas>
 
     <!-- Navigation -->
     <header class="nav-header" id="navHeader">
         <div class="nav-container">
             <a href="#hero" class="nav-logo">
-                <span class="logo-w">Web</span><span class="logo-p">Pulse</span>
+                <div class="nav-logo__icon">
+                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><circle cx="14" cy="14" r="12" stroke="url(#logoGrad)" stroke-width="2.5"/><path d="M8.5 9.5L4.75 14L8.5 18.5" stroke="url(#logoGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.5 9.5L23.25 14L19.5 18.5" stroke="url(#logoGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.25 7.75L11.75 20.25" stroke="url(#logoGrad)" stroke-width="2.5" stroke-linecap="round"/><defs><linearGradient id="logoGrad" x1="0" y1="0" x2="28" y2="28"><stop stop-color="#818cf8"/><stop offset="1" stop-color="#c084fc"/></linearGradient></defs></svg>
+                </div>
+                <span class="logo-text"><span class="logo-w">Web</span><span class="logo-p">Pulse</span></span>
             </a>
             <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
                 <span></span><span></span><span></span>
@@ -47,8 +48,11 @@
                 <a href="#expertise" class="nav-link">Expertise</a>
                 <a href="#portfolio" class="nav-link">Portfolio</a>
                 <a href="#services" class="nav-link">Services</a>
-                <a href="#testimonials" class="nav-link">Testimonials</a>
-                <a href="#contact" class="nav-link nav-link--cta">Let's Talk</a>
+                <a href="#testimonials" class="nav-link">Reviews</a>
+                <a href="#contact" class="nav-link nav-link--cta">
+                    <span class="cta-pulse"></span>
+                    Let's Talk
+                </a>
             </nav>
         </div>
     </header>
@@ -59,31 +63,36 @@
             <div class="hero-inner">
                 <div class="hero-badge">
                     <span class="hero-badge__dot"></span>
-                    Here to help. Coffee helps.
+                    Available for projects
                 </div>
                 <h1 class="hero-title">
-                    <span id="heroTypedPart1"></span><span class="hero-title__accent" id="heroTypedPart2"></span><br><span id="heroTypedPart3"></span><span class="hero-title__cursor" id="heroCursor" aria-hidden="true"></span>
+                    <span class="hero-title__line" id="heroLine1">I craft</span>
+                    <span class="hero-title__accent" id="heroLine2">digital experiences</span>
+                    <span class="hero-title__line" id="heroLine3">that captivate.</span>
                 </h1>
                 <p class="hero-subtitle">
-                    Full-Stack Developer & Digital Solutions Architect with 4+ years of experience delivering 
-                    high-performance web applications, fintech platforms, e-commerce stores, trading systems, 
-                    and scalable SaaS products. I handle everything from concept and design to development, 
-                    deployment, and ongoing maintenance &mdash; so you get a complete solution, not just code.
+                    Full-Stack Developer & Solutions Architect specializing in fintech, trading platforms, 
+                    e-commerce, and SaaS — from concept to deployment.
                 </p>
                 <div class="hero-actions">
-                    <a href="#portfolio" class="btn btn--primary">
-                        <span>View My Work</span>
+                    <a href="#portfolio" class="btn btn--primary btn--glow">
+                        <span>Explore My Work</span>
                         <i class="fas fa-arrow-down"></i>
                     </a>
-                    <a href="#contact" class="btn btn--ghost">
-                        <span>Get In Touch</span>
+                    <a href="#contact" class="btn btn--glass">
+                        <span>Start a Project</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
                 <div class="hero-metrics">
                     <div class="hero-metric">
                         <span class="hero-metric__num" data-target="50">0</span><span class="hero-metric__plus">+</span>
-                        <span class="hero-metric__label">Projects Delivered</span>
+                        <span class="hero-metric__label">Projects</span>
+                    </div>
+                    <div class="hero-metric__divider"></div>
+                    <div class="hero-metric">
+                        <span class="hero-metric__num" data-target="247">0</span><span class="hero-metric__plus">+</span>
+                        <span class="hero-metric__label">Clients</span>
                     </div>
                     <div class="hero-metric__divider"></div>
                     <div class="hero-metric">
@@ -92,68 +101,105 @@
                     </div>
                     <div class="hero-metric__divider"></div>
                     <div class="hero-metric">
-                        <span class="hero-metric__num" data-target="247">0</span><span class="hero-metric__plus">+</span>
-                        <span class="hero-metric__label">Happy Clients</span>
-                    </div>
-                    <div class="hero-metric__divider"></div>
-                    <div class="hero-metric">
                         <span class="hero-metric__num" data-target="4">0</span><span class="hero-metric__plus">+</span>
-                        <span class="hero-metric__label">Years Experience</span>
+                        <span class="hero-metric__label">Years</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-orbit">
+                    <div class="orbit-ring orbit-ring--1">
+                        <div class="orbit-dot"><i class="fab fa-react"></i></div>
+                    </div>
+                    <div class="orbit-ring orbit-ring--2">
+                        <div class="orbit-dot"><i class="fab fa-laravel"></i></div>
+                    </div>
+                    <div class="orbit-ring orbit-ring--3">
+                        <div class="orbit-dot"><i class="fab fa-node-js"></i></div>
+                    </div>
+                    <div class="orbit-core">
+                        <i class="fas fa-code"></i>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Marquee -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span>Fintech</span><span class="marquee-dot"></span>
+                <span>Trading</span><span class="marquee-dot"></span>
+                <span>E-Commerce</span><span class="marquee-dot"></span>
+                <span>Blockchain</span><span class="marquee-dot"></span>
+                <span>SaaS</span><span class="marquee-dot"></span>
+                <span>Logistics</span><span class="marquee-dot"></span>
+                <span>Web3</span><span class="marquee-dot"></span>
+                <span>WordPress</span><span class="marquee-dot"></span>
+                <span>Fintech</span><span class="marquee-dot"></span>
+                <span>Trading</span><span class="marquee-dot"></span>
+                <span>E-Commerce</span><span class="marquee-dot"></span>
+                <span>Blockchain</span><span class="marquee-dot"></span>
+                <span>SaaS</span><span class="marquee-dot"></span>
+                <span>Logistics</span><span class="marquee-dot"></span>
+                <span>Web3</span><span class="marquee-dot"></span>
+                <span>WordPress</span><span class="marquee-dot"></span>
+            </div>
+        </div>
+    </div>
+
     <!-- About -->
     <section id="about" class="section">
         <div class="container">
-            <div class="section-eyebrow">About Me</div>
+            <div class="section-header">
+                <div class="section-eyebrow"><span class="eyebrow-line"></span>About Me</div>
+                <h2 class="section-title">Complex problems,<br><span class="text-gradient">elegant solutions.</span></h2>
+            </div>
             <div class="about-grid">
                 <div class="about-content reveal">
-                    <h2 class="section-title">Turning complex problems<br>into <span class="text-gradient">elegant solutions</span></h2>
-                    <p class="about-text">
-                        I'm a Full-Stack Developer and Digital Solutions Architect based in Cameroon with over 
-                        4 years of hands-on experience building production-grade software. I specialize in fintech 
-                        platforms, cryptocurrency systems, forex and copy trading tools, e-commerce stores 
-                        (including WordPress/WooCommerce), logistics management systems, and custom SaaS 
-                        applications &mdash; helping businesses of all sizes operate more efficiently and scale faster.
+                    <p class="about-text about-text--lead">
+                        I'm a Full-Stack Developer based in Cameroon with 4+ years building production-grade 
+                        software for fintech, crypto, forex, e-commerce, and enterprise clients across Africa and beyond.
                     </p>
                     <p class="about-text">
-                        With a portfolio of 22+ premium production-ready scripts and 50+ successfully delivered 
-                        projects across Africa and beyond, I bring a proven track record of shipping clean, scalable, 
-                        and well-documented code that performs in the real world. Every project I take on includes 
-                        responsive design, SEO-ready architecture, secure authentication, admin panels, and thorough 
-                        documentation so you can manage everything with confidence.
-                    </p>
-                    <p class="about-text">
-                        Whether you need a brand-new website built from scratch, an existing platform redesigned and 
-                        optimized, bugs fixed in your current codebase, or a complete custom application developed 
-                        end-to-end &mdash; I provide a full-service experience from initial consultation and wireframing 
-                        through development, testing, deployment, and post-launch support. I work with individuals, 
-                        startups, agencies, and established companies who value quality, reliability, and clear communication.
+                        With 50+ delivered projects and 22+ premium scripts, I ship clean, scalable code 
+                        that performs. Every project includes responsive design, SEO, secure auth, admin panels, 
+                        and full documentation.
                     </p>
                     <div class="about-info-grid">
-                        <div class="about-info">
-                            <span class="about-info__label">Location</span>
-                            <span class="about-info__value">Cameroon</span>
+                        <div class="about-info glass-card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span class="about-info__label">Location</span>
+                                <span class="about-info__value">Cameroon</span>
+                            </div>
                         </div>
-                        <div class="about-info">
-                            <span class="about-info__label">Experience</span>
-                            <span class="about-info__value">4+ Years</span>
+                        <div class="about-info glass-card">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <span class="about-info__label">Experience</span>
+                                <span class="about-info__value">4+ Years</span>
+                            </div>
                         </div>
-                        <div class="about-info">
-                            <span class="about-info__label">Availability</span>
-                            <span class="about-info__value"><span class="status-dot"></span>Open to Work</span>
+                        <div class="about-info glass-card">
+                            <i class="fas fa-circle-check"></i>
+                            <div>
+                                <span class="about-info__label">Status</span>
+                                <span class="about-info__value"><span class="status-dot"></span>Open to Work</span>
+                            </div>
                         </div>
-                        <div class="about-info">
-                            <span class="about-info__label">Languages</span>
-                            <span class="about-info__value">English, French</span>
+                        <div class="about-info glass-card">
+                            <i class="fas fa-language"></i>
+                            <div>
+                                <span class="about-info__label">Languages</span>
+                                <span class="about-info__value">EN / FR</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="about-stack reveal">
-                    <h3 class="about-stack__title">Tech Stack</h3>
+                <div class="about-stack reveal glass-card">
+                    <h3 class="about-stack__title"><i class="fas fa-layer-group"></i> Tech Stack</h3>
                     <div class="stack-grid">
                         <div class="stack-item"><i class="fab fa-php"></i><span>PHP</span></div>
                         <div class="stack-item"><i class="fab fa-laravel"></i><span>Laravel</span></div>
@@ -163,61 +209,10 @@
                         <div class="stack-item"><i class="fab fa-python"></i><span>Python</span></div>
                         <div class="stack-item"><i class="fas fa-database"></i><span>MySQL</span></div>
                         <div class="stack-item"><i class="fab fa-docker"></i><span>Docker</span></div>
-                        <div class="stack-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
-                        <div class="stack-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+                        <div class="stack-item"><i class="fab fa-vuejs"></i><span>Vue.js</span></div>
                         <div class="stack-item"><i class="fab fa-wordpress"></i><span>WordPress</span></div>
-                        <div class="stack-item"><i class="fas fa-store"></i><span>WooCommerce</span></div>
                         <div class="stack-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
                         <div class="stack-item"><i class="fas fa-server"></i><span>REST APIs</span></div>
-                    </div>
-                    <div class="tech-robot" aria-hidden="true">
-                        <svg class="tech-robot__svg" viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <linearGradient id="robotGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:var(--grad-1)"/>
-                                    <stop offset="100%" style="stop-color:var(--grad-2)"/>
-                                </linearGradient>
-                                <linearGradient id="robotGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
-                                    <stop offset="0%" style="stop-color:var(--accent-bright)"/>
-                                    <stop offset="100%" style="stop-color:var(--accent)"/>
-                                </linearGradient>
-                                <filter id="robotGlow">
-                                    <feGaussianBlur stdDeviation="1" result="blur"/>
-                                    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-                                </filter>
-                            </defs>
-                            <g class="tech-robot__body">
-                                <rect x="35" y="52" width="50" height="42" rx="6" fill="url(#robotGrad1)" stroke="var(--border)" stroke-width="1.5"/>
-                                <rect x="42" y="60" width="36" height="18" rx="2" fill="var(--bg)" opacity="0.9"/>
-                                <line x1="45" y1="66" x2="75" y2="66" stroke="var(--accent)" stroke-width="1" opacity="0.6" class="tech-robot__screen-line"/>
-                                <line x1="45" y1="71" x2="65" y2="71" stroke="var(--accent)" stroke-width="1" opacity="0.4" class="tech-robot__screen-line"/>
-                                <line x1="45" y1="76" x2="70" y2="76" stroke="var(--accent)" stroke-width="1" opacity="0.3" class="tech-robot__screen-line"/>
-                            </g>
-                            <g class="tech-robot__head">
-                                <rect x="40" y="18" width="40" height="36" rx="8" fill="url(#robotGrad1)" stroke="var(--border)" stroke-width="1.5"/>
-                                <circle cx="52" cy="32" r="4" fill="var(--accent)" class="tech-robot__eye tech-robot__eye--l"/>
-                                <circle cx="68" cy="32" r="4" fill="var(--accent)" class="tech-robot__eye tech-robot__eye--r"/>
-                                <circle cx="52" cy="32" r="1.5" fill="var(--bg)" class="tech-robot__pupil tech-robot__pupil--l"/>
-                                <circle cx="68" cy="32" r="1.5" fill="var(--bg)" class="tech-robot__pupil tech-robot__pupil--r"/>
-                            </g>
-                            <g class="tech-robot__antenna">
-                                <line x1="60" y1="18" x2="60" y2="6" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
-                                <circle cx="60" cy="4" r="4" fill="url(#robotGrad2)" filter="url(#robotGlow)" class="tech-robot__antenna-orb"/>
-                            </g>
-                            <g class="tech-robot__arm tech-robot__arm--l">
-                                <rect x="20" y="58" width="14" height="6" rx="3" fill="url(#robotGrad1)" stroke="var(--border)" stroke-width="1" transform="rotate(-25 27 61)"/>
-                                <rect x="12" y="54" width="10" height="5" rx="2" fill="var(--grad-2)" stroke="var(--border)" stroke-width="1" transform="rotate(-45 17 56.5)" class="tech-robot__hand"/>
-                            </g>
-                            <g class="tech-robot__arm tech-robot__arm--r">
-                                <rect x="86" y="58" width="14" height="6" rx="3" fill="url(#robotGrad1)" stroke="var(--border)" stroke-width="1" transform="rotate(25 93 61)"/>
-                                <rect x="98" y="54" width="10" height="5" rx="2" fill="var(--grad-2)" stroke="var(--border)" stroke-width="1" transform="rotate(45 103 56.5)" class="tech-robot__hand"/>
-                            </g>
-                            <g class="tech-robot__base">
-                                <rect x="38" y="94" width="44" height="14" rx="4" fill="var(--text-3)" opacity="0.4"/>
-                                <circle cx="48" cy="108" r="5" fill="var(--text-2)" opacity="0.5" class="tech-robot__wheel"/>
-                                <circle cx="72" cy="108" r="5" fill="var(--text-2)" opacity="0.5" class="tech-robot__wheel"/>
-                            </g>
-                        </svg>
                     </div>
                 </div>
             </div>
@@ -227,55 +222,63 @@
     <!-- Expertise -->
     <section id="expertise" class="section section--alt">
         <div class="container">
-            <div class="section-eyebrow">What I Do</div>
-            <h2 class="section-title section-title--center">Areas of <span class="text-gradient">Expertise</span></h2>
+            <div class="section-header section-header--center">
+                <div class="section-eyebrow"><span class="eyebrow-line"></span>What I Do</div>
+                <h2 class="section-title section-title--center">Areas of <span class="text-gradient">Expertise</span></h2>
+            </div>
             <div class="expertise-grid">
-                <div class="expertise-card reveal">
+                <div class="expertise-card glass-card reveal" data-tilt>
+                    <div class="expertise-card__glow"></div>
                     <div class="expertise-card__icon"><i class="fas fa-university"></i></div>
                     <h3 class="expertise-card__title">Fintech & Banking</h3>
-                    <p class="expertise-card__desc">I build full-stack banking platforms with cryptocurrency integration, multi-currency wallets, user account management, secure transaction processing, KYC/AML verification workflows, detailed admin dashboards, and real-time reporting &mdash; everything a modern financial institution needs to operate securely and at scale.</p>
+                    <p class="expertise-card__desc">Full-stack banking platforms with crypto wallets, multi-currency accounts, KYC verification, and real-time reporting dashboards.</p>
                     <div class="expertise-card__tags">
-                        <span>Payment Systems</span><span>Crypto</span><span>KYC/AML</span><span>Admin Panels</span>
+                        <span>Payment Systems</span><span>Crypto</span><span>KYC/AML</span>
                     </div>
                 </div>
-                <div class="expertise-card reveal">
+                <div class="expertise-card glass-card reveal" data-tilt>
+                    <div class="expertise-card__glow"></div>
                     <div class="expertise-card__icon"><i class="fas fa-chart-line"></i></div>
                     <h3 class="expertise-card__title">Trading Platforms</h3>
-                    <p class="expertise-card__desc">I develop advanced forex and crypto trading platforms featuring real-time charting with TradingView integration, automated signal systems, copy trading functionality, order management, portfolio tracking, risk analytics dashboards, and user-friendly interfaces that make complex trading accessible to beginners and professionals alike.</p>
+                    <p class="expertise-card__desc">Forex & crypto trading with TradingView charts, automated signals, copy trading, and risk analytics dashboards.</p>
                     <div class="expertise-card__tags">
-                        <span>Forex</span><span>Copy Trading</span><span>Analytics</span><span>Signals</span>
+                        <span>Forex</span><span>Copy Trading</span><span>Signals</span>
                     </div>
                 </div>
-                <div class="expertise-card reveal">
+                <div class="expertise-card glass-card reveal" data-tilt>
+                    <div class="expertise-card__glow"></div>
                     <div class="expertise-card__icon"><i class="fas fa-shopping-cart"></i></div>
                     <h3 class="expertise-card__title">E-Commerce</h3>
-                    <p class="expertise-card__desc">I create modern online stores using custom code or WordPress/WooCommerce &mdash; complete with product catalogs, shopping carts, secure payment gateway integration (Stripe, PayPal, mobile money), inventory management, order tracking, customer dashboards, coupon systems, and mobile-first responsive designs that convert visitors into buyers.</p>
+                    <p class="expertise-card__desc">Modern online stores with Stripe, PayPal, mobile money integration, inventory management, and mobile-first design.</p>
                     <div class="expertise-card__tags">
-                        <span>WooCommerce</span><span>Custom Stores</span><span>Payments</span><span>Mobile-First</span>
+                        <span>WooCommerce</span><span>Payments</span><span>Mobile-First</span>
                     </div>
                 </div>
-                <div class="expertise-card reveal">
+                <div class="expertise-card glass-card reveal" data-tilt>
+                    <div class="expertise-card__glow"></div>
                     <div class="expertise-card__icon"><i class="fas fa-truck"></i></div>
                     <h3 class="expertise-card__title">Logistics & Shipping</h3>
-                    <p class="expertise-card__desc">I build complete logistics management solutions with real-time GPS tracking, route optimization, delivery scheduling, driver and fleet management, warehouse inventory control, automated notifications, proof-of-delivery systems, and comprehensive reporting &mdash; giving you full visibility and control over your supply chain operations.</p>
+                    <p class="expertise-card__desc">End-to-end logistics with GPS tracking, route optimization, fleet management, and automated delivery notifications.</p>
                     <div class="expertise-card__tags">
-                        <span>Tracking</span><span>Fleet Mgmt</span><span>Automation</span><span>Warehouse</span>
+                        <span>Tracking</span><span>Fleet Mgmt</span><span>Automation</span>
                     </div>
                 </div>
-                <div class="expertise-card reveal">
+                <div class="expertise-card glass-card reveal" data-tilt>
+                    <div class="expertise-card__glow"></div>
                     <div class="expertise-card__icon"><i class="fas fa-link"></i></div>
                     <h3 class="expertise-card__title">Blockchain & Web3</h3>
-                    <p class="expertise-card__desc">I develop blockchain-based financial systems, multi-chain wallet integrations (MetaMask, WalletConnect, Trust Wallet), smart contract interfaces, decentralized application frontends, token dashboards, and DeFi platforms &mdash; bridging the gap between complex blockchain technology and user-friendly interfaces that anyone can navigate.</p>
+                    <p class="expertise-card__desc">Multi-chain wallet integrations, smart contract interfaces, DeFi platforms, and token dashboards with intuitive UX.</p>
                     <div class="expertise-card__tags">
-                        <span>Smart Contracts</span><span>DeFi</span><span>Wallets</span><span>Multi-Chain</span>
+                        <span>Smart Contracts</span><span>DeFi</span><span>Wallets</span>
                     </div>
                 </div>
-                <div class="expertise-card reveal">
+                <div class="expertise-card glass-card reveal" data-tilt>
+                    <div class="expertise-card__glow"></div>
                     <div class="expertise-card__icon"><i class="fas fa-code"></i></div>
                     <h3 class="expertise-card__title">Custom Development</h3>
-                    <p class="expertise-card__desc">I design and build bespoke web applications, SaaS platforms, content management systems, admin panels, REST API development, third-party integrations, WordPress/WooCommerce customization, and enterprise-grade solutions &mdash; tailored precisely to your business requirements with clean architecture and thorough documentation.</p>
+                    <p class="expertise-card__desc">Bespoke SaaS platforms, CMS, admin panels, REST APIs, and enterprise solutions with clean architecture.</p>
                     <div class="expertise-card__tags">
-                        <span>SaaS</span><span>APIs</span><span>WordPress</span><span>Enterprise</span>
+                        <span>SaaS</span><span>APIs</span><span>Enterprise</span>
                     </div>
                 </div>
             </div>
@@ -285,93 +288,203 @@
     <!-- Portfolio -->
     <section id="portfolio" class="section">
         <div class="container">
-            <div class="section-eyebrow">Selected Work</div>
-            <h2 class="section-title section-title--center">Featured <span class="text-gradient">Projects</span></h2>
+            <div class="section-header section-header--center">
+                <div class="section-eyebrow"><span class="eyebrow-line"></span>Selected Work</div>
+                <h2 class="section-title section-title--center">Featured <span class="text-gradient">Projects</span></h2>
+                <p class="section-subtitle">Click "Preview" to see a live homepage preview of each project.</p>
+            </div>
             <div class="portfolio-grid">
-                <article class="project-card reveal">
-                    <div class="project-card__header">
-                        <span class="project-card__cat">Fintech</span>
-                        <span class="project-card__num">01</span>
+
+                <article class="project-card glass-card reveal" data-tilt>
+                    <div class="project-card__preview">
+                        <div class="project-card__browser">
+                            <div class="browser-dots"><span></span><span></span><span></span></div>
+                            <span class="browser-url">pulsebank-wheat.vercel.app</span>
+                        </div>
+                        <div class="project-card__screenshot">
+                            <iframe src="https://pulsebank-wheat.vercel.app" loading="lazy" title="Banking Platform Preview" sandbox="allow-scripts allow-same-origin"></iframe>
+                            <div class="screenshot-overlay"></div>
+                        </div>
+                        <a href="https://pulsebank-wheat.vercel.app" class="project-card__preview-btn" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Preview</span>
+                        </a>
                     </div>
-                    <h3 class="project-card__title">Banking with Crypto Integration</h3>
-                    <p class="project-card__desc">A complete digital banking platform built from the ground up with cryptocurrency wallet support, fiat and crypto multi-currency accounts, peer-to-peer transfers, bill payments, KYC verification, transaction history, and a comprehensive admin panel for managing users, transactions, and compliance settings.</p>
-                    <div class="project-card__tech">
-                        <span>Laravel</span><span>MySQL</span><span>API</span><span>Blockchain</span><span>Admin Panel</span>
+                    <div class="project-card__body">
+                        <div class="project-card__header">
+                            <span class="project-card__cat">Fintech</span>
+                            <span class="project-card__num">01</span>
+                        </div>
+                        <h3 class="project-card__title">Banking with Crypto Integration</h3>
+                        <p class="project-card__desc">Digital banking platform with crypto wallets, multi-currency accounts, P2P transfers, KYC verification, and admin panel.</p>
+                        <div class="project-card__tech">
+                            <span>Laravel</span><span>MySQL</span><span>API</span><span>Blockchain</span>
+                        </div>
+                        <a href="https://pulsebank-wheat.vercel.app" class="project-card__cta" target="_blank">
+                            Visit Live Site <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
-                    <a href="https://pulsebank-wheat.vercel.app" class="project-card__cta" target="_blank">
-                        See Sample <i class="fas fa-external-link-alt"></i>
-                    </a>
                 </article>
-                <article class="project-card reveal">
-                    <div class="project-card__header">
-                        <span class="project-card__cat">Trading</span>
-                        <span class="project-card__num">02</span>
+
+                <article class="project-card glass-card reveal" data-tilt>
+                    <div class="project-card__preview">
+                        <div class="project-card__browser">
+                            <div class="browser-dots"><span></span><span></span><span></span></div>
+                            <span class="browser-url">forex-trading-platform.app</span>
+                        </div>
+                        <div class="project-card__screenshot project-card__screenshot--placeholder">
+                            <div class="screenshot-placeholder">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Forex Trading Platform</span>
+                            </div>
+                        </div>
+                        <div class="project-card__preview-btn project-card__preview-btn--coming">
+                            <i class="fas fa-clock"></i>
+                            <span>Coming Soon</span>
+                        </div>
                     </div>
-                    <h3 class="project-card__title">Forex Trading Platform</h3>
-                    <p class="project-card__desc">A professional-grade forex trading platform featuring real-time candlestick charts with TradingView integration, automated buy/sell signal alerts, position sizing tools, order management with stop-loss and take-profit, portfolio analytics, and a risk management dashboard that helps traders make informed decisions with confidence.</p>
-                    <div class="project-card__tech">
-                        <span>PHP</span><span>JavaScript</span><span>WebSocket</span><span>TradingView</span><span>Charts</span>
+                    <div class="project-card__body">
+                        <div class="project-card__header">
+                            <span class="project-card__cat">Trading</span>
+                            <span class="project-card__num">02</span>
+                        </div>
+                        <h3 class="project-card__title">Forex Trading Platform</h3>
+                        <p class="project-card__desc">Professional forex trading with TradingView charts, automated signals, copy trading, and risk management dashboard.</p>
+                        <div class="project-card__tech">
+                            <span>PHP</span><span>WebSocket</span><span>TradingView</span><span>Charts</span>
+                        </div>
+                        <span class="project-card__cta project-card__cta--muted">
+                            Demo Coming Soon <i class="fas fa-hourglass-half"></i>
+                        </span>
                     </div>
-                    <a href="#" class="project-card__cta" target="_blank">
-                        See Sample <i class="fas fa-external-link-alt"></i>
-                    </a>
                 </article>
-                <article class="project-card reveal">
-                    <div class="project-card__header">
-                        <span class="project-card__cat">E-Commerce</span>
-                        <span class="project-card__num">03</span>
+
+                <article class="project-card glass-card reveal" data-tilt>
+                    <div class="project-card__preview">
+                        <div class="project-card__browser">
+                            <div class="browser-dots"><span></span><span></span><span></span></div>
+                            <span class="browser-url">beige-barracuda-349616.hostingersite.com</span>
+                        </div>
+                        <div class="project-card__screenshot">
+                            <iframe src="https://beige-barracuda-349616.hostingersite.com" loading="lazy" title="E-Commerce Preview" sandbox="allow-scripts allow-same-origin"></iframe>
+                            <div class="screenshot-overlay"></div>
+                        </div>
+                        <a href="https://beige-barracuda-349616.hostingersite.com" class="project-card__preview-btn" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Preview</span>
+                        </a>
                     </div>
-                    <h3 class="project-card__title">E-Commerce Platform</h3>
-                    <p class="project-card__desc">A fully responsive online store with advanced product catalog, smart search and filtering, shopping cart with abandoned cart recovery, multi-gateway payment processing (Stripe, PayPal, mobile money), real-time inventory management, order tracking, customer accounts, reviews system, and a powerful admin dashboard for managing every aspect of the business.</p>
-                    <div class="project-card__tech">
-                        <span>Laravel</span><span>Stripe</span><span>React</span><span>MySQL</span><span>WooCommerce</span>
+                    <div class="project-card__body">
+                        <div class="project-card__header">
+                            <span class="project-card__cat">E-Commerce</span>
+                            <span class="project-card__num">03</span>
+                        </div>
+                        <h3 class="project-card__title">E-Commerce Platform</h3>
+                        <p class="project-card__desc">Full online store with smart search, multi-gateway payments, abandoned cart recovery, and powerful admin dashboard.</p>
+                        <div class="project-card__tech">
+                            <span>Laravel</span><span>Stripe</span><span>React</span><span>WooCommerce</span>
+                        </div>
+                        <a href="https://beige-barracuda-349616.hostingersite.com" class="project-card__cta" target="_blank">
+                            Visit Live Site <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
-                    <a href="https://beige-barracuda-349616.hostingersite.com" class="project-card__cta" target="_blank">
-                        See Sample <i class="fas fa-external-link-alt"></i>
-                    </a>
                 </article>
-                <article class="project-card reveal">
-                    <div class="project-card__header">
-                        <span class="project-card__cat">Fintech</span>
-                        <span class="project-card__num">04</span>
+
+                <article class="project-card glass-card reveal" data-tilt>
+                    <div class="project-card__preview">
+                        <div class="project-card__browser">
+                            <div class="browser-dots"><span></span><span></span><span></span></div>
+                            <span class="browser-url">fintech-six-chi.vercel.app</span>
+                        </div>
+                        <div class="project-card__screenshot">
+                            <iframe src="https://fintech-six-chi.vercel.app" loading="lazy" title="Fintech Mobile App Preview" sandbox="allow-scripts allow-same-origin"></iframe>
+                            <div class="screenshot-overlay"></div>
+                        </div>
+                        <a href="https://fintech-six-chi.vercel.app" class="project-card__preview-btn" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Preview</span>
+                        </a>
                     </div>
-                    <h3 class="project-card__title">Fintech Mobile Banking App</h3>
-                    <p class="project-card__desc">A modern mobile-first banking application designed for seamless digital banking on the go. Features include secure account management, instant fund transfers, bill payments, transaction history, balance checking, card management, biometric login, push notifications for transactions, and an intuitive UI that makes everyday banking fast and secure for users.</p>
-                    <div class="project-card__tech">
-                        <span>React</span><span>Mobile-First</span><span>Secure Auth</span><span>Payments</span><span>REST API</span>
+                    <div class="project-card__body">
+                        <div class="project-card__header">
+                            <span class="project-card__cat">Fintech</span>
+                            <span class="project-card__num">04</span>
+                        </div>
+                        <h3 class="project-card__title">Fintech Mobile Banking</h3>
+                        <p class="project-card__desc">Mobile-first banking with instant transfers, bill payments, biometric login, and transaction notifications.</p>
+                        <div class="project-card__tech">
+                            <span>React</span><span>Mobile-First</span><span>Auth</span><span>REST API</span>
+                        </div>
+                        <a href="https://fintech-six-chi.vercel.app" class="project-card__cta" target="_blank">
+                            Visit Live Site <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
-                    <a href="https://fintech-six-chi.vercel.app" class="project-card__cta" target="_blank">
-                        See Sample <i class="fas fa-external-link-alt"></i>
-                    </a>
                 </article>
-                <article class="project-card reveal">
-                    <div class="project-card__header">
-                        <span class="project-card__cat">Logistics</span>
-                        <span class="project-card__num">05</span>
+
+                <article class="project-card glass-card reveal" data-tilt>
+                    <div class="project-card__preview">
+                        <div class="project-card__browser">
+                            <div class="browser-dots"><span></span><span></span><span></span></div>
+                            <span class="browser-url">jplogistics.cc</span>
+                        </div>
+                        <div class="project-card__screenshot">
+                            <iframe src="https://jplogistics.cc" loading="lazy" title="Logistics Preview" sandbox="allow-scripts allow-same-origin"></iframe>
+                            <div class="screenshot-overlay"></div>
+                        </div>
+                        <a href="https://jplogistics.cc" class="project-card__preview-btn" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Preview</span>
+                        </a>
                     </div>
-                    <h3 class="project-card__title">Shipping & Logistics Suite</h3>
-                    <p class="project-card__desc">An end-to-end logistics management system with real-time GPS tracking on an interactive map, intelligent route optimization, delivery scheduling and assignment, driver management, warehouse inventory control, automated SMS/email notifications for customers, proof-of-delivery capture, and comprehensive analytics for monitoring fleet performance and operational costs.</p>
-                    <div class="project-card__tech">
-                        <span>PHP</span><span>Maps API</span><span>MySQL</span><span>REST</span><span>GPS</span>
+                    <div class="project-card__body">
+                        <div class="project-card__header">
+                            <span class="project-card__cat">Logistics</span>
+                            <span class="project-card__num">05</span>
+                        </div>
+                        <h3 class="project-card__title">Shipping & Logistics Suite</h3>
+                        <p class="project-card__desc">Complete logistics with GPS tracking, route optimization, driver management, and real-time delivery notifications.</p>
+                        <div class="project-card__tech">
+                            <span>PHP</span><span>Maps API</span><span>MySQL</span><span>GPS</span>
+                        </div>
+                        <a href="https://jplogistics.cc" class="project-card__cta" target="_blank">
+                            Visit Live Site <i class="fas fa-arrow-right"></i>
+                        </a>
                     </div>
-                    <a href="https://jplogistics.cc" class="project-card__cta" target="_blank">
-                        See Sample <i class="fas fa-external-link-alt"></i>
-                    </a>
                 </article>
-                <article class="project-card reveal">
-                    <div class="project-card__header">
-                        <span class="project-card__cat">Finance</span>
-                        <span class="project-card__num">06</span>
+
+                <article class="project-card glass-card reveal" data-tilt>
+                    <div class="project-card__preview">
+                        <div class="project-card__browser">
+                            <div class="browser-dots"><span></span><span></span><span></span></div>
+                            <span class="browser-url">copy-trading-system.app</span>
+                        </div>
+                        <div class="project-card__screenshot project-card__screenshot--placeholder">
+                            <div class="screenshot-placeholder">
+                                <i class="fas fa-copy"></i>
+                                <span>Copy Trading System</span>
+                            </div>
+                        </div>
+                        <div class="project-card__preview-btn project-card__preview-btn--coming">
+                            <i class="fas fa-clock"></i>
+                            <span>Coming Soon</span>
+                        </div>
                     </div>
-                    <h3 class="project-card__title">Copy Trading System</h3>
-                    <p class="project-card__desc">A social trading platform that lets users automatically replicate the trades of top-performing traders in real time. Includes a public trader leaderboard with verified performance stats, customizable risk controls (max drawdown, lot size limits), portfolio allocation tools, profit-sharing settings, and detailed analytics so both leaders and followers can track ROI and manage risk effectively.</p>
-                    <div class="project-card__tech">
-                        <span>Laravel</span><span>Vue.js</span><span>API</span><span>WebSocket</span><span>Analytics</span>
+                    <div class="project-card__body">
+                        <div class="project-card__header">
+                            <span class="project-card__cat">Finance</span>
+                            <span class="project-card__num">06</span>
+                        </div>
+                        <h3 class="project-card__title">Copy Trading System</h3>
+                        <p class="project-card__desc">Social trading platform with auto-replicated trades, leaderboard, risk controls, and performance analytics.</p>
+                        <div class="project-card__tech">
+                            <span>Laravel</span><span>Vue.js</span><span>WebSocket</span><span>Analytics</span>
+                        </div>
+                        <span class="project-card__cta project-card__cta--muted">
+                            Demo Coming Soon <i class="fas fa-hourglass-half"></i>
+                        </span>
                     </div>
-                    <a href="#" class="project-card__cta" target="_blank">
-                        See Sample <i class="fas fa-external-link-alt"></i>
-                    </a>
                 </article>
+
             </div>
         </div>
     </section>
@@ -379,36 +492,53 @@
     <!-- Services -->
     <section id="services" class="section section--alt">
         <div class="container">
-            <div class="section-eyebrow">What I Offer</div>
-            <h2 class="section-title section-title--center">Professional <span class="text-gradient">Services</span></h2>
+            <div class="section-header section-header--center">
+                <div class="section-eyebrow"><span class="eyebrow-line"></span>Services</div>
+                <h2 class="section-title section-title--center">What I <span class="text-gradient">Offer</span></h2>
+            </div>
             <div class="services-grid">
-                <div class="service-card reveal">
+                <div class="service-card glass-card reveal" data-tilt>
+                    <div class="service-card__icon-wrap">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
                     <div class="service-card__num">01</div>
                     <h3 class="service-card__title">Full Website Development</h3>
-                    <p class="service-card__desc">I design and build complete professional websites from scratch &mdash; tailored to your brand, goals, and target audience. Every project includes a modern responsive design that looks perfect on all devices, intuitive UI/UX, SEO-optimized structure so you rank on Google, fast loading speeds, contact forms, social media integration, analytics setup, SSL security, and full deployment to your hosting. Whether you need a business website, portfolio, landing page, WordPress site, or a complex web application &mdash; I deliver a polished, production-ready product with documentation and post-launch support.</p>
-                    <div class="service-card__price">From <strong>$250</strong>+</div>
-                    <a href="https://wa.me/237681008986?text=Hi,%20I'm%20interested%20in%20Full%20Website%20Development" class="service-card__cta" target="_blank">
-                        Discuss Project <i class="fas fa-arrow-right"></i>
-                    </a>
+                    <p class="service-card__desc">Complete professional websites from scratch — responsive design, SEO, fast performance, analytics, SSL, and post-launch support included.</p>
+                    <div class="service-card__footer">
+                        <div class="service-card__price">From <strong>$250</strong></div>
+                        <a href="https://wa.me/237681008986?text=Hi,%20I'm%20interested%20in%20Full%20Website%20Development" class="service-card__cta" target="_blank">
+                            Discuss <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="service-card service-card--featured reveal">
+                <div class="service-card service-card--featured glass-card reveal" data-tilt>
                     <div class="service-card__badge">Popular</div>
+                    <div class="service-card__icon-wrap">
+                        <i class="fas fa-wrench"></i>
+                    </div>
                     <div class="service-card__num">02</div>
-                    <h3 class="service-card__title">Website Code Fixing &amp; Optimization</h3>
-                    <p class="service-card__desc">Is your website broken, slow, or not working the way it should? I provide comprehensive code fixing, debugging, performance optimization, security patching, mobile responsiveness fixes, feature additions, plugin conflicts resolution, database optimization, and complete code cleanup for any existing web application. Whether it's a WordPress site, custom PHP project, Laravel app, React frontend, or any other stack &mdash; I diagnose the root cause quickly, fix it properly, and make sure everything runs smoothly. You also get a detailed report of everything I changed and why.</p>
-                    <div class="service-card__price">From <strong>$130</strong>+</div>
-                    <a href="https://wa.me/237681008986?text=Hi,%20I%20need%20help%20fixing%20my%20website" class="service-card__cta" target="_blank">
-                        Get Help <i class="fas fa-arrow-right"></i>
-                    </a>
+                    <h3 class="service-card__title">Code Fixing & Optimization</h3>
+                    <p class="service-card__desc">Debugging, performance optimization, security patching, mobile fixes, and complete code cleanup for any stack.</p>
+                    <div class="service-card__footer">
+                        <div class="service-card__price">From <strong>$130</strong></div>
+                        <a href="https://wa.me/237681008986?text=Hi,%20I%20need%20help%20fixing%20my%20website" class="service-card__cta" target="_blank">
+                            Get Help <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="service-card reveal">
+                <div class="service-card glass-card reveal" data-tilt>
+                    <div class="service-card__icon-wrap">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
                     <div class="service-card__num">03</div>
                     <h3 class="service-card__title">AI Website Building Course</h3>
-                    <p class="service-card__desc">A comprehensive, hands-on course that teaches you how to build professional, production-quality websites from absolute zero using modern AI tools &mdash; no prior coding experience required. You'll learn to create responsive business websites, portfolios, e-commerce stores, and landing pages using AI-assisted development workflows. The course covers HTML, CSS, JavaScript fundamentals, WordPress/WooCommerce setup, deployment to live hosting, domain configuration, SEO basics, and how to use AI to write, debug, and optimize code 10x faster. Includes lifetime access to all course materials, project templates, and a private community for ongoing support.</p>
-                    <div class="service-card__price"><strong>$999</strong>+</div>
-                    <a href="https://wa.me/237681008986?text=Hi,%20I'm%20interested%20in%20the%20AI%20Website%20Building%20Course" class="service-card__cta" target="_blank">
-                        Enroll Now <i class="fas fa-arrow-right"></i>
-                    </a>
+                    <p class="service-card__desc">Build professional websites from zero using AI tools — no coding experience needed. Lifetime access, templates, and community support.</p>
+                    <div class="service-card__footer">
+                        <div class="service-card__price"><strong>$999</strong></div>
+                        <a href="https://wa.me/237681008986?text=Hi,%20I'm%20interested%20in%20the%20AI%20Website%20Building%20Course" class="service-card__cta" target="_blank">
+                            Enroll <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -417,14 +547,16 @@
     <!-- Testimonials -->
     <section id="testimonials" class="section">
         <div class="container">
-            <div class="section-eyebrow">Client Feedback</div>
-            <h2 class="section-title section-title--center">What <span class="text-gradient">Clients Say</span></h2>
+            <div class="section-header section-header--center">
+                <div class="section-eyebrow"><span class="eyebrow-line"></span>Reviews</div>
+                <h2 class="section-title section-title--center">What <span class="text-gradient">Clients Say</span></h2>
+            </div>
             <div class="testimonials-grid">
-                <div class="testimonial-card reveal">
+                <div class="testimonial-card glass-card reveal">
                     <div class="testimonial-card__stars">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <blockquote class="testimonial-card__quote">"Amazing work! Set up my banking site in a short time frame. Clean code, excellent documentation, and outstanding support. Worth every penny."</blockquote>
+                    <blockquote class="testimonial-card__quote">"Amazing work! Set up my banking site in a short time frame. Clean code, excellent documentation, and outstanding support."</blockquote>
                     <div class="testimonial-card__author">
                         <div class="testimonial-card__avatar">EN</div>
                         <div>
@@ -433,11 +565,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card reveal">
+                <div class="testimonial-card glass-card reveal">
                     <div class="testimonial-card__stars">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <blockquote class="testimonial-card__quote">"Professional scripts with excellent support. The trading platform exceeded our expectations. Highly recommended for any serious project."</blockquote>
+                    <blockquote class="testimonial-card__quote">"The trading platform exceeded our expectations. Professional scripts with excellent support. Highly recommended."</blockquote>
                     <div class="testimonial-card__author">
                         <div class="testimonial-card__avatar">JT</div>
                         <div>
@@ -446,11 +578,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card reveal">
+                <div class="testimonial-card glass-card reveal">
                     <div class="testimonial-card__stars">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <blockquote class="testimonial-card__quote">"Best investment for my web development business. The code quality is exceptional, clients love the end result. Ongoing support is superb."</blockquote>
+                    <blockquote class="testimonial-card__quote">"Best investment for my web dev business. The code quality is exceptional and clients love the end result."</blockquote>
                     <div class="testimonial-card__author">
                         <div class="testimonial-card__avatar">FM</div>
                         <div>
@@ -459,11 +591,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card reveal">
+                <div class="testimonial-card glass-card reveal">
                     <div class="testimonial-card__stars">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     </div>
-                    <blockquote class="testimonial-card__quote">"Clean code, easy to customize. The e-commerce solution handles thousands of orders daily without issues. Support team is very responsive."</blockquote>
+                    <blockquote class="testimonial-card__quote">"The e-commerce solution handles thousands of orders daily without issues. Clean code, easy to customize."</blockquote>
                     <div class="testimonial-card__author">
                         <div class="testimonial-card__avatar">SA</div>
                         <div>
@@ -481,32 +613,32 @@
         <div class="container">
             <div class="contact-layout">
                 <div class="contact-info reveal">
-                    <div class="section-eyebrow">Get In Touch</div>
-                    <h2 class="section-title">Let's build something<br><span class="text-gradient">great together</span></h2>
-                    <p class="contact-text">Have a project in mind? I'd love to hear about it. Whether you need a complete website or web application built from scratch, an existing site redesigned and optimized, bugs and performance issues fixed, a WordPress/WooCommerce store set up, or a custom fintech or trading platform developed &mdash; I'm here to help. Reach out through any channel below and I'll respond within a few hours with a free consultation and project estimate.</p>
+                    <div class="section-eyebrow"><span class="eyebrow-line"></span>Get In Touch</div>
+                    <h2 class="section-title">Let's build<br><span class="text-gradient">something great.</span></h2>
+                    <p class="contact-text">Have a project in mind? Reach out and I'll respond within a few hours with a free consultation.</p>
                     <div class="contact-channels">
-                        <a href="https://wa.me/237681008986" class="contact-channel" target="_blank">
+                        <a href="https://wa.me/237681008986" class="contact-channel glass-card" target="_blank">
                             <div class="contact-channel__icon"><i class="fab fa-whatsapp"></i></div>
                             <div>
                                 <span class="contact-channel__label">WhatsApp</span>
                                 <span class="contact-channel__value">+237 681 008 986</span>
                             </div>
                         </a>
-                        <a href="mailto:hello@webpulse.dev" class="contact-channel">
+                        <a href="mailto:mrperevette@gmail.com" class="contact-channel glass-card">
                             <div class="contact-channel__icon"><i class="fas fa-envelope"></i></div>
                             <div>
                                 <span class="contact-channel__label">Email</span>
-                                <span class="contact-channel__value">hello@webpulse.dev</span>
+                                <span class="contact-channel__value">mrperevette@gmail.com</span>
                             </div>
                         </a>
-                        <a href="https://github.com/perevet74" class="contact-channel" target="_blank">
+                        <a href="https://github.com/perevet74" class="contact-channel glass-card" target="_blank">
                             <div class="contact-channel__icon"><i class="fab fa-github"></i></div>
                             <div>
                                 <span class="contact-channel__label">GitHub</span>
                                 <span class="contact-channel__value">@perevet74</span>
                             </div>
                         </a>
-                        <a href="http://linkedin.com/in/perevet-n-4a453230b" class="contact-channel" target="_blank">
+                        <a href="http://linkedin.com/in/perevet-n-4a453230b" class="contact-channel glass-card" target="_blank">
                             <div class="contact-channel__icon"><i class="fab fa-linkedin-in"></i></div>
                             <div>
                                 <span class="contact-channel__label">LinkedIn</span>
@@ -515,7 +647,7 @@
                         </a>
                     </div>
                 </div>
-                <form class="contact-form reveal" id="contactForm">
+                <form class="contact-form glass-card reveal" id="contactForm">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Name</label>
@@ -534,7 +666,7 @@
                         <label for="message">Message</label>
                         <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
                     </div>
-                    <button type="submit" class="btn btn--primary btn--full">
+                    <button type="submit" class="btn btn--primary btn--glow btn--full">
                         <span>Send Message</span>
                         <i class="fas fa-paper-plane"></i>
                     </button>
@@ -550,7 +682,7 @@
                 <a href="#hero" class="footer-logo">
                     <span class="logo-w">Web</span><span class="logo-p">Pulse</span>
                 </a>
-                <p class="footer-copy">&copy; 2026 WebPulse Web Solutions. All rights reserved.</p>
+                <p class="footer-copy">&copy; 2026 WebPulse. Crafted with precision.</p>
                 <div class="footer-social">
                     <a href="https://github.com/perevet74" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     <a href="http://linkedin.com/in/perevet-n-4a453230b" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -560,13 +692,13 @@
         </div>
     </footer>
 
-    <!-- Leave Review Button -->
-    <a href="mailto:hello@webpulse.dev?subject=Review%20%2F%20Feedback%20-%20WebPulse%20Website" class="review-fab" title="Leave a review">
+    <!-- Leave Review FAB -->
+    <a href="mailto:mrperevette@gmail.com?subject=Review%20%2F%20Feedback%20-%20WebPulse%20Website" class="review-fab" title="Leave a review">
         <i class="fas fa-star"></i>
-        <span class="review-fab__label">Leave a Review</span>
+        <span class="review-fab__label">Review</span>
     </a>
 
-    <!-- Color Mode Picker (bottom-left) -->
+    <!-- Color Mode Picker -->
     <div class="color-mode-wrap">
         <button type="button" class="color-mode-btn" id="colorModeBtn" aria-label="Choose color theme" aria-expanded="false" aria-haspopup="true" title="Color theme">
             <span class="color-mode-btn__swatch" id="colorModeSwatch" aria-hidden="true"></span>
