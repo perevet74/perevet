@@ -3,216 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebPulse | What i do, Full Stack DevOps & Digital Solutions Architect</title>
-    <script>
-    (function(){
-        var k='webpulse-theme',s=typeof localStorage!=='undefined'?localStorage.getItem(k):null,v;
-        if(s==='system'||s===''||s===null){v=typeof matchMedia!=='undefined'&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}else{v=s;}
-        document.documentElement.setAttribute('data-theme',v==='light'?'':v);
-    })();
-    </script>
+    <meta name="theme-color" content="#020408">
+    <title>My Portfolio | What i do Full-Stack DevOp & Digital Solutions</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- Cursor Glow -->
     <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Scroll Progress -->
     <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Noise Overlay -->
     <div class="noise-overlay"></div>
 
-    <div class="gradient-mesh">
-        <div class="mesh-blob mesh-blob--1"></div>
-        <div class="mesh-blob mesh-blob--2"></div>
-        <div class="mesh-blob mesh-blob--3"></div>
-        <div class="mesh-blob mesh-blob--4"></div>
+    <!-- Ambient Orbs -->
+    <div class="ambient-orbs">
+        <div class="orb orb--1"></div>
+        <div class="orb orb--2"></div>
+        <div class="orb orb--3"></div>
     </div>
 
-    <!-- Floating Particles -->
+    <!-- Particle Canvas -->
     <canvas id="particleCanvas" class="particle-canvas"></canvas>
 
     <!-- Navigation -->
     <header class="nav-header" id="navHeader">
         <div class="nav-container">
             <a href="#hero" class="nav-logo">
-                <div class="nav-logo__icon">
-                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><circle cx="14" cy="14" r="12" stroke="url(#logoGrad)" stroke-width="2.5"/><path d="M8.5 9.5L4.75 14L8.5 18.5" stroke="url(#logoGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.5 9.5L23.25 14L19.5 18.5" stroke="url(#logoGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16.25 7.75L11.75 20.25" stroke="url(#logoGrad)" stroke-width="2.5" stroke-linecap="round"/><defs><linearGradient id="logoGrad" x1="0" y1="0" x2="28" y2="28"><stop stop-color="#818cf8"/><stop offset="1" stop-color="#c084fc"/></linearGradient></defs></svg>
-                </div>
-                <span class="logo-text"><span class="logo-w">Web</span><span class="logo-p">Pulse</span></span>
+                <span class="nav-logo__pulse"></span>
+                <span class="nav-logo__text">WebPulse</span>
             </a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span></span><span></span><span></span>
-            </button>
             <nav class="nav-menu" id="navMenu">
                 <a href="#about" class="nav-link">About</a>
                 <a href="#expertise" class="nav-link">Expertise</a>
                 <a href="#portfolio" class="nav-link">Portfolio</a>
                 <a href="#services" class="nav-link">Services</a>
                 <a href="#testimonials" class="nav-link">Reviews</a>
-                <a href="#contact" class="nav-link nav-link--cta">
-                    <span class="cta-pulse"></span>
-                    Let's Talk
-                </a>
+                <a href="#contact" class="nav-link nav-link--cta">Let's Talk</a>
             </nav>
+            <div class="nav-right">
+                <div class="nav-status">
+                    <span class="nav-status__dot"></span>
+                    <span class="nav-status__text">Available for projects</span>
+                </div>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </header>
 
     <!-- Hero -->
     <section id="hero" class="hero">
-        <div class="container">
-            <div class="hero-inner">
-                <div class="hero-badge">
-                    <span class="hero-badge__dot"></span>
-                    Available for projects
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-kicker anim-item">
+                    <span class="hero-kicker__line"></span>
+                    <span>Product-minded projects for ambitious brands</span>
                 </div>
-                <h1 class="hero-title">
-                    <span class="hero-title__line" id="heroLine1">I craft</span>
-                    <span class="hero-title__accent" id="heroLine2">digital experiences</span>
-                    <span class="hero-title__line" id="heroLine3">that captivate.</span>
+                <div class="hero-badge anim-item">
+                    <span class="hero-badge__border"></span>
+                    <span class="hero-badge__text">&#10022; Full-Stack Developer & Solutions Architect</span>
+                </div>
+                <h1 class="hero-title anim-item">
+                    <span class="hero-title__line">I craft digital</span>
+                    <span class="hero-title__gradient">experiences</span>
+                    <span class="hero-title__line">that captivate<span class="hero-cursor">|</span></span>
                 </h1>
-                <p class="hero-subtitle">
-                    Full-Stack Developer & Solutions Architect specializing in fintech, trading platforms, 
-                    e-commerce, and SaaS — from concept to deployment.
+                <p class="hero-sub anim-item">
+                    Full-Stack Developer & Solutions specializing in Web Applications, 
+                    trading platforms, e-commerce, and SaaS &mdash; from concept to deployment.
                 </p>
-                <div class="hero-actions">
-                    <a href="#portfolio" class="btn btn--primary btn--glow">
+                <div class="hero-proof anim-item">
+                    <div class="hero-proof__item">
+                        <span class="hero-proof__label">Fast delivery</span>
+                        <strong>Clear milestones from kickoff to launch</strong>
+                    </div>
+                    <div class="hero-proof__item">
+                        <span class="hero-proof__label">Built for growth</span>
+                        <strong>Performance, security, and SEO included</strong>
+                    </div>
+                </div>
+                <div class="hero-tags anim-item">
+                    <span class="hero-tag">Fintech</span>
+                    <span class="hero-tag">Trading</span>
+                    <span class="hero-tag">E-Commerce</span>
+                    <span class="hero-tag">Blockchain</span>
+                    <span class="hero-tag">SaaS</span>
+                    <span class="hero-tag">Logistics</span>
+                    <span class="hero-tag">Web3</span>
+                </div>
+                <div class="hero-actions anim-item">
+                    <a href="#portfolio" class="btn btn--primary">
                         <span>Explore My Work</span>
-                        <i class="fas fa-arrow-down"></i>
+                        <i class="fas fa-arrow-right"></i>
                     </a>
                     <a href="#contact" class="btn btn--glass">
                         <span>Start a Project</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
-                <div class="hero-metrics">
-                    <div class="hero-metric">
-                        <span class="hero-metric__num" data-target="50">0</span><span class="hero-metric__plus">+</span>
-                        <span class="hero-metric__label">Projects</span>
+                <div class="hero-stats anim-item">
+                    <div class="hero-stat">
+                        <span class="hero-stat__num" data-target="50">0</span><span class="hero-stat__plus">+</span>
+                        <span class="hero-stat__label">Projects</span>
                     </div>
-                    <div class="hero-metric__divider"></div>
-                    <div class="hero-metric">
-                        <span class="hero-metric__num" data-target="247">0</span><span class="hero-metric__plus">+</span>
-                        <span class="hero-metric__label">Clients</span>
+                    <div class="hero-stat">
+                        <span class="hero-stat__num" data-target="30">0</span><span class="hero-stat__plus">+</span>
+                        <span class="hero-stat__label">Clients</span>
                     </div>
-                    <div class="hero-metric__divider"></div>
-                    <div class="hero-metric">
-                        <span class="hero-metric__num" data-target="22">0</span><span class="hero-metric__plus">+</span>
-                        <span class="hero-metric__label">Premium Scripts</span>
+                    <div class="hero-stat">
+                        <span class="hero-stat__num" data-target="22">0</span><span class="hero-stat__plus">+</span>
+                        <span class="hero-stat__label">Scripts</span>
                     </div>
-                    <div class="hero-metric__divider"></div>
-                    <div class="hero-metric">
-                        <span class="hero-metric__num" data-target="4">0</span><span class="hero-metric__plus">+</span>
-                        <span class="hero-metric__label">Years</span>
+                    <div class="hero-stat">
+                        <span class="hero-stat__num" data-target="4">0</span><span class="hero-stat__plus">+</span>
+                        <span class="hero-stat__label">Years</span>
                     </div>
                 </div>
             </div>
-            <div class="hero-visual">
-                <div class="hero-orbit">
-                    <div class="orbit-ring orbit-ring--1">
-                        <div class="orbit-dot"><i class="fab fa-react"></i></div>
+            <div class="hero-visual anim-item">
+                <div class="hero-panel glass-card">
+                    <div class="hero-panel__top">
+                        <div>
+                            <span class="hero-panel__eyebrow">Current Focus</span>
+                            <h3>Shipping platforms people trust</h3>
+                        </div>
+                        <div class="hero-panel__availability">
+                            <span class="status-dot"></span>
+                            <span>Open for select 2026 builds</span>
+                        </div>
                     </div>
-                    <div class="orbit-ring orbit-ring--2">
-                        <div class="orbit-dot"><i class="fab fa-laravel"></i></div>
+                    <div class="hero-matrix">
+                        <article class="hero-matrix__card hero-matrix__card--accent">
+                            <span class="hero-matrix__label">Flagship work</span>
+                            <strong>Banking, trading, logistics, and custom SaaS systems.</strong>
+                        </article>
+                        <article class="hero-matrix__card">
+                            <span class="hero-matrix__label">Delivery style</span>
+                            <strong>Clean architecture, sharp UI, and launch-ready documentation.</strong>
+                        </article>
                     </div>
-                    <div class="orbit-ring orbit-ring--3">
-                        <div class="orbit-dot"><i class="fab fa-node-js"></i></div>
+                    <div class="code-card">
+                        <div class="code-card__dots"><span></span><span></span><span></span></div>
+                        <pre class="code-card__code"><span class="ck">const</span> <span class="cv">dev</span> = {
+  <span class="cp">name</span>: <span class="cs">"Perevet N."</span>,
+  <span class="cp">stack</span>: [<span class="cs">"React"</span>, <span class="cs">"Laravel"</span>, <span class="cs">"Node"</span>],
+  <span class="cp">status</span>: <span class="cs">"Available ✓"</span>
+};</pre>
                     </div>
-                    <div class="orbit-core">
-                        <i class="fas fa-code"></i>
+                    <div class="hero-signals">
+                        <div class="hero-signal">
+                            <span class="hero-signal__value">48h</span>
+                            <span class="hero-signal__label">Typical first response</span>
+                        </div>
+                        <div class="hero-signal">
+                            <span class="hero-signal__value">End-to-end</span>
+                            <span class="hero-signal__label">Design, build, optimize, deploy</span>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Marquee -->
+        <div class="marquee">
+            <div class="marquee__track">
+                <div class="marquee__content">
+                    <span>Fintech</span><span class="marquee__dot">·</span>
+                    <span>Trading</span><span class="marquee__dot">·</span>
+                    <span>E-Commerce</span><span class="marquee__dot">·</span>
+                    <span>Blockchain</span><span class="marquee__dot">·</span>
+                    <span>SaaS</span><span class="marquee__dot">·</span>
+                    <span>Logistics</span><span class="marquee__dot">·</span>
+                    <span>Web3</span><span class="marquee__dot">·</span>
+                    <span>WordPress</span><span class="marquee__dot">·</span>
+                    <span>Fintech</span><span class="marquee__dot">·</span>
+                    <span>Trading</span><span class="marquee__dot">·</span>
+                    <span>E-Commerce</span><span class="marquee__dot">·</span>
+                    <span>Blockchain</span><span class="marquee__dot">·</span>
+                    <span>SaaS</span><span class="marquee__dot">·</span>
+                    <span>Logistics</span><span class="marquee__dot">·</span>
+                    <span>Web3</span><span class="marquee__dot">·</span>
+                    <span>WordPress</span><span class="marquee__dot">·</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Marquee -->
-    <div class="marquee-section">
-        <div class="marquee-track">
-            <div class="marquee-content">
-                <span>Fintech</span><span class="marquee-dot"></span>
-                <span>Trading</span><span class="marquee-dot"></span>
-                <span>E-Commerce</span><span class="marquee-dot"></span>
-                <span>Blockchain</span><span class="marquee-dot"></span>
-                <span>SaaS</span><span class="marquee-dot"></span>
-                <span>Logistics</span><span class="marquee-dot"></span>
-                <span>Web3</span><span class="marquee-dot"></span>
-                <span>WordPress</span><span class="marquee-dot"></span>
-                <span>Fintech</span><span class="marquee-dot"></span>
-                <span>Trading</span><span class="marquee-dot"></span>
-                <span>E-Commerce</span><span class="marquee-dot"></span>
-                <span>Blockchain</span><span class="marquee-dot"></span>
-                <span>SaaS</span><span class="marquee-dot"></span>
-                <span>Logistics</span><span class="marquee-dot"></span>
-                <span>Web3</span><span class="marquee-dot"></span>
-                <span>WordPress</span><span class="marquee-dot"></span>
-            </div>
-        </div>
-    </div>
-
     <!-- About -->
     <section id="about" class="section">
         <div class="container">
-            <div class="section-header">
-                <div class="section-eyebrow"><span class="eyebrow-line"></span>About Me</div>
-                <h2 class="section-title">Complex problems,<br><span class="text-gradient">elegant solutions.</span></h2>
-            </div>
+            <div class="section-label reveal">About Me</div>
+            <h2 class="section-heading reveal">Complex problems,<br><span class="gradient-text">elegant solutions.</span></h2>
             <div class="about-grid">
-                <div class="about-content reveal">
-                    <p class="about-text about-text--lead">
-                        I'm a Full-Stack Developer based in Cameroon with 4+ years building production-grade 
-                        software for fintech, crypto, forex, e-commerce, and enterprise clients across Africa and beyond.
+                <div class="about-left reveal">
+                    <p class="about-lead">
+                        I'm a Full-Stack Developer based in Cameroon with 4+ years building 
+                        production-grade software for fintech, crypto, forex, e-commerce, and 
+                        enterprise clients across Africa and beyond.
                     </p>
-                    <p class="about-text">
-                        With 50+ delivered projects and 22+ premium scripts, I ship clean, scalable code 
-                        that performs. Every project includes responsive design, SEO, secure auth, admin panels, 
-                        and full documentation.
+                    <p class="about-body">
+                        With 50+ delivered projects and 22+ premium scripts, I ship clean, scalable 
+                        code that performs. Every project includes responsive design, SEO, secure auth, 
+                        admin panels, and full documentation.
                     </p>
-                    <div class="about-info-grid">
-                        <div class="about-info glass-card">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <span class="about-info__label">Location</span>
-                                <span class="about-info__value">Cameroon</span>
-                            </div>
+                    <div class="about-chips">
+                        <div class="about-chip glass-card"><i class="fas fa-map-marker-alt"></i> Cameroon</div>
+                        <div class="about-chip glass-card"><i class="fas fa-bolt"></i> 4+ Years Experience</div>
+                        <div class="about-chip glass-card"><span class="status-dot"></span> Open to Work</div>
+                        <div class="about-chip glass-card"><i class="fas fa-globe"></i> EN / FR</div>
+                    </div>
+                    <div class="about-ribbon glass-card">
+                        <div class="about-ribbon__item">
+                            <span class="about-ribbon__label">Approach</span>
+                            <strong>Strategy first, code second</strong>
                         </div>
-                        <div class="about-info glass-card">
-                            <i class="fas fa-briefcase"></i>
-                            <div>
-                                <span class="about-info__label">Experience</span>
-                                <span class="about-info__value">4+ Years</span>
-                            </div>
-                        </div>
-                        <div class="about-info glass-card">
-                            <i class="fas fa-circle-check"></i>
-                            <div>
-                                <span class="about-info__label">Status</span>
-                                <span class="about-info__value"><span class="status-dot"></span>Open to Work</span>
-                            </div>
-                        </div>
-                        <div class="about-info glass-card">
-                            <i class="fas fa-language"></i>
-                            <div>
-                                <span class="about-info__label">Languages</span>
-                                <span class="about-info__value">EN / FR</span>
-                            </div>
+                        <div class="about-ribbon__item">
+                            <span class="about-ribbon__label">Promise</span>
+                            <strong>Thoughtful UX with maintainable systems</strong>
                         </div>
                     </div>
                 </div>
-                <div class="about-stack reveal glass-card">
-                    <h3 class="about-stack__title"><i class="fas fa-layer-group"></i> Tech Stack</h3>
-                    <div class="stack-grid">
-                        <div class="stack-item"><i class="fab fa-php"></i><span>PHP</span></div>
-                        <div class="stack-item"><i class="fab fa-laravel"></i><span>Laravel</span></div>
-                        <div class="stack-item"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
-                        <div class="stack-item"><i class="fab fa-react"></i><span>React</span></div>
-                        <div class="stack-item"><i class="fab fa-node-js"></i><span>Node.js</span></div>
-                        <div class="stack-item"><i class="fab fa-python"></i><span>Python</span></div>
-                        <div class="stack-item"><i class="fas fa-database"></i><span>MySQL</span></div>
-                        <div class="stack-item"><i class="fab fa-docker"></i><span>Docker</span></div>
-                        <div class="stack-item"><i class="fab fa-vuejs"></i><span>Vue.js</span></div>
-                        <div class="stack-item"><i class="fab fa-wordpress"></i><span>WordPress</span></div>
-                        <div class="stack-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
-                        <div class="stack-item"><i class="fas fa-server"></i><span>REST APIs</span></div>
+                <div class="about-right reveal">
+                    <div class="stack-card glass-card">
+                        <h3 class="stack-card__title">Tech Stack</h3>
+                        <div class="stack-card__line"></div>
+                        <div class="stack-pills">
+                            <span class="stack-pill"><i class="fab fa-php"></i> PHP</span>
+                            <span class="stack-pill"><i class="fab fa-laravel"></i> Laravel</span>
+                            <span class="stack-pill"><i class="fab fa-js-square"></i> JavaScript</span>
+                            <span class="stack-pill"><i class="fab fa-react"></i> React</span>
+                            <span class="stack-pill"><i class="fab fa-node-js"></i> Node.js</span>
+                            <span class="stack-pill"><i class="fab fa-python"></i> Python</span>
+                            <span class="stack-pill"><i class="fas fa-database"></i> MySQL</span>
+                            <span class="stack-pill"><i class="fab fa-docker"></i> Docker</span>
+                            <span class="stack-pill"><i class="fab fa-vuejs"></i> Vue.js</span>
+                            <span class="stack-pill"><i class="fab fa-wordpress"></i> WordPress</span>
+                            <span class="stack-pill"><i class="fab fa-git-alt"></i> Git</span>
+                            <span class="stack-pill"><i class="fas fa-server"></i> REST APIs</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -220,66 +254,58 @@
     </section>
 
     <!-- Expertise -->
-    <section id="expertise" class="section section--alt">
+    <section id="expertise" class="section">
         <div class="container">
-            <div class="section-header section-header--center">
-                <div class="section-eyebrow"><span class="eyebrow-line"></span>What I Do</div>
-                <h2 class="section-title section-title--center">Areas of <span class="text-gradient">Expertise</span></h2>
-            </div>
+            <div class="section-label reveal">What I Do</div>
+            <h2 class="section-heading section-heading--center reveal">Areas of <span class="gradient-text">Expertise</span></h2>
             <div class="expertise-grid">
-                <div class="expertise-card glass-card reveal" data-tilt>
-                    <div class="expertise-card__glow"></div>
-                    <div class="expertise-card__icon"><i class="fas fa-university"></i></div>
-                    <h3 class="expertise-card__title">Fintech & Banking</h3>
-                    <p class="expertise-card__desc">Full-stack banking platforms with crypto wallets, multi-currency accounts, KYC verification, and real-time reporting dashboards.</p>
-                    <div class="expertise-card__tags">
-                        <span>Payment Systems</span><span>Crypto</span><span>KYC/AML</span>
-                    </div>
+                <div class="exp-card glass-card reveal" data-tilt data-color="indigo">
+                    <div class="exp-card__shimmer"></div>
+                    <span class="exp-card__num">01</span>
+                    <div class="exp-card__icon"><i class="fas fa-university"></i></div>
+                    <h3 class="exp-card__title">Fintech & Banking</h3>
+                    <p class="exp-card__desc">Full-stack banking platforms with crypto wallets, multi-currency accounts, KYC verification, and real-time reporting dashboards.</p>
+                    <div class="exp-card__tags"><span>Payment Systems</span><span>Crypto</span><span>KYC/AML</span></div>
                 </div>
-                <div class="expertise-card glass-card reveal" data-tilt>
-                    <div class="expertise-card__glow"></div>
-                    <div class="expertise-card__icon"><i class="fas fa-chart-line"></i></div>
-                    <h3 class="expertise-card__title">Trading Platforms</h3>
-                    <p class="expertise-card__desc">Forex & crypto trading with TradingView charts, automated signals, copy trading, and risk analytics dashboards.</p>
-                    <div class="expertise-card__tags">
-                        <span>Forex</span><span>Copy Trading</span><span>Signals</span>
-                    </div>
+                <div class="exp-card glass-card reveal" data-tilt data-color="cyan">
+                    <div class="exp-card__shimmer"></div>
+                    <span class="exp-card__num">02</span>
+                    <div class="exp-card__icon"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="exp-card__title">Trading Platforms</h3>
+                    <p class="exp-card__desc">Forex & crypto trading with TradingView charts, automated signals, copy trading, and risk analytics dashboards.</p>
+                    <div class="exp-card__tags"><span>Forex</span><span>Copy Trading</span><span>Signals</span></div>
                 </div>
-                <div class="expertise-card glass-card reveal" data-tilt>
-                    <div class="expertise-card__glow"></div>
-                    <div class="expertise-card__icon"><i class="fas fa-shopping-cart"></i></div>
-                    <h3 class="expertise-card__title">E-Commerce</h3>
-                    <p class="expertise-card__desc">Modern online stores with Stripe, PayPal, mobile money integration, inventory management, and mobile-first design.</p>
-                    <div class="expertise-card__tags">
-                        <span>WooCommerce</span><span>Payments</span><span>Mobile-First</span>
-                    </div>
+                <div class="exp-card glass-card reveal" data-tilt data-color="violet">
+                    <div class="exp-card__shimmer"></div>
+                    <span class="exp-card__num">03</span>
+                    <div class="exp-card__icon"><i class="fas fa-shopping-cart"></i></div>
+                    <h3 class="exp-card__title">E-Commerce</h3>
+                    <p class="exp-card__desc">Modern online stores with Stripe, PayPal, mobile money integration, inventory management, and mobile-first design.</p>
+                    <div class="exp-card__tags"><span>WooCommerce</span><span>Payments</span><span>Mobile-First</span></div>
                 </div>
-                <div class="expertise-card glass-card reveal" data-tilt>
-                    <div class="expertise-card__glow"></div>
-                    <div class="expertise-card__icon"><i class="fas fa-truck"></i></div>
-                    <h3 class="expertise-card__title">Logistics & Shipping</h3>
-                    <p class="expertise-card__desc">End-to-end logistics with GPS tracking, route optimization, fleet management, and automated delivery notifications.</p>
-                    <div class="expertise-card__tags">
-                        <span>Tracking</span><span>Fleet Mgmt</span><span>Automation</span>
-                    </div>
+                <div class="exp-card glass-card reveal" data-tilt data-color="teal">
+                    <div class="exp-card__shimmer"></div>
+                    <span class="exp-card__num">04</span>
+                    <div class="exp-card__icon"><i class="fas fa-truck"></i></div>
+                    <h3 class="exp-card__title">Logistics & Shipping</h3>
+                    <p class="exp-card__desc">End-to-end logistics with GPS tracking, route optimization, fleet management, and automated delivery notifications.</p>
+                    <div class="exp-card__tags"><span>Tracking</span><span>Fleet Mgmt</span><span>Automation</span></div>
                 </div>
-                <div class="expertise-card glass-card reveal" data-tilt>
-                    <div class="expertise-card__glow"></div>
-                    <div class="expertise-card__icon"><i class="fas fa-link"></i></div>
-                    <h3 class="expertise-card__title">Blockchain & Web3</h3>
-                    <p class="expertise-card__desc">Multi-chain wallet integrations, smart contract interfaces, DeFi platforms, and token dashboards with intuitive UX.</p>
-                    <div class="expertise-card__tags">
-                        <span>Smart Contracts</span><span>DeFi</span><span>Wallets</span>
-                    </div>
+                <div class="exp-card glass-card reveal" data-tilt data-color="purple">
+                    <div class="exp-card__shimmer"></div>
+                    <span class="exp-card__num">05</span>
+                    <div class="exp-card__icon"><i class="fas fa-link"></i></div>
+                    <h3 class="exp-card__title">Blockchain & Web3</h3>
+                    <p class="exp-card__desc">Multi-chain wallet integrations, smart contract interfaces, DeFi platforms, and token dashboards with intuitive UX.</p>
+                    <div class="exp-card__tags"><span>Smart Contracts</span><span>DeFi</span><span>Wallets</span></div>
                 </div>
-                <div class="expertise-card glass-card reveal" data-tilt>
-                    <div class="expertise-card__glow"></div>
-                    <div class="expertise-card__icon"><i class="fas fa-code"></i></div>
-                    <h3 class="expertise-card__title">Custom Development</h3>
-                    <p class="expertise-card__desc">Bespoke SaaS platforms, CMS, admin panels, REST APIs, and enterprise solutions with clean architecture.</p>
-                    <div class="expertise-card__tags">
-                        <span>SaaS</span><span>APIs</span><span>Enterprise</span>
-                    </div>
+                <div class="exp-card glass-card reveal" data-tilt data-color="blue">
+                    <div class="exp-card__shimmer"></div>
+                    <span class="exp-card__num">06</span>
+                    <div class="exp-card__icon"><i class="fas fa-code"></i></div>
+                    <h3 class="exp-card__title">Custom Development</h3>
+                    <p class="exp-card__desc">Bespoke SaaS platforms, CMS, admin panels, REST APIs, and enterprise solutions with clean architecture.</p>
+                    <div class="exp-card__tags"><span>SaaS</span><span>APIs</span><span>Enterprise</span></div>
                 </div>
             </div>
         </div>
@@ -288,257 +314,227 @@
     <!-- Portfolio -->
     <section id="portfolio" class="section">
         <div class="container">
-            <div class="section-header section-header--center">
-                <div class="section-eyebrow"><span class="eyebrow-line"></span>Selected Work</div>
-                <h2 class="section-title section-title--center">Featured <span class="text-gradient">Projects</span></h2>
-                <p class="section-subtitle">Click "Preview" to see a live homepage preview of each project.</p>
+            <div class="section-label reveal">Selected Work</div>
+            <h2 class="section-heading section-heading--center reveal">Featured <span class="gradient-text">Projects</span></h2>
+            <p class="section-sub reveal">Click "Live Preview" to see a live homepage preview of each project.</p>
+            <div class="portfolio-intro glass-card reveal">
+                <div class="portfolio-intro__item">
+                    <span class="portfolio-intro__label">Outcome-driven</span>
+                    <strong>Each build is designed to convert, scale, and stay easy to manage.</strong>
+                </div>
+                <div class="portfolio-intro__item">
+                    <span class="portfolio-intro__label">What you will notice</span>
+                    <strong>Clear interfaces, strong architecture, and business-focused features.</strong>
+                </div>
             </div>
-            <div class="portfolio-grid">
 
-                <article class="project-card glass-card reveal" data-tilt>
-                    <div class="project-card__preview">
-                        <div class="project-card__browser">
-                            <div class="browser-dots"><span></span><span></span><span></span></div>
-                            <span class="browser-url">pulsebank-wheat.vercel.app</span>
-                        </div>
-                        <div class="project-card__screenshot">
-                            <iframe src="https://pulsebank-wheat.vercel.app" loading="lazy" title="Banking Platform Preview" sandbox="allow-scripts allow-same-origin"></iframe>
-                            <div class="screenshot-overlay"></div>
-                        </div>
-                        <a href="https://pulsebank-wheat.vercel.app" class="project-card__preview-btn" target="_blank">
-                            <i class="fas fa-external-link-alt"></i>
-                            <span>Preview</span>
-                        </a>
+            <!-- Project 01 -->
+            <div class="project reveal" data-tilt>
+                <div class="project__info">
+                    <span class="project__cat">Fintech</span>
+                    <span class="project__num">01</span>
+                    <h3 class="project__title">Banking with Crypto Integration</h3>
+                    <p class="project__desc">Digital banking platform with crypto wallets, multi-currency accounts, P2P transfers, KYC verification, and admin panel.</p>
+                    <div class="project__tech"><span>Laravel</span><span>MySQL</span><span>API</span><span>Blockchain</span></div>
+                    <div class="project__highlights"><span>Crypto wallets</span><span>Multi-currency accounts</span><span>KYC dashboard</span></div>
+                    <div class="project__actions">
+                        <button class="btn btn--preview" data-preview="https://pulsebank-wheat.vercel.app"><i class="fas fa-eye"></i> Live Preview</button>
+                        <a href="https://pulsebank-wheat.vercel.app" class="btn btn--ghost-sm" target="_blank">Visit Live Site <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <div class="project-card__body">
-                        <div class="project-card__header">
-                            <span class="project-card__cat">Fintech</span>
-                            <span class="project-card__num">01</span>
-                        </div>
-                        <h3 class="project-card__title">Banking with Crypto Integration</h3>
-                        <p class="project-card__desc">Digital banking platform with crypto wallets, multi-currency accounts, P2P transfers, KYC verification, and admin panel.</p>
-                        <div class="project-card__tech">
-                            <span>Laravel</span><span>MySQL</span><span>API</span><span>Blockchain</span>
-                        </div>
-                        <a href="https://pulsebank-wheat.vercel.app" class="project-card__cta" target="_blank">
-                            Visit Live Site <i class="fas fa-arrow-right"></i>
-                        </a>
+                </div>
+                <div class="project__thumb" data-preview="https://pulsebank-wheat.vercel.app">
+                    <img src="https://api.microlink.io?url=https://pulsebank-wheat.vercel.app&screenshot=true&meta=false&embed=screenshot.url" alt="Banking Platform" loading="lazy">
+                    <div class="project__thumb-overlay"><i class="fas fa-expand"></i> Preview</div>
+                </div>
+                <div class="project__iframe-wrap" id="preview-0">
+                    <div class="iframe-bar">
+                        <span class="iframe-bar__url">pulsebank-wheat.vercel.app</span>
+                        <a href="https://pulsebank-wheat.vercel.app" target="_blank" class="iframe-bar__open">Open in new tab <i class="fas fa-external-link-alt"></i></a>
                     </div>
-                </article>
+                    <div class="iframe-skeleton">Loading preview...</div>
+                    <iframe src="https://pulsebank-wheat.vercel.app" sandbox="allow-scripts allow-same-origin" title="Banking Platform Preview"></iframe>
+                </div>
+            </div>
 
-                <article class="project-card glass-card reveal" data-tilt>
-                    <div class="project-card__preview">
-                        <div class="project-card__browser">
-                            <div class="browser-dots"><span></span><span></span><span></span></div>
-                            <span class="browser-url">forex-trading-platform.app</span>
-                        </div>
-                        <div class="project-card__screenshot project-card__screenshot--placeholder">
-                            <div class="screenshot-placeholder">
-                                <i class="fas fa-chart-line"></i>
-                                <span>Forex Trading Platform</span>
-                            </div>
-                        </div>
-                        <div class="project-card__preview-btn project-card__preview-btn--coming">
-                            <i class="fas fa-clock"></i>
-                            <span>Coming Soon</span>
-                        </div>
+            <!-- Project 02 -->
+            <div class="project project--reverse reveal" data-tilt>
+                <div class="project__info">
+                    <span class="project__cat">Trading</span>
+                    <span class="project__num">02</span>
+                    <h3 class="project__title">Forex Trading Platform</h3>
+                    <p class="project__desc">Professional forex trading with TradingView charts, automated signals, copy trading, and risk management dashboard.</p>
+                    <div class="project__tech"><span>PHP</span><span>WebSocket</span><span>TradingView</span><span>Charts</span></div>
+                    <div class="project__highlights"><span>Signal automation</span><span>Copy trading</span><span>Risk controls</span></div>
+                    <div class="project__actions">
+                        <span class="btn btn--coming"><i class="fas fa-clock"></i> Coming Soon</span>
+                        <span class="project__muted">Demo Coming Soon</span>
                     </div>
-                    <div class="project-card__body">
-                        <div class="project-card__header">
-                            <span class="project-card__cat">Trading</span>
-                            <span class="project-card__num">02</span>
-                        </div>
-                        <h3 class="project-card__title">Forex Trading Platform</h3>
-                        <p class="project-card__desc">Professional forex trading with TradingView charts, automated signals, copy trading, and risk management dashboard.</p>
-                        <div class="project-card__tech">
-                            <span>PHP</span><span>WebSocket</span><span>TradingView</span><span>Charts</span>
-                        </div>
-                        <span class="project-card__cta project-card__cta--muted">
-                            Demo Coming Soon <i class="fas fa-hourglass-half"></i>
-                        </span>
+                </div>
+                <div class="project__thumb project__thumb--placeholder">
+                    <div class="thumb-placeholder">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Coming Soon</span>
                     </div>
-                </article>
+                </div>
+            </div>
 
-                <article class="project-card glass-card reveal" data-tilt>
-                    <div class="project-card__preview">
-                        <div class="project-card__browser">
-                            <div class="browser-dots"><span></span><span></span><span></span></div>
-                            <span class="browser-url">beige-barracuda-349616.hostingersite.com</span>
-                        </div>
-                        <div class="project-card__screenshot">
-                            <iframe src="https://beige-barracuda-349616.hostingersite.com" loading="lazy" title="E-Commerce Preview" sandbox="allow-scripts allow-same-origin"></iframe>
-                            <div class="screenshot-overlay"></div>
-                        </div>
-                        <a href="https://beige-barracuda-349616.hostingersite.com" class="project-card__preview-btn" target="_blank">
-                            <i class="fas fa-external-link-alt"></i>
-                            <span>Preview</span>
-                        </a>
+            <!-- Project 03 -->
+            <div class="project reveal" data-tilt>
+                <div class="project__info">
+                    <span class="project__cat">E-Commerce</span>
+                    <span class="project__num">03</span>
+                    <h3 class="project__title">E-Commerce Platform</h3>
+                    <p class="project__desc">Full online store with smart search, multi-gateway payments, abandoned cart recovery, and powerful admin dashboard.</p>
+                    <div class="project__tech"><span>Laravel</span><span>Stripe</span><span>React</span><span>WooCommerce</span></div>
+                    <div class="project__highlights"><span>Smart search</span><span>Checkout flows</span><span>Admin analytics</span></div>
+                    <div class="project__actions">
+                        <button class="btn btn--preview" data-preview="https://beige-barracuda-349616.hostingersite.com"><i class="fas fa-eye"></i> Live Preview</button>
+                        <a href="https://beige-barracuda-349616.hostingersite.com" class="btn btn--ghost-sm" target="_blank">Visit Live Site <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <div class="project-card__body">
-                        <div class="project-card__header">
-                            <span class="project-card__cat">E-Commerce</span>
-                            <span class="project-card__num">03</span>
-                        </div>
-                        <h3 class="project-card__title">E-Commerce Platform</h3>
-                        <p class="project-card__desc">Full online store with smart search, multi-gateway payments, abandoned cart recovery, and powerful admin dashboard.</p>
-                        <div class="project-card__tech">
-                            <span>Laravel</span><span>Stripe</span><span>React</span><span>WooCommerce</span>
-                        </div>
-                        <a href="https://beige-barracuda-349616.hostingersite.com" class="project-card__cta" target="_blank">
-                            Visit Live Site <i class="fas fa-arrow-right"></i>
-                        </a>
+                </div>
+                <div class="project__thumb" data-preview="https://beige-barracuda-349616.hostingersite.com">
+                    <img src="https://api.microlink.io?url=https://beige-barracuda-349616.hostingersite.com&screenshot=true&meta=false&embed=screenshot.url" alt="E-Commerce Platform" loading="lazy">
+                    <div class="project__thumb-overlay"><i class="fas fa-expand"></i> Preview</div>
+                </div>
+                <div class="project__iframe-wrap" id="preview-2">
+                    <div class="iframe-bar">
+                        <span class="iframe-bar__url">beige-barracuda-349616.hostingersite.com</span>
+                        <a href="https://beige-barracuda-349616.hostingersite.com" target="_blank" class="iframe-bar__open">Open in new tab <i class="fas fa-external-link-alt"></i></a>
                     </div>
-                </article>
+                    <div class="iframe-skeleton">Loading preview...</div>
+                    <iframe src="https://beige-barracuda-349616.hostingersite.com" sandbox="allow-scripts allow-same-origin" title="E-Commerce Preview"></iframe>
+                </div>
+            </div>
 
-                <article class="project-card glass-card reveal" data-tilt>
-                    <div class="project-card__preview">
-                        <div class="project-card__browser">
-                            <div class="browser-dots"><span></span><span></span><span></span></div>
-                            <span class="browser-url">fintech-six-chi.vercel.app</span>
-                        </div>
-                        <div class="project-card__screenshot">
-                            <iframe src="https://fintech-six-chi.vercel.app" loading="lazy" title="Fintech Mobile App Preview" sandbox="allow-scripts allow-same-origin"></iframe>
-                            <div class="screenshot-overlay"></div>
-                        </div>
-                        <a href="https://fintech-six-chi.vercel.app" class="project-card__preview-btn" target="_blank">
-                            <i class="fas fa-external-link-alt"></i>
-                            <span>Preview</span>
-                        </a>
+            <!-- Project 04 -->
+            <div class="project project--reverse reveal" data-tilt>
+                <div class="project__info">
+                    <span class="project__cat">Fintech</span>
+                    <span class="project__num">04</span>
+                    <h3 class="project__title">Fintech Mobile Banking</h3>
+                    <p class="project__desc">Mobile-first banking with instant transfers, bill payments, biometric login, and transaction notifications.</p>
+                    <div class="project__tech"><span>React</span><span>Mobile-First</span><span>Auth</span><span>REST API</span></div>
+                    <div class="project__highlights"><span>Mobile-first UX</span><span>Biometric login</span><span>Fast transfers</span></div>
+                    <div class="project__actions">
+                        <button class="btn btn--preview" data-preview="https://fintech-six-chi.vercel.app"><i class="fas fa-eye"></i> Live Preview</button>
+                        <a href="https://fintech-six-chi.vercel.app" class="btn btn--ghost-sm" target="_blank">Visit Live Site <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <div class="project-card__body">
-                        <div class="project-card__header">
-                            <span class="project-card__cat">Fintech</span>
-                            <span class="project-card__num">04</span>
-                        </div>
-                        <h3 class="project-card__title">Fintech Mobile Banking</h3>
-                        <p class="project-card__desc">Mobile-first banking with instant transfers, bill payments, biometric login, and transaction notifications.</p>
-                        <div class="project-card__tech">
-                            <span>React</span><span>Mobile-First</span><span>Auth</span><span>REST API</span>
-                        </div>
-                        <a href="https://fintech-six-chi.vercel.app" class="project-card__cta" target="_blank">
-                            Visit Live Site <i class="fas fa-arrow-right"></i>
-                        </a>
+                </div>
+                <div class="project__thumb" data-preview="https://fintech-six-chi.vercel.app">
+                    <img src="https://api.microlink.io?url=https://fintech-six-chi.vercel.app&screenshot=true&meta=false&embed=screenshot.url" alt="Fintech Mobile Banking" loading="lazy">
+                    <div class="project__thumb-overlay"><i class="fas fa-expand"></i> Preview</div>
+                </div>
+                <div class="project__iframe-wrap" id="preview-3">
+                    <div class="iframe-bar">
+                        <span class="iframe-bar__url">fintech-six-chi.vercel.app</span>
+                        <a href="https://fintech-six-chi.vercel.app" target="_blank" class="iframe-bar__open">Open in new tab <i class="fas fa-external-link-alt"></i></a>
                     </div>
-                </article>
+                    <div class="iframe-skeleton">Loading preview...</div>
+                    <iframe src="https://fintech-six-chi.vercel.app" sandbox="allow-scripts allow-same-origin" title="Fintech Preview"></iframe>
+                </div>
+            </div>
 
-                <article class="project-card glass-card reveal" data-tilt>
-                    <div class="project-card__preview">
-                        <div class="project-card__browser">
-                            <div class="browser-dots"><span></span><span></span><span></span></div>
-                            <span class="browser-url">jplogistics.cc</span>
-                        </div>
-                        <div class="project-card__screenshot">
-                            <iframe src="https://jplogistics.cc" loading="lazy" title="Logistics Preview" sandbox="allow-scripts allow-same-origin"></iframe>
-                            <div class="screenshot-overlay"></div>
-                        </div>
-                        <a href="https://jplogistics.cc" class="project-card__preview-btn" target="_blank">
-                            <i class="fas fa-external-link-alt"></i>
-                            <span>Preview</span>
-                        </a>
+            <!-- Project 05 -->
+            <div class="project reveal" data-tilt>
+                <div class="project__info">
+                    <span class="project__cat">Logistics</span>
+                    <span class="project__num">05</span>
+                    <h3 class="project__title">Shipping & Logistics Suite</h3>
+                    <p class="project__desc">Complete logistics with GPS tracking, route optimization, driver management, and real-time delivery notifications.</p>
+                    <div class="project__tech"><span>PHP</span><span>Maps API</span><span>MySQL</span><span>GPS</span></div>
+                    <div class="project__highlights"><span>Live tracking</span><span>Route planning</span><span>Fleet operations</span></div>
+                    <div class="project__actions">
+                        <button class="btn btn--preview" data-preview="https://jplogistics.cc"><i class="fas fa-eye"></i> Live Preview</button>
+                        <a href="https://jplogistics.cc" class="btn btn--ghost-sm" target="_blank">Visit Live Site <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <div class="project-card__body">
-                        <div class="project-card__header">
-                            <span class="project-card__cat">Logistics</span>
-                            <span class="project-card__num">05</span>
-                        </div>
-                        <h3 class="project-card__title">Shipping & Logistics Suite</h3>
-                        <p class="project-card__desc">Complete logistics with GPS tracking, route optimization, driver management, and real-time delivery notifications.</p>
-                        <div class="project-card__tech">
-                            <span>PHP</span><span>Maps API</span><span>MySQL</span><span>GPS</span>
-                        </div>
-                        <a href="https://jplogistics.cc" class="project-card__cta" target="_blank">
-                            Visit Live Site <i class="fas fa-arrow-right"></i>
-                        </a>
+                </div>
+                <div class="project__thumb" data-preview="https://jplogistics.cc">
+                    <img src="https://api.microlink.io?url=https://jplogistics.cc&screenshot=true&meta=false&embed=screenshot.url" alt="Logistics Suite" loading="lazy">
+                    <div class="project__thumb-overlay"><i class="fas fa-expand"></i> Preview</div>
+                </div>
+                <div class="project__iframe-wrap" id="preview-4">
+                    <div class="iframe-bar">
+                        <span class="iframe-bar__url">jplogistics.cc</span>
+                        <a href="https://jplogistics.cc" target="_blank" class="iframe-bar__open">Open in new tab <i class="fas fa-external-link-alt"></i></a>
                     </div>
-                </article>
+                    <div class="iframe-skeleton">Loading preview...</div>
+                    <iframe src="https://jplogistics.cc" sandbox="allow-scripts allow-same-origin" title="Logistics Preview"></iframe>
+                </div>
+            </div>
 
-                <article class="project-card glass-card reveal" data-tilt>
-                    <div class="project-card__preview">
-                        <div class="project-card__browser">
-                            <div class="browser-dots"><span></span><span></span><span></span></div>
-                            <span class="browser-url">copy-trading-system.app</span>
-                        </div>
-                        <div class="project-card__screenshot project-card__screenshot--placeholder">
-                            <div class="screenshot-placeholder">
-                                <i class="fas fa-copy"></i>
-                                <span>Copy Trading System</span>
-                            </div>
-                        </div>
-                        <div class="project-card__preview-btn project-card__preview-btn--coming">
-                            <i class="fas fa-clock"></i>
-                            <span>Coming Soon</span>
-                        </div>
+            <!-- Project 06 -->
+            <div class="project project--reverse reveal" data-tilt>
+                <div class="project__info">
+                    <span class="project__cat">Finance</span>
+                    <span class="project__num">06</span>
+                    <h3 class="project__title">Copy Trading System</h3>
+                    <p class="project__desc">Social trading platform with auto-replicated trades, leaderboard, risk controls, and performance analytics.</p>
+                    <div class="project__tech"><span>Laravel</span><span>Vue.js</span><span>WebSocket</span><span>Analytics</span></div>
+                    <div class="project__highlights"><span>Social trading</span><span>Leaderboards</span><span>Performance analytics</span></div>
+                    <div class="project__actions">
+                        <span class="btn btn--coming"><i class="fas fa-clock"></i> Coming Soon</span>
+                        <span class="project__muted">Demo Coming Soon</span>
                     </div>
-                    <div class="project-card__body">
-                        <div class="project-card__header">
-                            <span class="project-card__cat">Finance</span>
-                            <span class="project-card__num">06</span>
-                        </div>
-                        <h3 class="project-card__title">Copy Trading System</h3>
-                        <p class="project-card__desc">Social trading platform with auto-replicated trades, leaderboard, risk controls, and performance analytics.</p>
-                        <div class="project-card__tech">
-                            <span>Laravel</span><span>Vue.js</span><span>WebSocket</span><span>Analytics</span>
-                        </div>
-                        <span class="project-card__cta project-card__cta--muted">
-                            Demo Coming Soon <i class="fas fa-hourglass-half"></i>
-                        </span>
+                </div>
+                <div class="project__thumb project__thumb--placeholder">
+                    <div class="thumb-placeholder">
+                        <i class="fas fa-copy"></i>
+                        <span>Coming Soon</span>
                     </div>
-                </article>
-
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Services -->
-    <section id="services" class="section section--alt">
+    <section id="services" class="section">
         <div class="container">
-            <div class="section-header section-header--center">
-                <div class="section-eyebrow"><span class="eyebrow-line"></span>Services</div>
-                <h2 class="section-title section-title--center">What I <span class="text-gradient">Offer</span></h2>
-            </div>
+            <div class="section-label reveal">Services</div>
+            <h2 class="section-heading section-heading--center reveal">What I <span class="gradient-text">Offer</span></h2>
+            <p class="section-sub reveal">Flexible collaboration for new products, high-stakes rebuilds, and technical rescue work.</p>
             <div class="services-grid">
-                <div class="service-card glass-card reveal" data-tilt>
-                    <div class="service-card__icon-wrap">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <div class="service-card__num">01</div>
-                    <h3 class="service-card__title">Full Website Development</h3>
-                    <p class="service-card__desc">Complete professional websites from scratch — responsive design, SEO, fast performance, analytics, SSL, and post-launch support included.</p>
-                    <div class="service-card__footer">
-                        <div class="service-card__price">From <strong>$250</strong></div>
-                        <a href="https://wa.me/237681008986?text=Hi,%20I'm%20interested%20in%20Full%20Website%20Development" class="service-card__cta" target="_blank">
-                            Discuss <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
+                <div class="svc-card glass-card reveal" data-tilt>
+                    <div class="svc-card__icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3 class="svc-card__title">Full Website Development</h3>
+                    <div class="svc-card__price">From <strong>$250</strong></div>
+                    <p class="svc-card__desc">Complete professional websites from scratch — responsive, SEO-optimized, fast, and fully deployed.</p>
+                    <ul class="svc-card__features">
+                        <li><i class="fas fa-check"></i> Modern responsive design</li>
+                        <li><i class="fas fa-check"></i> SEO & analytics setup</li>
+                        <li><i class="fas fa-check"></i> Post-launch support</li>
+                    </ul>
+                    <a href="https://wa.me/237681008986?text=Hi,%20I'm%20interested%20in%20Full%20Website%20Development" class="btn btn--glass btn--full" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Discuss Project
+                    </a>
                 </div>
-                <div class="service-card service-card--featured glass-card reveal" data-tilt>
-                    <div class="service-card__badge">Popular</div>
-                    <div class="service-card__icon-wrap">
-                        <i class="fas fa-wrench"></i>
-                    </div>
-                    <div class="service-card__num">02</div>
-                    <h3 class="service-card__title">Code Fixing & Optimization</h3>
-                    <p class="service-card__desc">Debugging, performance optimization, security patching, mobile fixes, and complete code cleanup for any stack.</p>
-                    <div class="service-card__footer">
-                        <div class="service-card__price">From <strong>$130</strong></div>
-                        <a href="https://wa.me/237681008986?text=Hi,%20I%20need%20help%20fixing%20my%20website" class="service-card__cta" target="_blank">
-                            Get Help <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
+                <div class="svc-card svc-card--popular glass-card reveal" data-tilt>
+                    <span class="svc-card__badge">Most Popular</span>
+                    <div class="svc-card__icon"><i class="fas fa-wrench"></i></div>
+                    <h3 class="svc-card__title">Code Fixing & Optimization</h3>
+                    <div class="svc-card__price">From <strong>$130</strong></div>
+                    <p class="svc-card__desc">Debugging, performance, security, mobile fixes, and complete code cleanup for any stack.</p>
+                    <ul class="svc-card__features">
+                        <li><i class="fas fa-check"></i> Performance optimization</li>
+                        <li><i class="fas fa-check"></i> Security patching</li>
+                        <li><i class="fas fa-check"></i> Detailed fix report</li>
+                    </ul>
+                    <a href="https://wa.me/237681008986?text=Hi,%20I%20need%20help%20fixing%20my%20website" class="btn btn--primary btn--full" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Get Help
+                    </a>
                 </div>
-                <div class="service-card glass-card reveal" data-tilt>
-                    <div class="service-card__icon-wrap">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="service-card__num">03</div>
-                    <h3 class="service-card__title">AI Website Building Course</h3>
-                    <p class="service-card__desc">Build professional websites from zero using AI tools — no coding experience needed. Lifetime access, templates, and community support.</p>
-                    <div class="service-card__footer">
-                        <div class="service-card__price"><strong>$999</strong></div>
-                        <a href="https://wa.me/237681008986?text=Hi,%20I'm%20interested%20in%20the%20AI%20Website%20Building%20Course" class="service-card__cta" target="_blank">
-                            Enroll <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
+                <div class="svc-card glass-card reveal" data-tilt>
+                    <div class="svc-card__icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3 class="svc-card__title">AI Website Building Course</h3>
+                    <div class="svc-card__price"><strong>$999</strong> <span class="svc-card__badge-inline">Lifetime Access</span></div>
+                    <p class="svc-card__desc">Build professional websites from zero using AI tools — no coding experience needed.</p>
+                    <ul class="svc-card__features">
+                        <li><i class="fas fa-check"></i> Zero to production</li>
+                        <li><i class="fas fa-check"></i> Project templates</li>
+                        <li><i class="fas fa-check"></i> Private community</li>
+                    </ul>
+                    <a href="https://wa.me/237681008986?text=Hi,%20I'm%20interested%20in%20the%20AI%20Website%20Building%20Course" class="btn btn--glass btn--full" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Enroll Now
+                    </a>
                 </div>
             </div>
         </div>
@@ -547,105 +543,84 @@
     <!-- Testimonials -->
     <section id="testimonials" class="section">
         <div class="container">
-            <div class="section-header section-header--center">
-                <div class="section-eyebrow"><span class="eyebrow-line"></span>Reviews</div>
-                <h2 class="section-title section-title--center">What <span class="text-gradient">Clients Say</span></h2>
+            <div class="section-label reveal">Reviews</div>
+            <h2 class="section-heading section-heading--center reveal">What <span class="gradient-text">Clients Say</span></h2>
+            <div class="testimonial-carousel reveal" id="testimonialCarousel">
+                <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="testi-card glass-card">
+                        <div class="testi-card__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <blockquote class="testi-card__quote">"Amazing work! Set up my banking site in a short time frame. Clean code, excellent documentation, and outstanding support."</blockquote>
+                        <div class="testi-card__author">
+                            <div class="testi-card__avatar">EN</div>
+                            <div><div class="testi-card__name">Emmanuel N.</div><div class="testi-card__role">Fintech Startup, Douala</div></div>
+                        </div>
+                    </div>
+                    <div class="testi-card glass-card">
+                        <div class="testi-card__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <blockquote class="testi-card__quote">"The trading platform exceeded our expectations. Professional scripts with excellent support. Highly recommended."</blockquote>
+                        <div class="testi-card__author">
+                            <div class="testi-card__avatar">JT</div>
+                            <div><div class="testi-card__name">Jean-Pierre T.</div><div class="testi-card__role">Trading Firm, Yaound&eacute;</div></div>
+                        </div>
+                    </div>
+                    <div class="testi-card glass-card">
+                        <div class="testi-card__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <blockquote class="testi-card__quote">"Best investment for my web dev business. The code quality is exceptional and clients love the end result."</blockquote>
+                        <div class="testi-card__author">
+                            <div class="testi-card__avatar">FM</div>
+                            <div><div class="testi-card__name">Franck M.</div><div class="testi-card__role">Agency Owner, Bamenda</div></div>
+                        </div>
+                    </div>
+                    <div class="testi-card glass-card">
+                        <div class="testi-card__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <blockquote class="testi-card__quote">"The e-commerce solution handles thousands of orders daily without issues. Clean code, easy to customize."</blockquote>
+                        <div class="testi-card__author">
+                            <div class="testi-card__avatar">SA</div>
+                            <div><div class="testi-card__name">Sandrine A.</div><div class="testi-card__role">E-Commerce, Buea</div></div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card glass-card reveal">
-                    <div class="testimonial-card__stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <blockquote class="testimonial-card__quote">"Amazing work! Set up my banking site in a short time frame. Clean code, excellent documentation, and outstanding support."</blockquote>
-                    <div class="testimonial-card__author">
-                        <div class="testimonial-card__avatar">EN</div>
-                        <div>
-                            <div class="testimonial-card__name">Emmanuel N.</div>
-                            <div class="testimonial-card__role">Fintech Startup, Douala</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card glass-card reveal">
-                    <div class="testimonial-card__stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <blockquote class="testimonial-card__quote">"The trading platform exceeded our expectations. Professional scripts with excellent support. Highly recommended."</blockquote>
-                    <div class="testimonial-card__author">
-                        <div class="testimonial-card__avatar">JT</div>
-                        <div>
-                            <div class="testimonial-card__name">Jean-Pierre T.</div>
-                            <div class="testimonial-card__role">Trading Firm, Yaound&eacute;</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card glass-card reveal">
-                    <div class="testimonial-card__stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <blockquote class="testimonial-card__quote">"Best investment for my web dev business. The code quality is exceptional and clients love the end result."</blockquote>
-                    <div class="testimonial-card__author">
-                        <div class="testimonial-card__avatar">FM</div>
-                        <div>
-                            <div class="testimonial-card__name">Franck M.</div>
-                            <div class="testimonial-card__role">Agency Owner, Bamenda</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card glass-card reveal">
-                    <div class="testimonial-card__stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <blockquote class="testimonial-card__quote">"The e-commerce solution handles thousands of orders daily without issues. Clean code, easy to customize."</blockquote>
-                    <div class="testimonial-card__author">
-                        <div class="testimonial-card__avatar">SA</div>
-                        <div>
-                            <div class="testimonial-card__name">Sandrine A.</div>
-                            <div class="testimonial-card__role">E-Commerce, Buea</div>
-                        </div>
-                    </div>
-                </div>
+            <div class="social-proof reveal">
+                <span>50+ Projects Delivered</span>
+                <span class="social-proof__dot">·</span>
+                <span>30+ Happy Clients</span>
+                <span class="social-proof__dot">·</span>
+                <span>4.9/5 Average Rating</span>
             </div>
         </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section section--alt">
+    <section id="contact" class="section">
         <div class="container">
-            <div class="contact-layout">
-                <div class="contact-info reveal">
-                    <div class="section-eyebrow"><span class="eyebrow-line"></span>Get In Touch</div>
-                    <h2 class="section-title">Let's build<br><span class="text-gradient">something great.</span></h2>
-                    <p class="contact-text">Have a project in mind? Reach out and I'll respond within a few hours with a free consultation.</p>
-                    <div class="contact-channels">
-                        <a href="https://wa.me/237681008986" class="contact-channel glass-card" target="_blank">
-                            <div class="contact-channel__icon"><i class="fab fa-whatsapp"></i></div>
-                            <div>
-                                <span class="contact-channel__label">WhatsApp</span>
-                                <span class="contact-channel__value">+237 681 008 986</span>
-                            </div>
-                        </a>
-                        <a href="mailto:mrperevette@gmail.com" class="contact-channel glass-card">
-                            <div class="contact-channel__icon"><i class="fas fa-envelope"></i></div>
-                            <div>
-                                <span class="contact-channel__label">Email</span>
-                                <span class="contact-channel__value">mrperevette@gmail.com</span>
-                            </div>
-                        </a>
-                        <a href="https://github.com/perevet74" class="contact-channel glass-card" target="_blank">
-                            <div class="contact-channel__icon"><i class="fab fa-github"></i></div>
-                            <div>
-                                <span class="contact-channel__label">GitHub</span>
-                                <span class="contact-channel__value">@perevet74</span>
-                            </div>
-                        </a>
-                        <a href="http://linkedin.com/in/perevet-n-4a453230b" class="contact-channel glass-card" target="_blank">
-                            <div class="contact-channel__icon"><i class="fab fa-linkedin-in"></i></div>
-                            <div>
-                                <span class="contact-channel__label">LinkedIn</span>
-                                <span class="contact-channel__value">Perevet N.</span>
-                            </div>
-                        </a>
+            <div class="section-label reveal">Get In Touch</div>
+            <h2 class="section-heading reveal">Let's build something<br><span class="gradient-text">great together.</span></h2>
+            <p class="section-sub reveal">Have a project in mind? Reach out and I'll respond within a few hours with a free consultation.</p>
+            <div class="contact-grid">
+                <div class="contact-channels reveal">
+                    <div class="contact-intro glass-card">
+                        <span class="contact-intro__label">Best for</span>
+                        <p>Startup launches, redesigns, platform upgrades, bug rescue, and custom software delivery.</p>
                     </div>
+                    <a href="https://wa.me/237681008986" class="contact-card glass-card" target="_blank">
+                        <div class="contact-card__icon"><i class="fab fa-whatsapp"></i></div>
+                        <div><span class="contact-card__label">WhatsApp</span><span class="contact-card__value">+237 681 008 986</span></div>
+                    </a>
+                    <a href="mailto:mrperevette@gmail.com" class="contact-card glass-card">
+                        <div class="contact-card__icon"><i class="fas fa-envelope"></i></div>
+                        <div><span class="contact-card__label">Email</span><span class="contact-card__value">mrperevette@gmail.com</span></div>
+                    </a>
+                    <a href="https://github.com/perevet74" class="contact-card glass-card" target="_blank">
+                        <div class="contact-card__icon"><i class="fab fa-github"></i></div>
+                        <div><span class="contact-card__label">GitHub</span><span class="contact-card__value">@perevet74</span></div>
+                    </a>
+                    <a href="http://linkedin.com/in/perevet-n-4a453230b" class="contact-card glass-card" target="_blank">
+                        <div class="contact-card__icon"><i class="fab fa-linkedin-in"></i></div>
+                        <div><span class="contact-card__label">LinkedIn</span><span class="contact-card__value">Perevet N.</span></div>
+                    </a>
                 </div>
                 <form class="contact-form glass-card reveal" id="contactForm">
                     <div class="form-row">
@@ -666,7 +641,7 @@
                         <label for="message">Message</label>
                         <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
                     </div>
-                    <button type="submit" class="btn btn--primary btn--glow btn--full">
+                    <button type="submit" class="btn btn--primary btn--full">
                         <span>Send Message</span>
                         <i class="fas fa-paper-plane"></i>
                     </button>
@@ -678,49 +653,40 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-inner">
-                <a href="#hero" class="footer-logo">
-                    <span class="logo-w">Web</span><span class="logo-p">Pulse</span>
-                </a>
-                <p class="footer-copy">&copy; 2026 WebPulse. Crafted with precision.</p>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#hero" class="footer-logo">WebPulse</a>
+                    <p class="footer-tagline">Crafting digital excellence since 2021</p>
+                </div>
+                <nav class="footer-nav">
+                    <a href="#about">About</a>
+                    <a href="#expertise">Expertise</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#services">Services</a>
+                    <a href="#testimonials">Reviews</a>
+                    <a href="#contact">Contact</a>
+                </nav>
                 <div class="footer-social">
                     <a href="https://github.com/perevet74" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     <a href="http://linkedin.com/in/perevet-n-4a453230b" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://wa.me/237681008986" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:mrperevette@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 WebPulse. Crafted with precision.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Leave Review FAB -->
-    <a href="mailto:mrperevette@gmail.com?subject=Review%20%2F%20Feedback%20-%20WebPulse%20Website" class="review-fab" title="Leave a review">
+    <a
+        href="mailto:mrperevette@gmail.com?subject=Website%20Review%20for%20WebPulse&body=Hi%20Perevet%2C%0D%0A%0D%0AI%E2%80%99d%20like%20to%20leave%20a%20review%20about%20your%20work.%0D%0A%0D%0AReview%3A%0D%0A"
+        class="floating-review-btn"
+        aria-label="Leave a review by email"
+    >
         <i class="fas fa-star"></i>
-        <span class="review-fab__label">Review</span>
+        <span>Leave a Review</span>
     </a>
-
-    <!-- Color Mode Picker -->
-    <div class="color-mode-wrap">
-        <button type="button" class="color-mode-btn" id="colorModeBtn" aria-label="Choose color theme" aria-expanded="false" aria-haspopup="true" title="Color theme">
-            <span class="color-mode-btn__swatch" id="colorModeSwatch" aria-hidden="true"></span>
-            <i class="fas fa-palette" aria-hidden="true"></i>
-            <span class="color-mode-btn__label">Theme</span>
-        </button>
-        <div class="color-mode-panel" id="colorModePanel" role="listbox" aria-label="Color theme" aria-hidden="true">
-            <div class="color-mode-panel__title">Color mode</div>
-            <div class="color-mode-options" id="colorModeOptions" role="group">
-                <button type="button" class="color-mode-option" role="option" data-theme="system" title="Follow system"><span class="color-mode-option__swatch color-mode-option__swatch--system"></span> System</button>
-                <button type="button" class="color-mode-option" role="option" data-theme="light" title="Light"><span class="color-mode-option__swatch" style="background:#fff;border:1px solid #e2e8f0"></span> Light</button>
-                <button type="button" class="color-mode-option" role="option" data-theme="dark" title="Dark"><span class="color-mode-option__swatch" style="background:#0f172a"></span> Dark</button>
-                <button type="button" class="color-mode-option" role="option" data-theme="midnight" title="Midnight"><span class="color-mode-option__swatch" style="background:#0c0a1d"></span> Midnight</button>
-                <button type="button" class="color-mode-option" role="option" data-theme="ocean" title="Ocean"><span class="color-mode-option__swatch" style="background:#0c4a6e"></span> Ocean</button>
-                <button type="button" class="color-mode-option" role="option" data-theme="forest" title="Forest"><span class="color-mode-option__swatch" style="background:#14532d"></span> Forest</button>
-                <button type="button" class="color-mode-option" role="option" data-theme="sunset" title="Sunset"><span class="color-mode-option__swatch" style="background:#7c2d12"></span> Sunset</button>
-                <button type="button" class="color-mode-option" role="option" data-theme="rose" title="Rose"><span class="color-mode-option__swatch" style="background:#831843"></span> Rose</button>
-                <button type="button" class="color-mode-option" role="option" data-theme="lavender" title="Lavender"><span class="color-mode-option__swatch" style="background:#4c1d95"></span> Lavender</button>
-                <button type="button" class="color-mode-option" role="option" data-theme="terminal" title="Terminal"><span class="color-mode-option__swatch" style="background:#052e16"></span> Terminal</button>
-            </div>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>
