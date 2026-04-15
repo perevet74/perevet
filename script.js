@@ -4,8 +4,26 @@
    Cursor glow · Counter · Reveal · Nav
    ============================================ */
 
+const PERFORMANCE_FLAGS = {
+    prefersReducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+    isTouchDevice: window.matchMedia('(hover: none), (pointer: coarse)').matches,
+    isNarrowViewport: window.innerWidth <= 900,
+    saveData: Boolean(navigator.connection && navigator.connection.saveData),
+};
+
+PERFORMANCE_FLAGS.reduceVisualEffects =
+    PERFORMANCE_FLAGS.prefersReducedMotion ||
+    PERFORMANCE_FLAGS.saveData ||
+    (PERFORMANCE_FLAGS.isTouchDevice && PERFORMANCE_FLAGS.isNarrowViewport);
+
 document.addEventListener('DOMContentLoaded', () => {
-    initCursorGlow();
+    document.body.classList.toggle('reduce-effects', PERFORMANCE_FLAGS.reduceVisualEffects);
+
+    if (!PERFORMANCE_FLAGS.reduceVisualEffects) {
+        initCursorGlow();
+        initParticles();
+        initParallaxOrbs();
+    }
     initScrollProgress();
     initNav();
     initMobileMenu();
@@ -16,10 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initContactForm();
     initActiveNavHighlight();
     initTiltCards();
-    initParticles();
     initIframePreviews();
     initCarousel();
-    initParallaxOrbs();
 });
 
 /* === Cursor Glow (smoother lerp) === */
@@ -95,6 +111,8 @@ function initMobileMenu() {
 
 /* === Smooth Scroll with Custom Easing === */
 function initSmoothScroll() {
+    if (PERFORMANCE_FLAGS.reduceVisualEffects) return;
+
     document.querySelectorAll('a[href^="#"]').forEach(link => {
         link.addEventListener('click', e => {
             const href = link.getAttribute('href');
@@ -162,6 +180,10 @@ function initRevealAnimations() {
 /* === Hero Stagger === */
 function initHeroStagger() {
     const items = document.querySelectorAll('.anim-item');
+    if (PERFORMANCE_FLAGS.reduceVisualEffects) {
+        items.forEach(el => el.classList.add('visible'));
+        return;
+    }
     items.forEach((el, i) => {
         setTimeout(() => el.classList.add('visible'), 200 + i * 140);
     });
@@ -258,6 +280,8 @@ function initTiltCards() {
 
 /* === Particles === */
 function initParticles() {
+    if (PERFORMANCE_FLAGS.reduceVisualEffects) return;
+
     const canvas = document.getElementById('particleCanvas');
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
@@ -352,6 +376,9 @@ function initIframePreviews() {
 
         const iframe = wrap.querySelector('iframe');
         if (iframe) {
+            if (!iframe.src && iframe.dataset.src) {
+                iframe.src = iframe.dataset.src;
+            }
             if (!wrap.classList.contains('loaded')) {
                 if (iframe.contentDocument && iframe.contentDocument.readyState === 'complete') {
                     wrap.classList.add('loaded');
