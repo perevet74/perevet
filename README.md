@@ -139,7 +139,7 @@ This is a template/example project. Customize it for your needs.
 
 For questions or issues, please contact:
 - Phone: +234 810 608 1318
-- WhatsApp: [Click here](https://wa.me/2348106081318)
+- WhatsApp: [Click here](https://wa.me/237673477156)
 
 ---
 
