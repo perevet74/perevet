@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#020408">
-    <title>My Portfolio | What i do Full-Stack DevOp & Digital Solutions</title>
+    <title data-i18n="page.title">My Portfolio | What i do Full-Stack DevOp & Digital Solutions</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -38,19 +38,19 @@
                 <span class="nav-logo__text">WebPulse</span>
             </a>
             <nav class="nav-menu" id="navMenu">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#expertise" class="nav-link">Expertise</a>
-                <a href="#portfolio" class="nav-link">Portfolio</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#testimonials" class="nav-link">Reviews</a>
-                <a href="#contact" class="nav-link nav-link--cta">Let's Talk</a>
+                <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
+                <a href="#expertise" class="nav-link" data-i18n="nav.expertise">Expertise</a>
+                <a href="#portfolio" class="nav-link" data-i18n="nav.portfolio">Portfolio</a>
+                <a href="#services" class="nav-link" data-i18n="nav.services">Services</a>
+                <a href="#testimonials" class="nav-link" data-i18n="nav.reviews">Reviews</a>
+                <a href="#contact" class="nav-link nav-link--cta" data-i18n="nav.cta">Let's Talk</a>
             </nav>
             <div class="nav-right">
                 <div class="nav-status">
                     <span class="nav-status__dot"></span>
-                    <span class="nav-status__text">Available for projects</span>
+                    <span class="nav-status__text" data-i18n="nav.status">Available for projects</span>
                 </div>
-                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" data-i18n-aria="aria.menu">
                     <span></span><span></span><span></span>
                 </button>
             </div>
@@ -63,66 +63,66 @@
             <div class="hero-content">
                 <div class="hero-kicker anim-item">
                     <span class="hero-kicker__line"></span>
-                    <span>Product-minded projects for ambitious brands</span>
+                    <span data-i18n="hero.kicker">Product-minded projects for ambitious brands</span>
                 </div>
                 <div class="hero-badge anim-item">
                     <span class="hero-badge__border"></span>
-                    <span class="hero-badge__text">&#10022; Full-Stack Developer & Solutions Architect</span>
+                    <span class="hero-badge__text" data-i18n="hero.badge">&#10022; Full-Stack Developer & Solutions Architect</span>
                 </div>
                 <h1 class="hero-title anim-item">
-                    <span class="hero-title__line">I craft digital</span>
-                    <span class="hero-title__gradient">experiences</span>
-                    <span class="hero-title__line">that captivate<span class="hero-cursor">|</span></span>
+                    <span class="hero-title__line" data-i18n="hero.title1">I craft digital</span>
+                    <span class="hero-title__gradient" data-i18n="hero.title2">experiences</span>
+                    <span class="hero-title__line"><span data-i18n="hero.title3">that captivate</span><span class="hero-cursor">|</span></span>
                 </h1>
-                <p class="hero-sub anim-item">
+                <p class="hero-sub anim-item" data-i18n="hero.sub">
                     Full-Stack Developer & Solutions specializing in Web Applications, 
-                    trading platforms, e-commerce, and SaaS &mdash; from concept to deployment.
+                    trading platforms, e-commerce, and SaaS — from concept to deployment.
                 </p>
                 <div class="hero-proof anim-item">
                     <div class="hero-proof__item">
-                        <span class="hero-proof__label">Fast delivery</span>
-                        <strong>Clear milestones from kickoff to launch</strong>
+                        <span class="hero-proof__label" data-i18n="hero.proof1Label">Fast delivery</span>
+                        <strong data-i18n="hero.proof1Strong">Clear milestones from kickoff to launch</strong>
                     </div>
                     <div class="hero-proof__item">
-                        <span class="hero-proof__label">Built for growth</span>
-                        <strong>Performance, security, and SEO included</strong>
+                        <span class="hero-proof__label" data-i18n="hero.proof2Label">Built for growth</span>
+                        <strong data-i18n="hero.proof2Strong">Performance, security, and SEO included</strong>
                     </div>
                 </div>
                 <div class="hero-tags anim-item">
-                    <span class="hero-tag">Fintech</span>
-                    <span class="hero-tag">Trading</span>
-                    <span class="hero-tag">E-Commerce</span>
+                    <span class="hero-tag" data-i18n="cat.fintech">Fintech</span>
+                    <span class="hero-tag" data-i18n="cat.trading">Trading</span>
+                    <span class="hero-tag" data-i18n="cat.ecommerce">E-Commerce</span>
                     <span class="hero-tag">Blockchain</span>
                     <span class="hero-tag">SaaS</span>
-                    <span class="hero-tag">Logistics</span>
+                    <span class="hero-tag" data-i18n="cat.logistics">Logistics</span>
                     <span class="hero-tag">Web3</span>
                 </div>
                 <div class="hero-actions anim-item">
                     <a href="#portfolio" class="btn btn--primary">
-                        <span>Explore My Work</span>
+                        <span data-i18n="hero.explore">Explore My Work</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
                     <a href="#contact" class="btn btn--glass">
-                        <span>Start a Project</span>
+                        <span data-i18n="hero.start">Start a Project</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
                 <div class="hero-stats anim-item">
                     <div class="hero-stat">
                         <span class="hero-stat__num" data-target="50">0</span><span class="hero-stat__plus">+</span>
-                        <span class="hero-stat__label">Projects</span>
+                        <span class="hero-stat__label" data-i18n="hero.statProjects">Projects</span>
                     </div>
                     <div class="hero-stat">
                         <span class="hero-stat__num" data-target="30">0</span><span class="hero-stat__plus">+</span>
-                        <span class="hero-stat__label">Clients</span>
+                        <span class="hero-stat__label" data-i18n="hero.statClients">Clients</span>
                     </div>
                     <div class="hero-stat">
                         <span class="hero-stat__num" data-target="22">0</span><span class="hero-stat__plus">+</span>
-                        <span class="hero-stat__label">Scripts</span>
+                        <span class="hero-stat__label" data-i18n="hero.statScripts">Scripts</span>
                     </div>
                     <div class="hero-stat">
                         <span class="hero-stat__num" data-target="4">0</span><span class="hero-stat__plus">+</span>
-                        <span class="hero-stat__label">Years</span>
+                        <span class="hero-stat__label" data-i18n="hero.statYears">Years</span>
                     </div>
                 </div>
             </div>
@@ -130,22 +130,22 @@
                 <div class="hero-panel glass-card">
                     <div class="hero-panel__top">
                         <div>
-                            <span class="hero-panel__eyebrow">Current Focus</span>
-                            <h3>Shipping platforms people trust</h3>
+                            <span class="hero-panel__eyebrow" data-i18n="panel.eyebrow">Current Focus</span>
+                            <h3 data-i18n="panel.title">Shipping platforms people trust</h3>
                         </div>
                         <div class="hero-panel__availability">
                             <span class="status-dot"></span>
-                            <span>Open for select 2026 builds</span>
+                            <span data-i18n="panel.availability">Open for select 2026 builds</span>
                         </div>
                     </div>
                     <div class="hero-matrix">
                         <article class="hero-matrix__card hero-matrix__card--accent">
-                            <span class="hero-matrix__label">Flagship work</span>
-                            <strong>Banking, trading, logistics, and custom SaaS systems.</strong>
+                            <span class="hero-matrix__label" data-i18n="panel.flagshipLabel">Flagship work</span>
+                            <strong data-i18n="panel.flagshipText">Banking, trading, logistics, and custom SaaS systems.</strong>
                         </article>
                         <article class="hero-matrix__card">
-                            <span class="hero-matrix__label">Delivery style</span>
-                            <strong>Clean architecture, sharp UI, and launch-ready documentation.</strong>
+                            <span class="hero-matrix__label" data-i18n="panel.deliveryLabel">Delivery style</span>
+                            <strong data-i18n="panel.deliveryText">Clean architecture, sharp UI, and launch-ready documentation.</strong>
                         </article>
                     </div>
                     <div class="code-card">
@@ -159,11 +159,11 @@
                     <div class="hero-signals">
                         <div class="hero-signal">
                             <span class="hero-signal__value">48h</span>
-                            <span class="hero-signal__label">Typical first response</span>
+                            <span class="hero-signal__label" data-i18n="panel.signal1">Typical first response</span>
                         </div>
                         <div class="hero-signal">
-                            <span class="hero-signal__value">End-to-end</span>
-                            <span class="hero-signal__label">Design, build, optimize, deploy</span>
+                            <span class="hero-signal__value" data-i18n="panel.signal2Value">End-to-end</span>
+                            <span class="hero-signal__label" data-i18n="panel.signal2">Design, build, optimize, deploy</span>
                         </div>
                     </div>
                 </div>
@@ -174,20 +174,20 @@
         <div class="marquee">
             <div class="marquee__track">
                 <div class="marquee__content">
-                    <span>Fintech</span><span class="marquee__dot">·</span>
-                    <span>Trading</span><span class="marquee__dot">·</span>
-                    <span>E-Commerce</span><span class="marquee__dot">·</span>
+                    <span data-i18n="cat.fintech">Fintech</span><span class="marquee__dot">·</span>
+                    <span data-i18n="cat.trading">Trading</span><span class="marquee__dot">·</span>
+                    <span data-i18n="cat.ecommerce">E-Commerce</span><span class="marquee__dot">·</span>
                     <span>Blockchain</span><span class="marquee__dot">·</span>
                     <span>SaaS</span><span class="marquee__dot">·</span>
-                    <span>Logistics</span><span class="marquee__dot">·</span>
+                    <span data-i18n="cat.logistics">Logistics</span><span class="marquee__dot">·</span>
                     <span>Web3</span><span class="marquee__dot">·</span>
                     <span>WordPress</span><span class="marquee__dot">·</span>
-                    <span>Fintech</span><span class="marquee__dot">·</span>
-                    <span>Trading</span><span class="marquee__dot">·</span>
-                    <span>E-Commerce</span><span class="marquee__dot">·</span>
+                    <span data-i18n="cat.fintech">Fintech</span><span class="marquee__dot">·</span>
+                    <span data-i18n="cat.trading">Trading</span><span class="marquee__dot">·</span>
+                    <span data-i18n="cat.ecommerce">E-Commerce</span><span class="marquee__dot">·</span>
                     <span>Blockchain</span><span class="marquee__dot">·</span>
                     <span>SaaS</span><span class="marquee__dot">·</span>
-                    <span>Logistics</span><span class="marquee__dot">·</span>
+                    <span data-i18n="cat.logistics">Logistics</span><span class="marquee__dot">·</span>
                     <span>Web3</span><span class="marquee__dot">·</span>
                     <span>WordPress</span><span class="marquee__dot">·</span>
                 </div>
@@ -198,40 +198,40 @@
     <!-- About -->
     <section id="about" class="section">
         <div class="container">
-            <div class="section-label reveal">About Me</div>
-            <h2 class="section-heading reveal">Complex problems,<br><span class="gradient-text">elegant solutions.</span></h2>
+            <div class="section-label reveal" data-i18n="about.label">About Me</div>
+            <h2 class="section-heading reveal" data-i18n-html="about.heading">Complex problems,<br><span class="gradient-text">elegant solutions.</span></h2>
             <div class="about-grid">
                 <div class="about-left reveal">
-                    <p class="about-lead">
+                    <p class="about-lead" data-i18n="about.lead">
                         I'm a Full-Stack Developer based in Cameroon with 4+ years building 
                         production-grade software for fintech, crypto, forex, e-commerce, and 
                         enterprise clients across Africa and beyond.
                     </p>
-                    <p class="about-body">
+                    <p class="about-body" data-i18n="about.body">
                         With 50+ delivered projects and 22+ premium scripts, I ship clean, scalable 
                         code that performs. Every project includes responsive design, SEO, secure auth, 
                         admin panels, and full documentation.
                     </p>
                     <div class="about-chips">
-                        <div class="about-chip glass-card"><i class="fas fa-map-marker-alt"></i> Cameroon</div>
-                        <div class="about-chip glass-card"><i class="fas fa-bolt"></i> 4+ Years Experience</div>
-                        <div class="about-chip glass-card"><span class="status-dot"></span> Open to Work</div>
-                        <div class="about-chip glass-card"><i class="fas fa-globe"></i> EN / FR</div>
+                        <div class="about-chip glass-card"><i class="fas fa-map-marker-alt"></i> <span data-i18n="about.chipLocation">Cameroon</span></div>
+                        <div class="about-chip glass-card"><i class="fas fa-bolt"></i> <span data-i18n="about.chipYears">4+ Years Experience</span></div>
+                        <div class="about-chip glass-card"><span class="status-dot"></span> <span data-i18n="about.openWork">Open to Work</span></div>
+                        <div class="about-chip glass-card"><i class="fas fa-globe"></i> <span data-i18n="about.chipLangs">EN / FR</span></div>
                     </div>
                     <div class="about-ribbon glass-card">
                         <div class="about-ribbon__item">
-                            <span class="about-ribbon__label">Approach</span>
-                            <strong>Strategy first, code second</strong>
+                            <span class="about-ribbon__label" data-i18n="about.approachLabel">Approach</span>
+                            <strong data-i18n="about.approachText">Strategy first, code second</strong>
                         </div>
                         <div class="about-ribbon__item">
-                            <span class="about-ribbon__label">Promise</span>
-                            <strong>Thoughtful UX with maintainable systems</strong>
+                            <span class="about-ribbon__label" data-i18n="about.promiseLabel">Promise</span>
+                            <strong data-i18n="about.promiseText">Thoughtful UX with maintainable systems</strong>
                         </div>
                     </div>
                 </div>
                 <div class="about-right reveal">
                     <div class="stack-card glass-card">
-                        <h3 class="stack-card__title">Tech Stack</h3>
+                        <h3 class="stack-card__title" data-i18n="about.stackTitle">Tech Stack</h3>
                         <div class="stack-card__line"></div>
                         <div class="stack-pills">
                             <span class="stack-pill"><i class="fab fa-php"></i> PHP</span>
@@ -256,56 +256,56 @@
     <!-- Expertise -->
     <section id="expertise" class="section">
         <div class="container">
-            <div class="section-label reveal">What I Do</div>
-            <h2 class="section-heading section-heading--center reveal">Areas of <span class="gradient-text">Expertise</span></h2>
+            <div class="section-label reveal" data-i18n="expertise.label">What I Do</div>
+            <h2 class="section-heading section-heading--center reveal" data-i18n-html="expertise.heading">Areas of <span class="gradient-text">Expertise</span></h2>
             <div class="expertise-grid">
                 <div class="exp-card glass-card reveal" data-tilt data-color="indigo">
                     <div class="exp-card__shimmer"></div>
                     <span class="exp-card__num">01</span>
                     <div class="exp-card__icon"><i class="fas fa-university"></i></div>
-                    <h3 class="exp-card__title">Fintech & Banking</h3>
-                    <p class="exp-card__desc">Full-stack banking platforms with crypto wallets, multi-currency accounts, KYC verification, and real-time reporting dashboards.</p>
-                    <div class="exp-card__tags"><span>Payment Systems</span><span>Crypto</span><span>KYC/AML</span></div>
+                    <h3 class="exp-card__title" data-i18n="exp1.title">Fintech & Banking</h3>
+                    <p class="exp-card__desc" data-i18n="exp1.desc">Full-stack banking platforms with crypto wallets, multi-currency accounts, KYC verification, and real-time reporting dashboards.</p>
+                    <div class="exp-card__tags"><span data-i18n="exp1.tag1">Payment Systems</span><span data-i18n="exp1.tag2">Crypto</span><span data-i18n="exp1.tag3">KYC/AML</span></div>
                 </div>
                 <div class="exp-card glass-card reveal" data-tilt data-color="cyan">
                     <div class="exp-card__shimmer"></div>
                     <span class="exp-card__num">02</span>
                     <div class="exp-card__icon"><i class="fas fa-chart-line"></i></div>
-                    <h3 class="exp-card__title">Trading Platforms</h3>
-                    <p class="exp-card__desc">Forex & crypto trading with TradingView charts, automated signals, copy trading, and risk analytics dashboards.</p>
-                    <div class="exp-card__tags"><span>Forex</span><span>Copy Trading</span><span>Signals</span></div>
+                    <h3 class="exp-card__title" data-i18n="exp2.title">Trading Platforms</h3>
+                    <p class="exp-card__desc" data-i18n="exp2.desc">Forex & crypto trading with TradingView charts, automated signals, copy trading, and risk analytics dashboards.</p>
+                    <div class="exp-card__tags"><span data-i18n="exp2.tag1">Forex</span><span data-i18n="exp2.tag2">Copy Trading</span><span data-i18n="exp2.tag3">Signals</span></div>
                 </div>
                 <div class="exp-card glass-card reveal" data-tilt data-color="violet">
                     <div class="exp-card__shimmer"></div>
                     <span class="exp-card__num">03</span>
                     <div class="exp-card__icon"><i class="fas fa-shopping-cart"></i></div>
-                    <h3 class="exp-card__title">E-Commerce</h3>
-                    <p class="exp-card__desc">Modern online stores with Stripe, PayPal, mobile money integration, inventory management, and mobile-first design.</p>
-                    <div class="exp-card__tags"><span>WooCommerce</span><span>Payments</span><span>Mobile-First</span></div>
+                    <h3 class="exp-card__title" data-i18n="exp3.title">E-Commerce</h3>
+                    <p class="exp-card__desc" data-i18n="exp3.desc">Modern online stores with Stripe, PayPal, mobile money integration, inventory management, and mobile-first design.</p>
+                    <div class="exp-card__tags"><span>WooCommerce</span><span data-i18n="exp3.tag2">Payments</span><span data-i18n="exp3.tag3">Mobile-First</span></div>
                 </div>
                 <div class="exp-card glass-card reveal" data-tilt data-color="teal">
                     <div class="exp-card__shimmer"></div>
                     <span class="exp-card__num">04</span>
                     <div class="exp-card__icon"><i class="fas fa-truck"></i></div>
-                    <h3 class="exp-card__title">Logistics & Shipping</h3>
-                    <p class="exp-card__desc">End-to-end logistics with GPS tracking, route optimization, fleet management, and automated delivery notifications.</p>
-                    <div class="exp-card__tags"><span>Tracking</span><span>Fleet Mgmt</span><span>Automation</span></div>
+                    <h3 class="exp-card__title" data-i18n="exp4.title">Logistics & Shipping</h3>
+                    <p class="exp-card__desc" data-i18n="exp4.desc">End-to-end logistics with GPS tracking, route optimization, fleet management, and automated delivery notifications.</p>
+                    <div class="exp-card__tags"><span data-i18n="exp4.tag1">Tracking</span><span data-i18n="exp4.tag2">Fleet Mgmt</span><span data-i18n="exp4.tag3">Automation</span></div>
                 </div>
                 <div class="exp-card glass-card reveal" data-tilt data-color="purple">
                     <div class="exp-card__shimmer"></div>
                     <span class="exp-card__num">05</span>
                     <div class="exp-card__icon"><i class="fas fa-link"></i></div>
-                    <h3 class="exp-card__title">Blockchain & Web3</h3>
-                    <p class="exp-card__desc">Multi-chain wallet integrations, smart contract interfaces, DeFi platforms, and token dashboards with intuitive UX.</p>
-                    <div class="exp-card__tags"><span>Smart Contracts</span><span>DeFi</span><span>Wallets</span></div>
+                    <h3 class="exp-card__title" data-i18n="exp5.title">Blockchain & Web3</h3>
+                    <p class="exp-card__desc" data-i18n="exp5.desc">Multi-chain wallet integrations, smart contract interfaces, DeFi platforms, and token dashboards with intuitive UX.</p>
+                    <div class="exp-card__tags"><span data-i18n="exp5.tag1">Smart Contracts</span><span>DeFi</span><span data-i18n="exp5.tag3">Wallets</span></div>
                 </div>
                 <div class="exp-card glass-card reveal" data-tilt data-color="blue">
                     <div class="exp-card__shimmer"></div>
                     <span class="exp-card__num">06</span>
                     <div class="exp-card__icon"><i class="fas fa-code"></i></div>
-                    <h3 class="exp-card__title">Custom Development</h3>
-                    <p class="exp-card__desc">Bespoke SaaS platforms, CMS, admin panels, REST APIs, and enterprise solutions with clean architecture.</p>
-                    <div class="exp-card__tags"><span>SaaS</span><span>APIs</span><span>Enterprise</span></div>
+                    <h3 class="exp-card__title" data-i18n="exp6.title">Custom Development</h3>
+                    <p class="exp-card__desc" data-i18n="exp6.desc">Bespoke SaaS platforms, CMS, admin panels, REST APIs, and enterprise solutions with clean architecture.</p>
+                    <div class="exp-card__tags"><span>SaaS</span><span>APIs</span><span data-i18n="exp6.tag3">Enterprise</span></div>
                 </div>
             </div>
         </div>
@@ -314,44 +314,44 @@
     <!-- Portfolio -->
     <section id="portfolio" class="section">
         <div class="container">
-            <div class="section-label reveal">Selected Work</div>
-            <h2 class="section-heading section-heading--center reveal">Featured <span class="gradient-text">Projects</span></h2>
-            <p class="section-sub reveal">Click "Live Preview" to see a live homepage preview of each project.</p>
+            <div class="section-label reveal" data-i18n="portfolio.label">Selected Work</div>
+            <h2 class="section-heading section-heading--center reveal" data-i18n-html="portfolio.heading">Featured <span class="gradient-text">Projects</span></h2>
+            <p class="section-sub reveal" data-i18n="portfolio.sub">Click "Live Preview" to see a live homepage preview of each project.</p>
             <div class="portfolio-intro glass-card reveal">
                 <div class="portfolio-intro__item">
-                    <span class="portfolio-intro__label">Outcome-driven</span>
-                    <strong>Each build is designed to convert, scale, and stay easy to manage.</strong>
+                    <span class="portfolio-intro__label" data-i18n="portfolio.intro1Label">Outcome-driven</span>
+                    <strong data-i18n="portfolio.intro1Text">Each build is designed to convert, scale, and stay easy to manage.</strong>
                 </div>
                 <div class="portfolio-intro__item">
-                    <span class="portfolio-intro__label">What you will notice</span>
-                    <strong>Clear interfaces, strong architecture, and business-focused features.</strong>
+                    <span class="portfolio-intro__label" data-i18n="portfolio.intro2Label">What you will notice</span>
+                    <strong data-i18n="portfolio.intro2Text">Clear interfaces, strong architecture, and business-focused features.</strong>
                 </div>
             </div>
 
             <!-- Project 01 -->
             <div class="project reveal" data-tilt>
                 <div class="project__info">
-                    <span class="project__cat">Fintech</span>
+                    <span class="project__cat" data-i18n="cat.fintech">Fintech</span>
                     <span class="project__num">01</span>
-                    <h3 class="project__title">Banking with Crypto Integration</h3>
-                    <p class="project__desc">Digital banking platform with crypto wallets, multi-currency accounts, P2P transfers, KYC verification, and admin panel.</p>
+                    <h3 class="project__title" data-i18n="proj1.title">Banking with Crypto Integration</h3>
+                    <p class="project__desc" data-i18n="proj1.desc">Digital banking platform with crypto wallets, multi-currency accounts, P2P transfers, KYC verification, and admin panel.</p>
                     <div class="project__tech"><span>Laravel</span><span>MySQL</span><span>API</span><span>Blockchain</span></div>
-                    <div class="project__highlights"><span>Crypto wallets</span><span>Multi-currency accounts</span><span>KYC dashboard</span></div>
+                    <div class="project__highlights"><span data-i18n="proj1.hl1">Crypto wallets</span><span data-i18n="proj1.hl2">Multi-currency accounts</span><span data-i18n="proj1.hl3">KYC dashboard</span></div>
                     <div class="project__actions">
-                        <button class="btn btn--preview" data-preview="https://pulsebank-wheat.vercel.app"><i class="fas fa-eye"></i> Live Preview</button>
-                        <a href="https://pulsebank-wheat.vercel.app" class="btn btn--ghost-sm" target="_blank">Visit Live Site <i class="fas fa-arrow-right"></i></a>
+                        <button class="btn btn--preview" data-preview="https://pulsebank-wheat.vercel.app"><i class="fas fa-eye"></i> <span data-i18n="btn.livePreview">Live Preview</span></button>
+                        <a href="https://pulsebank-wheat.vercel.app" class="btn btn--ghost-sm" target="_blank"><span data-i18n="btn.visitSite">Visit Live Site</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="project__thumb" data-preview="https://pulsebank-wheat.vercel.app">
                     <img src="https://api.microlink.io?url=https://pulsebank-wheat.vercel.app&screenshot=true&meta=false&embed=screenshot.url" alt="Banking Platform" loading="lazy">
-                    <div class="project__thumb-overlay"><i class="fas fa-expand"></i> Preview</div>
+                    <div class="project__thumb-overlay"><i class="fas fa-expand"></i> <span data-i18n="btn.preview">Preview</span></div>
                 </div>
                 <div class="project__iframe-wrap" id="preview-0">
                     <div class="iframe-bar">
                         <span class="iframe-bar__url">pulsebank-wheat.vercel.app</span>
-                        <a href="https://pulsebank-wheat.vercel.app" target="_blank" class="iframe-bar__open">Open in new tab <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://pulsebank-wheat.vercel.app" target="_blank" class="iframe-bar__open"><span data-i18n="btn.newTab">Open in new tab</span> <i class="fas fa-external-link-alt"></i></a>
                     </div>
-                    <div class="iframe-skeleton">Loading preview...</div>
+                    <div class="iframe-skeleton" data-i18n="btn.loading">Loading preview...</div>
                     <iframe data-src="https://pulsebank-wheat.vercel.app" sandbox="allow-scripts allow-same-origin" title="Banking Platform Preview" loading="lazy"></iframe>
                 </div>
             </div>
@@ -359,21 +359,21 @@
             <!-- Project 02 -->
             <div class="project project--reverse reveal" data-tilt>
                 <div class="project__info">
-                    <span class="project__cat">Trading</span>
+                    <span class="project__cat" data-i18n="cat.trading">Trading</span>
                     <span class="project__num">02</span>
-                    <h3 class="project__title">Forex Trading Platform</h3>
-                    <p class="project__desc">Professional forex trading with TradingView charts, automated signals, copy trading, and risk management dashboard.</p>
-                    <div class="project__tech"><span>PHP</span><span>WebSocket</span><span>TradingView</span><span>Charts</span></div>
-                    <div class="project__highlights"><span>Signal automation</span><span>Copy trading</span><span>Risk controls</span></div>
+                    <h3 class="project__title" data-i18n="proj2.title">Forex Trading Platform</h3>
+                    <p class="project__desc" data-i18n="proj2.desc">Professional forex trading with TradingView charts, automated signals, copy trading, and risk management dashboard.</p>
+                    <div class="project__tech"><span>PHP</span><span>WebSocket</span><span>TradingView</span><span data-i18n="proj2.tech4">Charts</span></div>
+                    <div class="project__highlights"><span data-i18n="proj2.hl1">Signal automation</span><span data-i18n="proj2.hl2">Copy trading</span><span data-i18n="proj2.hl3">Risk controls</span></div>
                     <div class="project__actions">
-                        <span class="btn btn--coming"><i class="fas fa-clock"></i> Coming Soon</span>
-                        <span class="project__muted">Demo Coming Soon</span>
+                        <span class="btn btn--coming"><i class="fas fa-clock"></i> <span data-i18n="btn.comingSoon">Coming Soon</span></span>
+                        <span class="project__muted" data-i18n="btn.demoSoon">Demo Coming Soon</span>
                     </div>
                 </div>
                 <div class="project__thumb project__thumb--placeholder">
                     <div class="thumb-placeholder">
                         <i class="fas fa-chart-line"></i>
-                        <span>Coming Soon</span>
+                        <span data-i18n="btn.comingSoon">Coming Soon</span>
                     </div>
                 </div>
             </div>
@@ -381,27 +381,27 @@
             <!-- Project 03 -->
             <div class="project reveal" data-tilt>
                 <div class="project__info">
-                    <span class="project__cat">E-Commerce</span>
+                    <span class="project__cat" data-i18n="cat.ecommerce">E-Commerce</span>
                     <span class="project__num">03</span>
-                    <h3 class="project__title">E-Commerce Platform</h3>
-                    <p class="project__desc">Full online store with smart search, multi-gateway payments, abandoned cart recovery, and powerful admin dashboard.</p>
+                    <h3 class="project__title" data-i18n="proj3.title">E-Commerce Platform</h3>
+                    <p class="project__desc" data-i18n="proj3.desc">Full online store with smart search, multi-gateway payments, abandoned cart recovery, and powerful admin dashboard.</p>
                     <div class="project__tech"><span>Laravel</span><span>Stripe</span><span>React</span><span>WooCommerce</span></div>
-                    <div class="project__highlights"><span>Smart search</span><span>Checkout flows</span><span>Admin analytics</span></div>
+                    <div class="project__highlights"><span data-i18n="proj3.hl1">Smart search</span><span data-i18n="proj3.hl2">Checkout flows</span><span data-i18n="proj3.hl3">Admin analytics</span></div>
                     <div class="project__actions">
-                        <button class="btn btn--preview" data-preview="https://beige-barracuda-349616.hostingersite.com"><i class="fas fa-eye"></i> Live Preview</button>
-                        <a href="https://beige-barracuda-349616.hostingersite.com" class="btn btn--ghost-sm" target="_blank">Visit Live Site <i class="fas fa-arrow-right"></i></a>
+                        <button class="btn btn--preview" data-preview="https://beige-barracuda-349616.hostingersite.com"><i class="fas fa-eye"></i> <span data-i18n="btn.livePreview">Live Preview</span></button>
+                        <a href="https://beige-barracuda-349616.hostingersite.com" class="btn btn--ghost-sm" target="_blank"><span data-i18n="btn.visitSite">Visit Live Site</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="project__thumb" data-preview="https://beige-barracuda-349616.hostingersite.com">
                     <img src="https://api.microlink.io?url=https://beige-barracuda-349616.hostingersite.com&screenshot=true&meta=false&embed=screenshot.url" alt="E-Commerce Platform" loading="lazy">
-                    <div class="project__thumb-overlay"><i class="fas fa-expand"></i> Preview</div>
+                    <div class="project__thumb-overlay"><i class="fas fa-expand"></i> <span data-i18n="btn.preview">Preview</span></div>
                 </div>
                 <div class="project__iframe-wrap" id="preview-2">
                     <div class="iframe-bar">
                         <span class="iframe-bar__url">beige-barracuda-349616.hostingersite.com</span>
-                        <a href="https://beige-barracuda-349616.hostingersite.com" target="_blank" class="iframe-bar__open">Open in new tab <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://beige-barracuda-349616.hostingersite.com" target="_blank" class="iframe-bar__open"><span data-i18n="btn.newTab">Open in new tab</span> <i class="fas fa-external-link-alt"></i></a>
                     </div>
-                    <div class="iframe-skeleton">Loading preview...</div>
+                    <div class="iframe-skeleton" data-i18n="btn.loading">Loading preview...</div>
                     <iframe data-src="https://beige-barracuda-349616.hostingersite.com" sandbox="allow-scripts allow-same-origin" title="E-Commerce Preview" loading="lazy"></iframe>
                 </div>
             </div>
@@ -409,27 +409,27 @@
             <!-- Project 04 -->
             <div class="project project--reverse reveal" data-tilt>
                 <div class="project__info">
-                    <span class="project__cat">Fintech</span>
+                    <span class="project__cat" data-i18n="cat.fintech">Fintech</span>
                     <span class="project__num">04</span>
-                    <h3 class="project__title">Fintech Mobile Banking</h3>
-                    <p class="project__desc">Mobile-first banking with instant transfers, bill payments, biometric login, and transaction notifications.</p>
-                    <div class="project__tech"><span>React</span><span>Mobile-First</span><span>Auth</span><span>REST API</span></div>
-                    <div class="project__highlights"><span>Mobile-first UX</span><span>Biometric login</span><span>Fast transfers</span></div>
+                    <h3 class="project__title" data-i18n="proj4.title">Fintech Mobile Banking</h3>
+                    <p class="project__desc" data-i18n="proj4.desc">Mobile-first banking with instant transfers, bill payments, biometric login, and transaction notifications.</p>
+                    <div class="project__tech"><span>React</span><span data-i18n="proj4.tech2">Mobile-First</span><span data-i18n="proj4.tech3">Auth</span><span>REST API</span></div>
+                    <div class="project__highlights"><span data-i18n="proj4.hl1">Mobile-first UX</span><span data-i18n="proj4.hl2">Biometric login</span><span data-i18n="proj4.hl3">Fast transfers</span></div>
                     <div class="project__actions">
-                        <button class="btn btn--preview" data-preview="https://fintech-six-chi.vercel.app"><i class="fas fa-eye"></i> Live Preview</button>
-                        <a href="https://fintech-six-chi.vercel.app" class="btn btn--ghost-sm" target="_blank">Visit Live Site <i class="fas fa-arrow-right"></i></a>
+                        <button class="btn btn--preview" data-preview="https://fintech-six-chi.vercel.app"><i class="fas fa-eye"></i> <span data-i18n="btn.livePreview">Live Preview</span></button>
+                        <a href="https://fintech-six-chi.vercel.app" class="btn btn--ghost-sm" target="_blank"><span data-i18n="btn.visitSite">Visit Live Site</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="project__thumb" data-preview="https://fintech-six-chi.vercel.app">
                     <img src="https://api.microlink.io?url=https://fintech-six-chi.vercel.app&screenshot=true&meta=false&embed=screenshot.url" alt="Fintech Mobile Banking" loading="lazy">
-                    <div class="project__thumb-overlay"><i class="fas fa-expand"></i> Preview</div>
+                    <div class="project__thumb-overlay"><i class="fas fa-expand"></i> <span data-i18n="btn.preview">Preview</span></div>
                 </div>
                 <div class="project__iframe-wrap" id="preview-3">
                     <div class="iframe-bar">
                         <span class="iframe-bar__url">fintech-six-chi.vercel.app</span>
-                        <a href="https://fintech-six-chi.vercel.app" target="_blank" class="iframe-bar__open">Open in new tab <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://fintech-six-chi.vercel.app" target="_blank" class="iframe-bar__open"><span data-i18n="btn.newTab">Open in new tab</span> <i class="fas fa-external-link-alt"></i></a>
                     </div>
-                    <div class="iframe-skeleton">Loading preview...</div>
+                    <div class="iframe-skeleton" data-i18n="btn.loading">Loading preview...</div>
                     <iframe data-src="https://fintech-six-chi.vercel.app" sandbox="allow-scripts allow-same-origin" title="Fintech Preview" loading="lazy"></iframe>
                 </div>
             </div>
@@ -437,27 +437,27 @@
             <!-- Project 05 -->
             <div class="project reveal" data-tilt>
                 <div class="project__info">
-                    <span class="project__cat">Logistics</span>
+                    <span class="project__cat" data-i18n="cat.logistics">Logistics</span>
                     <span class="project__num">05</span>
-                    <h3 class="project__title">Shipping & Logistics Suite</h3>
-                    <p class="project__desc">Complete logistics with GPS tracking, route optimization, driver management, and real-time delivery notifications.</p>
+                    <h3 class="project__title" data-i18n="proj5.title">Shipping & Logistics Suite</h3>
+                    <p class="project__desc" data-i18n="proj5.desc">Complete logistics with GPS tracking, route optimization, driver management, and real-time delivery notifications.</p>
                     <div class="project__tech"><span>PHP</span><span>Maps API</span><span>MySQL</span><span>GPS</span></div>
-                    <div class="project__highlights"><span>Live tracking</span><span>Route planning</span><span>Fleet operations</span></div>
+                    <div class="project__highlights"><span data-i18n="proj5.hl1">Live tracking</span><span data-i18n="proj5.hl2">Route planning</span><span data-i18n="proj5.hl3">Fleet operations</span></div>
                     <div class="project__actions">
-                        <button class="btn btn--preview" data-preview="https://jplogistics.cc"><i class="fas fa-eye"></i> Live Preview</button>
-                        <a href="https://jplogistics.cc" class="btn btn--ghost-sm" target="_blank">Visit Live Site <i class="fas fa-arrow-right"></i></a>
+                        <button class="btn btn--preview" data-preview="https://jplogistics.cc"><i class="fas fa-eye"></i> <span data-i18n="btn.livePreview">Live Preview</span></button>
+                        <a href="https://jplogistics.cc" class="btn btn--ghost-sm" target="_blank"><span data-i18n="btn.visitSite">Visit Live Site</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="project__thumb" data-preview="https://jplogistics.cc">
                     <img src="https://api.microlink.io?url=https://jplogistics.cc&screenshot=true&meta=false&embed=screenshot.url" alt="Logistics Suite" loading="lazy">
-                    <div class="project__thumb-overlay"><i class="fas fa-expand"></i> Preview</div>
+                    <div class="project__thumb-overlay"><i class="fas fa-expand"></i> <span data-i18n="btn.preview">Preview</span></div>
                 </div>
                 <div class="project__iframe-wrap" id="preview-4">
                     <div class="iframe-bar">
                         <span class="iframe-bar__url">jplogistics.cc</span>
-                        <a href="https://jplogistics.cc" target="_blank" class="iframe-bar__open">Open in new tab <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://jplogistics.cc" target="_blank" class="iframe-bar__open"><span data-i18n="btn.newTab">Open in new tab</span> <i class="fas fa-external-link-alt"></i></a>
                     </div>
-                    <div class="iframe-skeleton">Loading preview...</div>
+                    <div class="iframe-skeleton" data-i18n="btn.loading">Loading preview...</div>
                     <iframe data-src="https://jplogistics.cc" sandbox="allow-scripts allow-same-origin" title="Logistics Preview" loading="lazy"></iframe>
                 </div>
             </div>
@@ -467,25 +467,25 @@
                 <div class="project__info">
                     <span class="project__cat">AI</span>
                     <span class="project__num">06</span>
-                    <h3 class="project__title">AI Content Detection Website</h3>
-                    <p class="project__desc">AI-powered content authenticity platform to detect AI-generated text, review confidence scores, and support quick verification workflows.</p>
-                    <div class="project__tech"><span>AI</span><span>NLP</span><span>Web App</span><span>Analytics</span></div>
-                    <div class="project__highlights"><span>AI detection</span><span>Confidence scoring</span><span>Fast verification</span></div>
+                    <h3 class="project__title" data-i18n="proj6.title">AI Content Detection Website</h3>
+                    <p class="project__desc" data-i18n="proj6.desc">AI-powered content authenticity platform to detect AI-generated text, review confidence scores, and support quick verification workflows.</p>
+                    <div class="project__tech"><span>AI</span><span>NLP</span><span data-i18n="proj6.tech3">Web App</span><span data-i18n="proj6.tech4">Analytics</span></div>
+                    <div class="project__highlights"><span data-i18n="proj6.hl1">AI detection</span><span data-i18n="proj6.hl2">Confidence scoring</span><span data-i18n="proj6.hl3">Fast verification</span></div>
                     <div class="project__actions">
-                        <button class="btn btn--preview" data-preview="https://verifai.cc"><i class="fas fa-eye"></i> Live Preview</button>
-                        <a href="https://verifai.cc" class="btn btn--ghost-sm" target="_blank">Visit Live Site <i class="fas fa-arrow-right"></i></a>
+                        <button class="btn btn--preview" data-preview="https://verifai.cc"><i class="fas fa-eye"></i> <span data-i18n="btn.livePreview">Live Preview</span></button>
+                        <a href="https://verifai.cc" class="btn btn--ghost-sm" target="_blank"><span data-i18n="btn.visitSite">Visit Live Site</span> <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="project__thumb" data-preview="https://verifai.cc">
                     <img src="https://api.microlink.io?url=https://verifai.cc&screenshot=true&meta=false&embed=screenshot.url" alt="AI Content Detection Website" loading="lazy">
-                    <div class="project__thumb-overlay"><i class="fas fa-expand"></i> Preview</div>
+                    <div class="project__thumb-overlay"><i class="fas fa-expand"></i> <span data-i18n="btn.preview">Preview</span></div>
                 </div>
                 <div class="project__iframe-wrap" id="preview-5">
                     <div class="iframe-bar">
                         <span class="iframe-bar__url">verifai.cc</span>
-                        <a href="https://verifai.cc" target="_blank" class="iframe-bar__open">Open in new tab <i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://verifai.cc" target="_blank" class="iframe-bar__open"><span data-i18n="btn.newTab">Open in new tab</span> <i class="fas fa-external-link-alt"></i></a>
                     </div>
-                    <div class="iframe-skeleton">Loading preview...</div>
+                    <div class="iframe-skeleton" data-i18n="btn.loading">Loading preview...</div>
                     <iframe data-src="https://verifai.cc" sandbox="allow-scripts allow-same-origin" title="AI Content Detection Preview" loading="lazy"></iframe>
                 </div>
             </div>
@@ -495,51 +495,51 @@
     <!-- Services -->
     <section id="services" class="section">
         <div class="container">
-            <div class="section-label reveal">Services</div>
-            <h2 class="section-heading section-heading--center reveal">What I <span class="gradient-text">Offer</span></h2>
-            <p class="section-sub reveal">Flexible collaboration for new products, high-stakes rebuilds, and technical rescue work.</p>
+            <div class="section-label reveal" data-i18n="services.label">Services</div>
+            <h2 class="section-heading section-heading--center reveal" data-i18n-html="services.heading">What I <span class="gradient-text">Offer</span></h2>
+            <p class="section-sub reveal" data-i18n="services.sub">Flexible collaboration for new products, high-stakes rebuilds, and technical rescue work.</p>
             <div class="services-grid">
                 <div class="svc-card glass-card reveal" data-tilt>
                     <div class="svc-card__icon"><i class="fas fa-laptop-code"></i></div>
-                    <h3 class="svc-card__title">Full Website Development</h3>
-                    <div class="svc-card__price">From <strong>$250</strong></div>
-                    <p class="svc-card__desc">Complete professional websites from scratch — responsive, SEO-optimized, fast, and fully deployed.</p>
+                    <h3 class="svc-card__title" data-i18n="svc1.title">Full Website Development</h3>
+                    <div class="svc-card__price"><span data-i18n="svc.from">From</span> <strong>$250</strong></div>
+                    <p class="svc-card__desc" data-i18n="svc1.desc">Complete professional websites from scratch — responsive, SEO-optimized, fast, and fully deployed.</p>
                     <ul class="svc-card__features">
-                        <li><i class="fas fa-check"></i> Modern responsive design</li>
-                        <li><i class="fas fa-check"></i> SEO & analytics setup</li>
-                        <li><i class="fas fa-check"></i> Post-launch support</li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="svc1.f1">Modern responsive design</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="svc1.f2">SEO & analytics setup</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="svc1.f3">Post-launch support</span></li>
                     </ul>
                     <a href="https://wa.me/237673477156?text=Hi,%20I'm%20interested%20in%20Full%20Website%20Development" class="btn btn--glass btn--full" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Discuss Project
+                        <i class="fab fa-whatsapp"></i> <span data-i18n="svc1.cta">Discuss Project</span>
                     </a>
                 </div>
                 <div class="svc-card svc-card--popular glass-card reveal" data-tilt>
-                    <span class="svc-card__badge">Most Popular</span>
+                    <span class="svc-card__badge" data-i18n="svc.popular">Most Popular</span>
                     <div class="svc-card__icon"><i class="fas fa-wrench"></i></div>
-                    <h3 class="svc-card__title">Code Fixing & Optimization</h3>
-                    <div class="svc-card__price">From <strong>$130</strong></div>
-                    <p class="svc-card__desc">Debugging, performance, security, mobile fixes, and complete code cleanup for any stack.</p>
+                    <h3 class="svc-card__title" data-i18n="svc2.title">Code Fixing & Optimization</h3>
+                    <div class="svc-card__price"><span data-i18n="svc.from">From</span> <strong>$130</strong></div>
+                    <p class="svc-card__desc" data-i18n="svc2.desc">Debugging, performance, security, mobile fixes, and complete code cleanup for any stack.</p>
                     <ul class="svc-card__features">
-                        <li><i class="fas fa-check"></i> Performance optimization</li>
-                        <li><i class="fas fa-check"></i> Security patching</li>
-                        <li><i class="fas fa-check"></i> Detailed fix report</li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="svc2.f1">Performance optimization</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="svc2.f2">Security patching</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="svc2.f3">Detailed fix report</span></li>
                     </ul>
                     <a href="https://wa.me/237673477156?text=Hi,%20I%20need%20help%20fixing%20my%20website" class="btn btn--primary btn--full" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Get Help
+                        <i class="fab fa-whatsapp"></i> <span data-i18n="svc2.cta">Get Help</span>
                     </a>
                 </div>
                 <div class="svc-card glass-card reveal" data-tilt>
                     <div class="svc-card__icon"><i class="fas fa-graduation-cap"></i></div>
-                    <h3 class="svc-card__title">AI Website Building Course</h3>
-                    <div class="svc-card__price"><strong>$999</strong> <span class="svc-card__badge-inline">Lifetime Access</span></div>
-                    <p class="svc-card__desc">Build professional websites from zero using AI tools — no coding experience needed.</p>
+                    <h3 class="svc-card__title" data-i18n="svc3.title">AI Website Building Course</h3>
+                    <div class="svc-card__price"><strong>$999</strong> <span class="svc-card__badge-inline" data-i18n="svc3.badge">Lifetime Access</span></div>
+                    <p class="svc-card__desc" data-i18n="svc3.desc">Build professional websites from zero using AI tools — no coding experience needed.</p>
                     <ul class="svc-card__features">
-                        <li><i class="fas fa-check"></i> Zero to production</li>
-                        <li><i class="fas fa-check"></i> Project templates</li>
-                        <li><i class="fas fa-check"></i> Private community</li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="svc3.f1">Zero to production</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="svc3.f2">Project templates</span></li>
+                        <li><i class="fas fa-check"></i> <span data-i18n="svc3.f3">Private community</span></li>
                     </ul>
                     <a href="https://wa.me/237673477156?text=Hi,%20I'm%20interested%20in%20the%20AI%20Website%20Building%20Course" class="btn btn--glass btn--full" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Enroll Now
+                        <i class="fab fa-whatsapp"></i> <span data-i18n="svc3.cta">Enroll Now</span>
                     </a>
                 </div>
             </div>
@@ -549,52 +549,52 @@
     <!-- Testimonials -->
     <section id="testimonials" class="section">
         <div class="container">
-            <div class="section-label reveal">Reviews</div>
-            <h2 class="section-heading section-heading--center reveal">What <span class="gradient-text">Clients Say</span></h2>
+            <div class="section-label reveal" data-i18n="reviews.label">Reviews</div>
+            <h2 class="section-heading section-heading--center reveal" data-i18n-html="reviews.heading">What <span class="gradient-text">Clients Say</span></h2>
             <div class="testimonial-carousel reveal" id="testimonialCarousel">
-                <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-btn carousel-btn--prev" id="carouselPrev" aria-label="Previous" data-i18n-aria="aria.prev"><i class="fas fa-chevron-left"></i></button>
                 <div class="carousel-track" id="carouselTrack">
                     <div class="testi-card glass-card">
                         <div class="testi-card__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <blockquote class="testi-card__quote">"Amazing work! Set up my banking site in a short time frame. Clean code, excellent documentation, and outstanding support."</blockquote>
+                        <blockquote class="testi-card__quote" data-i18n="testi1.quote">"Amazing work! Set up my banking site in a short time frame. Clean code, excellent documentation, and outstanding support."</blockquote>
                         <div class="testi-card__author">
                             <div class="testi-card__avatar">EN</div>
-                            <div><div class="testi-card__name">Emmanuel N.</div><div class="testi-card__role">Fintech Startup, Douala</div></div>
+                            <div><div class="testi-card__name">Emmanuel N.</div><div class="testi-card__role" data-i18n="testi1.role">Fintech Startup, Douala</div></div>
                         </div>
                     </div>
                     <div class="testi-card glass-card">
                         <div class="testi-card__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <blockquote class="testi-card__quote">"The trading platform exceeded our expectations. Professional scripts with excellent support. Highly recommended."</blockquote>
+                        <blockquote class="testi-card__quote" data-i18n="testi2.quote">"The trading platform exceeded our expectations. Professional scripts with excellent support. Highly recommended."</blockquote>
                         <div class="testi-card__author">
                             <div class="testi-card__avatar">JT</div>
-                            <div><div class="testi-card__name">Jean-Pierre T.</div><div class="testi-card__role">Trading Firm, Yaound&eacute;</div></div>
+                            <div><div class="testi-card__name">Jean-Pierre T.</div><div class="testi-card__role" data-i18n="testi2.role">Trading Firm, Yaound&eacute;</div></div>
                         </div>
                     </div>
                     <div class="testi-card glass-card">
                         <div class="testi-card__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <blockquote class="testi-card__quote">"Best investment for my web dev business. The code quality is exceptional and clients love the end result."</blockquote>
+                        <blockquote class="testi-card__quote" data-i18n="testi3.quote">"Best investment for my web dev business. The code quality is exceptional and clients love the end result."</blockquote>
                         <div class="testi-card__author">
                             <div class="testi-card__avatar">FM</div>
-                            <div><div class="testi-card__name">Franck M.</div><div class="testi-card__role">Agency Owner, Bamenda</div></div>
+                            <div><div class="testi-card__name">Franck M.</div><div class="testi-card__role" data-i18n="testi3.role">Agency Owner, Bamenda</div></div>
                         </div>
                     </div>
                     <div class="testi-card glass-card">
                         <div class="testi-card__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <blockquote class="testi-card__quote">"The e-commerce solution handles thousands of orders daily without issues. Clean code, easy to customize."</blockquote>
+                        <blockquote class="testi-card__quote" data-i18n="testi4.quote">"The e-commerce solution handles thousands of orders daily without issues. Clean code, easy to customize."</blockquote>
                         <div class="testi-card__author">
                             <div class="testi-card__avatar">SA</div>
-                            <div><div class="testi-card__name">Sandrine A.</div><div class="testi-card__role">E-Commerce, Buea</div></div>
+                            <div><div class="testi-card__name">Sandrine A.</div><div class="testi-card__role" data-i18n="testi4.role">E-Commerce, Buea</div></div>
                         </div>
                     </div>
                 </div>
-                <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+                <button class="carousel-btn carousel-btn--next" id="carouselNext" aria-label="Next" data-i18n-aria="aria.next"><i class="fas fa-chevron-right"></i></button>
             </div>
             <div class="social-proof reveal">
-                <span>50+ Projects Delivered</span>
+                <span data-i18n="proof.projects">50+ Projects Delivered</span>
                 <span class="social-proof__dot">·</span>
-                <span>30+ Happy Clients</span>
+                <span data-i18n="proof.clients">30+ Happy Clients</span>
                 <span class="social-proof__dot">·</span>
-                <span>4.9/5 Average Rating</span>
+                <span data-i18n="proof.rating">4.9/5 Average Rating</span>
             </div>
         </div>
     </section>
@@ -602,14 +602,14 @@
     <!-- Contact -->
     <section id="contact" class="section">
         <div class="container">
-            <div class="section-label reveal">Get In Touch</div>
-            <h2 class="section-heading reveal">Let's build something<br><span class="gradient-text">great together.</span></h2>
-            <p class="section-sub reveal">Have a project in mind? Reach out and I'll respond within a few hours with a free consultation.</p>
+            <div class="section-label reveal" data-i18n="contact.label">Get In Touch</div>
+            <h2 class="section-heading reveal" data-i18n-html="contact.heading">Let's build something<br><span class="gradient-text">great together.</span></h2>
+            <p class="section-sub reveal" data-i18n="contact.sub">Have a project in mind? Reach out and I'll respond within a few hours with a free consultation.</p>
             <div class="contact-grid">
                 <div class="contact-channels reveal">
                     <div class="contact-intro glass-card">
-                        <span class="contact-intro__label">Best for</span>
-                        <p>Startup launches, redesigns, platform upgrades, bug rescue, and custom software delivery.</p>
+                        <span class="contact-intro__label" data-i18n="contact.bestForLabel">Best for</span>
+                        <p data-i18n="contact.bestForText">Startup launches, redesigns, platform upgrades, bug rescue, and custom software delivery.</p>
                     </div>
                     <a href="https://wa.me/237673477156" class="contact-card glass-card" target="_blank">
                         <div class="contact-card__icon"><i class="fab fa-whatsapp"></i></div>
@@ -631,24 +631,24 @@
                 <form class="contact-form glass-card reveal" id="contactForm">
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                            <label for="name" data-i18n="form.name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" data-i18n-placeholder="form.namePlaceholder" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
+                            <label for="email" data-i18n="form.email">Email</label>
                             <input type="email" id="email" name="email" placeholder="you@example.com" required>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject" placeholder="Project inquiry">
+                        <label for="subject" data-i18n="form.subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Project inquiry" data-i18n-placeholder="form.subjectPlaceholder">
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        <label for="message" data-i18n="form.message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." data-i18n-placeholder="form.messagePlaceholder" required></textarea>
                     </div>
                     <button type="submit" class="btn btn--primary btn--full">
-                        <span>Send Message</span>
+                        <span data-i18n="form.send">Send Message</span>
                         <i class="fas fa-paper-plane"></i>
                     </button>
                 </form>
@@ -662,15 +662,15 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <a href="#hero" class="footer-logo">WebPulse</a>
-                    <p class="footer-tagline">Crafting digital excellence since 2021</p>
+                    <p class="footer-tagline" data-i18n="footer.tagline">Crafting digital excellence since 2021</p>
                 </div>
                 <nav class="footer-nav">
-                    <a href="#about">About</a>
-                    <a href="#expertise">Expertise</a>
-                    <a href="#portfolio">Portfolio</a>
-                    <a href="#services">Services</a>
-                    <a href="#testimonials">Reviews</a>
-                    <a href="#contact">Contact</a>
+                    <a href="#about" data-i18n="nav.about">About</a>
+                    <a href="#expertise" data-i18n="nav.expertise">Expertise</a>
+                    <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+                    <a href="#services" data-i18n="nav.services">Services</a>
+                    <a href="#testimonials" data-i18n="nav.reviews">Reviews</a>
+                    <a href="#contact" data-i18n="footer.contact">Contact</a>
                 </nav>
                 <div class="footer-social">
                     <a href="https://github.com/perevet74" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -680,7 +680,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 WebPulse. Crafted with precision.</p>
+                <p data-i18n="footer.copyright">&copy; 2026 WebPulse. Crafted with precision.</p>
             </div>
         </div>
     </footer>
@@ -689,10 +689,47 @@
         href="mailto:mrperevette@gmail.com?subject=Website%20Review%20for%20WebPulse&body=Hi%20Perevet%2C%0D%0A%0D%0AI%E2%80%99d%20like%20to%20leave%20a%20review%20about%20your%20work.%0D%0A%0D%0AReview%3A%0D%0A"
         class="floating-review-btn"
         aria-label="Leave a review by email"
+        data-i18n-aria="aria.review"
     >
         <i class="fas fa-star"></i>
-        <span>Leave a Review</span>
+        <span data-i18n="reviewBtn">Leave a Review</span>
     </a>
+
+    <!-- Language Side Button -->
+    <button class="floating-lang-btn" id="langToggle" aria-label="Change language" data-i18n-aria="aria.changeLang">
+        <i class="fas fa-globe"></i>
+        <span class="floating-lang-btn__code" id="langCurrentCode">EN</span>
+    </button>
+
+    <!-- Language Popup -->
+    <div class="lang-modal" id="langModal" aria-hidden="true">
+        <div class="lang-modal__backdrop" id="langModalBackdrop"></div>
+        <div class="lang-modal__dialog glass-card" role="dialog" aria-labelledby="langModalTitle">
+            <button class="lang-modal__close" id="langModalClose" aria-label="Close" data-i18n-aria="aria.close">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="lang-modal__icon"><i class="fas fa-language"></i></div>
+            <h2 class="lang-modal__title" id="langModalTitle" data-i18n="lang.title">Choose Your Language</h2>
+            <p class="lang-modal__sub" data-i18n="lang.sub">Select the language you'd like to browse in</p>
+            <div class="lang-options">
+                <button class="lang-option" data-lang="pcm">
+                    <span class="lang-option__flag">🇨🇲</span>
+                    <span class="lang-option__name">PIDGIN</span>
+                    <span class="lang-option__native">Cameroon Pidgin</span>
+                </button>
+                <button class="lang-option" data-lang="en">
+                    <span class="lang-option__flag">🇬🇧</span>
+                    <span class="lang-option__name">ENGLISH</span>
+                    <span class="lang-option__native">English</span>
+                </button>
+                <button class="lang-option" data-lang="fr">
+                    <span class="lang-option__flag">🇫🇷</span>
+                    <span class="lang-option__name">FRENCH</span>
+                    <span class="lang-option__native">Français</span>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
