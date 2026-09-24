@@ -91,7 +91,7 @@ const TRANSLATIONS = {
         'footer.contact': 'Contact',
         'footer.copyright': '© 2026 WebPulse. Crafted with precision.',
         'reviewBtn': 'Leave a Review',
-        'lang.title': 'Choose Your Language',
+        'lang.title': 'Language',
         'lang.sub': "Select the language you'd like to browse in",
         'page.title': 'My Portfolio | Full-Stack Developer & Digital Solutions',
         'cat.fintech': 'Fintech',
@@ -286,7 +286,7 @@ const TRANSLATIONS = {
         'footer.contact': 'Contact',
         'footer.copyright': '© 2026 WebPulse. Conçu avec précision.',
         'reviewBtn': 'Laisser un avis',
-        'lang.title': 'Choisissez votre langue',
+        'lang.title': 'Langue',
         'lang.sub': 'Sélectionnez la langue dans laquelle vous souhaitez naviguer',
         'page.title': 'Mon Portfolio | Développeur Full-Stack & Solutions Digitales',
         'cat.fintech': 'Fintech',
@@ -481,7 +481,7 @@ const TRANSLATIONS = {
         'footer.contact': 'Contact',
         'footer.copyright': '© 2026 WebPulse. Craft with precision.',
         'reviewBtn': 'Leave Review',
-        'lang.title': 'Choose Your Language',
+        'lang.title': 'Language',
         'lang.sub': 'Pick language wey you want browse with',
         'page.title': 'My Portfolio | Full-Stack Developer & Digital Solutions',
         'cat.fintech': 'Fintech',
@@ -632,7 +632,18 @@ const TRANSLATIONS = {
     },
 };
 
-let CURRENT_LANG = localStorage.getItem(LANG_STORAGE_KEY) || 'en';
+let CURRENT_LANG = localStorage.getItem(LANG_STORAGE_KEY) || detectSystemLanguage();
+
+function detectSystemLanguage() {
+    const locales = [
+        ...(navigator.languages || []),
+        navigator.language,
+        navigator.userLanguage,
+    ].filter(Boolean).map(l => String(l).toLowerCase());
+
+    if (locales.some(l => l === 'fr' || l.startsWith('fr-'))) return 'fr';
+    return 'en';
+}
 
 function t(key) {
     const dict = TRANSLATIONS[CURRENT_LANG] || TRANSLATIONS.en;
@@ -640,17 +651,17 @@ function t(key) {
 }
 
 function initLanguage() {
-    const modal = document.getElementById('langModal');
-    const backdrop = document.getElementById('langModalBackdrop');
-    const closeBtn = document.getElementById('langModalClose');
+    const switcher = document.getElementById('langSwitcher');
+    const panel = document.getElementById('langPanel');
+    const closeBtn = document.getElementById('langPanelClose');
     const toggleBtn = document.getElementById('langToggle');
     const codeEl = document.getElementById('langCurrentCode');
     const options = document.querySelectorAll('.lang-option');
 
-    if (!modal) return;
+    if (!switcher || !panel) return;
 
-    const isFirstVisit = !localStorage.getItem(LANG_STORAGE_KEY);
-    let currentLang = localStorage.getItem(LANG_STORAGE_KEY) || 'en';
+    const savedLang = localStorage.getItem(LANG_STORAGE_KEY);
+    let currentLang = savedLang || detectSystemLanguage();
 
     function applyLanguage(lang, persist = true) {
         if (!TRANSLATIONS[lang]) lang = 'en';
@@ -686,38 +697,51 @@ function initLanguage() {
         });
     }
 
-    function openModal() {
-        modal.classList.add('active');
-        modal.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
+    function openPanel() {
+        switcher.classList.add('open');
+        panel.setAttribute('aria-hidden', 'false');
+        if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'true');
     }
 
-    function closeModal() {
-        modal.classList.remove('active');
-        modal.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
+    function closePanel() {
+        switcher.classList.remove('open');
+        panel.setAttribute('aria-hidden', 'true');
+        if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
+    }
+
+    function togglePanel() {
+        if (switcher.classList.contains('open')) closePanel();
+        else openPanel();
     }
 
     options.forEach(opt => {
         opt.addEventListener('click', () => {
             applyLanguage(opt.dataset.lang);
-            closeModal();
+            closePanel();
         });
     });
 
-    if (toggleBtn) toggleBtn.addEventListener('click', openModal);
-    if (backdrop) backdrop.addEventListener('click', closeModal);
-    if (closeBtn) closeBtn.addEventListener('click', closeModal);
-
-    document.addEventListener('keydown', e => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+    if (toggleBtn) toggleBtn.addEventListener('click', e => {
+        e.stopPropagation();
+        togglePanel();
+    });
+    if (closeBtn) closeBtn.addEventListener('click', e => {
+        e.stopPropagation();
+        closePanel();
     });
 
-    applyLanguage(currentLang, !isFirstVisit);
+    document.addEventListener('click', e => {
+        if (switcher.classList.contains('open') && !switcher.contains(e.target)) {
+            closePanel();
+        }
+    });
 
-    if (isFirstVisit) {
-        setTimeout(openModal, 600);
-    }
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && switcher.classList.contains('open')) closePanel();
+    });
+
+    // Save detected language on first visit so it stays consistent
+    applyLanguage(currentLang, true);
 }
 
 /* === Cursor Glow (smoother lerp) === */
